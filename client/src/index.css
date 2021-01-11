@@ -1,0 +1,186 @@
+ 
+ *{
+    font-family: Open Sans, sans-serif;
+    color:rgb(75, 77, 79);
+
+ }
+
+ .center{
+    text-align: center;
+ }
+ 
+ .header-introbig{
+    font-size: 20px;
+    margin-top: 200px;
+    color:rgb(255, 255, 255);
+}
+
+ .header-introsmall{
+    font-size: 10px;
+    margin-top: 3vh;
+    margin-bottom: 20vh;
+    color:rgb(255, 255, 255)
+
+}
+ 
+ .header-btn {
+    position: fixed;
+    top: 6vw;
+    right: 5vw;
+    border:none;
+    color: rgb(36, 48, 94);
+    
+}
+
+.header-btn:hover {
+   background-color:rgb(207, 195, 135);
+   color: white;
+   border: none;
+ }
+
+ .header-btn:active {
+   outline: none;
+   border: none;
+ }
+
+ .header-brand{
+    position: fixed;
+    top: 3.5vw;
+    left: 4vw
+}
+
+ .header-smSpace{
+    margin-top: 20vh
+}
+
+ .header-bgColor{
+    position: relative;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+}
+.header-logo-container{
+   position: absolute;
+   bottom: 0;
+}
+.header-logo-size{
+   width: 500px;
+   height:auto;
+}
+
+ .about-width {
+    color: rgb(75, 77, 79);
+    display: inline-block;
+}
+.about-img{
+   width:20vw;
+   height:auto;
+
+}
+
+.about-padding{
+   padding:20px;
+}
+
+ .about-card-edu{
+    margin-top: 100px;
+
+}
+.about-card-passion{
+   float: left;
+   width:50%;
+   margin-top: 100px;
+
+}
+.about-card-drive{
+   float: right;
+    width:50%;
+    margin-top: 100px;
+
+
+}
+ .intro-p{
+   line-height: 200%;
+   width:50%;
+   margin: 0 auto;
+ }
+ .about-p{
+   line-height: 200%;
+   font-size: 13px;
+ }
+ .footer-bgColor {
+    height: 50vh;
+}
+
+ .footer-center{
+    margin-top: 15vh;
+}
+
+ .footer-txtCenter {
+    margin-top: 100px;
+    font-size: 13px;
+    color: white;
+}
+.footer-img{
+   width:55px;
+   height:55px; 
+}
+ .work-center {
+    color: rgb(75, 77, 79);
+
+}
+
+ .work-introbig {
+    font-size: 20px;
+    color: rgb(75, 77, 79);
+}
+
+ .work-logos{
+      cursor: pointer;
+}
+
+.background-image-ac{ 
+   border-radius: 5px;
+   margin: 0px auto;
+   width: 300px;
+   height: 200px;
+   margin: 10px;
+   background-color: white;
+   border: 1px solid black;
+   display: inline-block;
+}
+
+.background-image-ib{
+   border-radius: 5px;
+   margin: 0px auto;
+   width: 300px;
+   height: 200px;
+   margin: 10px;
+   background-color: white;
+   border: 1px solid black;
+   display: inline-block;
+
+}
+
+.padding{
+   padding:100px 20px;
+}
+.yellow{
+   background-color: #FDD978;
+}
+.red{
+   background-color:#F06023;
+}
+.light-blue{
+   background-color: rgb(168, 208, 230);
+}
+.blue{
+   background-color: #13334C;
+}
+.dark-blue{
+   background-color: rgb(36, 48, 94);
+}
+
+
+
+ 
