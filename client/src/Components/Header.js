@@ -28,7 +28,7 @@ class Header extends Component {
                </svg>
            </div>
         
-            <ContactPage/>
+            {/* <ContactPage/> */}
                
            <Navbar.Brand className='header-brand'>
                         <a href='http://localhost:3000/'>
