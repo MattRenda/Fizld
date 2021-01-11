@@ -61,10 +61,10 @@
 }
 .header-logo-container{
    position: absolute;
-   bottom: 0;
+   bottom: 70px;
 }
 .header-logo-size{
-   width: 500px;
+   width: 300px;
    height:auto;
 }
 
@@ -73,7 +73,7 @@
     display: inline-block;
 }
 .about-img{
-   width:20vw;
+   width:300px;
    height:auto;
 
 }
@@ -101,8 +101,7 @@
 }
  .intro-p{
    line-height: 200%;
-   width:50%;
-   margin: 0 auto;
+   margin: 0 10vw;
  }
  .about-p{
    line-height: 200%;
