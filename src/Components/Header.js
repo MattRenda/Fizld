@@ -31,7 +31,7 @@ class Header extends Component {
             {/* <ContactPage/> */}
                
            <Navbar.Brand className='header-brand'>
-                        <a href='http://localhost:3000/'>
+                        <a href='https://www.matthewrenda.com/'>
                         <img
                             src={require('../imgs/portfolio_logo_yellow.png')}
                             width="75"
