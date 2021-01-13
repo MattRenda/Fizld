@@ -13,8 +13,8 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
     text-align: center;
-    margin-bottom: 10vh;
-    
+    margin: 10vh 20vw;
+
 }
 
 .headerTextContainer{
