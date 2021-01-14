@@ -24,7 +24,7 @@ class RecentWork extends Component {
                         
                         <div style={{border:'1px solid #a6b2bc',margin:'30px 10px', marginBottom:'10px'}}>
                         
-                            <img style={{ width: '300px', height: 'auto' }} src={require('../imgs/CHAMP.png')}
+                            <img style={{ width: '280px', height: 'auto' }} src={require('../imgs/CHAMP.png')}
                                 alt="CHAMP logo"
                             />
                         </div>
@@ -41,7 +41,7 @@ class RecentWork extends Component {
                         style={{margin:"auto 0px"}}>
                         
                         <div style={{border:'1px solid #a6b2bc',margin:'30px 10px', marginBottom:'10px' }}>
-                            <img style={{ width: '300px', height: 'auto' }} src={require('../imgs/RendaStudios.png')}
+                            <img style={{ width: '280px', height: 'auto' }} src={require('../imgs/RendaStudios.png')}
                                 alt="RendaStudios"
                             />
                         </div>
@@ -57,7 +57,7 @@ class RecentWork extends Component {
                         style={{margin:"auto 0px"}}>
 
                         <div style={{border:'1px solid #a6b2bc',margin:'30px 10px', marginBottom:'10px' }}>
-                            <img style={{ width: '300px', height: 'auto'}} src={require('../imgs/AC.png')}
+                            <img style={{ width: '280px', height: 'auto'}} src={require('../imgs/AC.png')}
                                 alt="ACHeatinglogo"
                             />
                         </div>
@@ -74,7 +74,7 @@ class RecentWork extends Component {
                         style={{margin:"auto 0px", marginBottom:'0px'}}>
 
                         <div style={{border:'1px solid #a6b2bc',margin:'30px 10px', marginBottom:'10px'}}>
-                            <img style={{ width: '300px', height: 'auto' }} src={require('../imgs/ButtonGame.png')}
+                            <img style={{ width: '280px', height: 'auto' }} src={require('../imgs/ButtonGame.png')}
                                 alt="Button"
                             />
                         </div>

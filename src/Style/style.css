@@ -5,7 +5,9 @@
     text-align: center;
 }
 .item{
-    width:500px;
+    width:400px;
+    margin:20px;
+
 }
 
 .recentWorkContainer{
@@ -13,7 +15,7 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
     text-align: center;
-    margin: 10vh 20vw;
+    margin: 5vh 20vw;
 
 }
 

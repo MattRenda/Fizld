@@ -6,7 +6,7 @@ class Intro extends Component {
 
         return (
             <>
-                <div style={{marginTop:'110px'}} className='center padding'>
+                <div style={{marginTop:'10vh'}} className='center padding'>
                         <h4 className='intro-h'><b>Hi i'm Matthew. Nice to meet you.</b></h4> 
                         <p className="intro-p"> 
                         Hard-working software developer, with a passion for problem solving in the least amount of time. 

@@ -73,8 +73,8 @@
     display: inline-block;
 }
 .about-img{
-   width:300px;
-   height:auto;
+   width:250px;
+   height:200px;
 
 }
 
@@ -101,7 +101,7 @@
 }
  .intro-p{
    line-height: 200%;
-   margin: 0 10vw;
+   margin: 0 5vw;
  }
  .about-p{
    line-height: 200%;
