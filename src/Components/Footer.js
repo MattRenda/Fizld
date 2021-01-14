@@ -14,7 +14,7 @@ class Footer extends Component {
                      </svg>
                 </div>
                     <div className='footer-bgColor center blue'>
-                        <a href="https://matthewrenda.com">
+                        <a href="https://www.matthewrenda.com">
                             <img className='footer-center footer-img' src={require('../imgs/portfolio_logo_yellow.png')}
                                 alt="Matthew Renda logo"/>
                         </a>
