@@ -21,11 +21,14 @@ class RecentWork extends Component {
                         target='_blank'
                         rel="noopener noreferrer"
                         style={{margin:"auto 0px"}}>
-                        <div style={{border:'1px solid #a6b2bc',margin:'30px 10px'}}>
+                        
+                        <div style={{border:'1px solid #a6b2bc',margin:'30px 10px', marginBottom:'10px'}}>
+                        
                             <img style={{ width: '300px', height: 'auto' }} src={require('../imgs/CHAMP.png')}
                                 alt="CHAMP logo"
                             />
                         </div>
+                        <strong>CHAMP</strong>
                         <p>
                             React, Redux, MaterialUI, HTML5/CSS3
                         </p>
@@ -37,13 +40,14 @@ class RecentWork extends Component {
                         rel="noopener noreferrer"
                         style={{margin:"auto 0px"}}>
                         
-                        <div style={{border:'1px solid #a6b2bc',margin:'30px 10px' }}>
+                        <div style={{border:'1px solid #a6b2bc',margin:'30px 10px', marginBottom:'10px' }}>
                             <img style={{ width: '300px', height: 'auto' }} src={require('../imgs/RendaStudios.png')}
                                 alt="RendaStudios"
                             />
                         </div>
+                        <strong>Renda Studios</strong>
                         <p>
-                            React, Redux, MaterialUI, HTML5/CSS3
+                            React, Redux, Azure function app,<br/> MaterialUI, HTML5/CSS3
                         </p>
                     </a>
                     <a
@@ -52,13 +56,14 @@ class RecentWork extends Component {
                         rel="noopener noreferrer"
                         style={{margin:"auto 0px"}}>
 
-                        <div style={{border:'1px solid #a6b2bc',margin:'30px 10px' }}>
+                        <div style={{border:'1px solid #a6b2bc',margin:'30px 10px', marginBottom:'10px' }}>
                             <img style={{ width: '300px', height: 'auto'}} src={require('../imgs/AC.png')}
                                 alt="ACHeatinglogo"
                             />
                         </div>
+                        <strong>Vaughns A/C and Heating</strong>
                         <p>
-                            React, Redux ,Node, Express, Mongo, HTML5/CSS3
+                            React, Redux ,Node, Express, Mongo,<br/> HTML5/CSS3
                         </p>
                     </a>
 
@@ -66,13 +71,14 @@ class RecentWork extends Component {
                         href='https://mattrenda.github.io/Button/'
                         target='_blank'
                         rel="noopener noreferrer"
-                        style={{margin:"auto 0px"}}>
+                        style={{margin:"auto 0px", marginBottom:'0px'}}>
 
-                        <div style={{border:'1px solid #a6b2bc',margin:'30px 10px'}}>
+                        <div style={{border:'1px solid #a6b2bc',margin:'30px 10px', marginBottom:'10px'}}>
                             <img style={{ width: '300px', height: 'auto' }} src={require('../imgs/ButtonGame.png')}
                                 alt="Button"
                             />
                         </div>
+                        <strong>Button Challenge</strong>
                         <p>
                             HTML5/CSS3, Javascript
                         </p>
