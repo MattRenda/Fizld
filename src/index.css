@@ -25,11 +25,10 @@
  
  .header-btn {
     position: fixed;
-    top: 6vw;
+    top: 5vw;
     right: 5vw;
     border:none;
     color: rgb(36, 48, 94);
-    
 }
 
 .header-btn:hover {
@@ -181,5 +180,15 @@
 }
 
 
+@media only screen and (max-width: 400px) {
+  
+.header-btn {
+   position: fixed;
+   top: 10vw;
+   right: 5vw;
+   border:none;
+   color: rgb(36, 48, 94);
+}
+ }
 
  
