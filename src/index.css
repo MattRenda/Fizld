@@ -8,7 +8,9 @@
  .left{
     text-align: left;
  }
- 
+ .center{
+   text-align: center;
+}
  .header-introbig{
     font-size: 20px;
     margin-top: 200px;
