@@ -28,9 +28,9 @@ class RecentWork extends Component {
                                 alt="CHAMP logo"
                             />
                         </div>
-                        <strong>CHAMP</strong>
+                        <strong>Vaccine Finder</strong>
                         <p>
-                            React, Redux, MaterialUI, HTML5/CSS3
+                            React, Redux, HTML5/CSS3, Nodejs, Azure
                         </p>
                     </a>
 
@@ -48,7 +48,7 @@ class RecentWork extends Component {
                         </div>
                         <strong>CHAMP</strong>
                         <p>
-                            React, Redux, MaterialUI, HTML5/CSS3
+                            React, Redux, MaterialUI, HTML5/CSS3, Azure
                         </p>
                     </a>
 
@@ -65,7 +65,7 @@ class RecentWork extends Component {
                         </div>
                         <strong>Renda Studios</strong>
                         <p>
-                            React, Redux, Azure function app,<br/> MaterialUI, HTML5/CSS3
+                            React, Redux, Azure function app,<br/> MaterialUI, HTML5/CSS3, Azure
                         </p>
                     </a>
                     <a
