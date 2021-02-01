@@ -17,6 +17,24 @@ class RecentWork extends Component {
                 <div className='recentWorkContainer'>
             
                 <a
+                        href='http://vaccinefinder.covid19.ca.gov/'
+                        target='_blank'
+                        rel="noopener noreferrer"
+                        style={{margin:"auto 0px"}}>
+                        
+                        <div style={{border:'1px solid #a6b2bc',margin:'30px 10px', marginBottom:'10px'}}>
+                        
+                            <img style={{ width: '280px', height: 'auto' }} src={require('../imgs/VaccineFinder.png')}
+                                alt="CHAMP logo"
+                            />
+                        </div>
+                        <strong>CHAMP</strong>
+                        <p>
+                            React, Redux, MaterialUI, HTML5/CSS3
+                        </p>
+                    </a>
+
+                <a
                         href='https://devchamp.cdt.ca.gov/'
                         target='_blank'
                         rel="noopener noreferrer"

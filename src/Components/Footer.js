@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 class Footer extends Component {
 
     render() {
+        const year = new Date();
         return (
             <>
                 <footer>
@@ -19,7 +20,7 @@ class Footer extends Component {
                                 alt="Matthew Renda logo"/>
                         </a>
                         
-                        <div className='footer-txtCenter'> Copyright &copy; 2020, MatthewJRenda</div>
+                        <div className='footer-txtCenter'> Copyright &copy; {year.getFullYear()}, MatthewJRenda</div>
 
 
                     </div>
