@@ -9,9 +9,7 @@ class RecentWork extends Component {
             <>
                         <div style={{textAlign:'center', marginTop:'10rem'}}>
                             <h4><b>My recent work</b></h4>
-                            <a href=''>
-                                View my GitHub
-                            </a>
+                         
                         </div>
 
                 <div className='recentWorkContainer'>
