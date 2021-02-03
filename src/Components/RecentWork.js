@@ -17,7 +17,7 @@ class RecentWork extends Component {
                 <div className='recentWorkContainer'>
             
                 <a
-                        href='http://vaccinefinder.covid19.ca.gov/'
+                        href='https://uat.vaccinefinder.covid19.ca.gov/'
                         target='_blank'
                         rel="noopener noreferrer"
                         style={{margin:"auto 0px"}}>
