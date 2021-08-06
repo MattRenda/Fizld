@@ -19,7 +19,7 @@ class About extends Component {
                         <img className='about-img' src={require('../imgs/growth.jpg')}></img>
                         <h4><b>Passion</b></h4>
                         <p className='left'>Seeing something through from start to finish has always given me a sense of
-                        fullfillment. Web development is a wonderful way to create, and add value
+                        fullfillment. Developing is a wonderful way to create, and add value
                         to many peoples lives.</p>
                     </div>
                     <div className='item'>
