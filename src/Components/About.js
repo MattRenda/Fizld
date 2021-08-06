@@ -23,7 +23,7 @@ class About extends Component {
                         to many peoples lives.</p>
                     </div>
                     <div className='item'>
-                        <img className='about-img' alt="Drive" src={require('../imgs/mind.jpg')}></img>
+                        <img className='about-img' alt="Drive" src={require('../imgs/DriveImg.jpg')}></img>
                         <h4><b>Drive</b></h4>
                         <p className='left'>I have grown quite a thirst for knowledge, and knowing that my work can always
                         improve makes me strive to be better every day.</p>
