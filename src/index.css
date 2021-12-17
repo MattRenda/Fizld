@@ -26,15 +26,14 @@
 }
  
  .header-btn {
-    position: fixed;
     top: 5vw;
     right: 5vw;
     border:none;
-    color: rgb(36, 48, 94);
+    color: white;
 }
 
 .header-btn:hover {
-   background-color:rgb(207, 195, 135);
+   background-color:#2f48a1;
    color: white;
    border: none;
  }
@@ -45,7 +44,6 @@
  }
 
  .header-brand{
-    position: fixed;
     top: 3.5vw;
     left: 4vw
 }
@@ -97,8 +95,6 @@
    float: right;
     width:50%;
     margin-top: 100px;
-
-
 }
  .intro-p{
    line-height: 200%;
@@ -117,9 +113,9 @@
 }
 
  .footer-txtCenter {
-    margin-top: 100px;
     font-size: 13px;
     color: white;
+    bottom:0px;
 }
 .footer-img{
    width:55px;
@@ -161,12 +157,14 @@
    display: inline-block;
 
 }
-
+.page{
+   margin: auto 10vw;
+}
 .padding{
    padding:20vh 20vw;
 }
 .yellow{
-   background-color: #FDD978;
+   background-color: #d78b7d;
 }
 .red{
    background-color:#F06023;
@@ -175,30 +173,27 @@
    background-color: rgb(168, 208, 230);
 }
 .blue{
-   background-color: #13334C;
+   background-color: #3755be;
 }
 .dark-blue{
-   background-color: rgb(36, 48, 94);
+   background-color: #1d236b;
 }
 
-
-@media only screen and (max-width: 500px) {
-  
-   .header-btn {
-      position: fixed;
-      top: 10vw;
-      right: 5vw;
-      border:none;
-      color: rgb(36, 48, 94);
-   }
-   .padding{
-      padding:20vh 0vw;
-   }
+.hero{
+   display:flex;
+   flex-wrap:wrap;
+   justify-content:space-between;
+   align-items:center;
 }
-
-@media only screen and (max-width: 425px) {
-  
-   .padding{
-      padding:20vh 0vw;
+@media only screen and (min-width: 768px) {
+   .hero{
+      display:flex;
+      flex-wrap:nowrap;
+      justify-content:space-between;
+      align-items:center;
    }
-}
+   .divider{
+      display: none;
+   }
+ }
+

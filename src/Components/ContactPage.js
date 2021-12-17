@@ -40,7 +40,7 @@ class ContactPage extends Component {
 
         return (
             <>
-                <Button className='header-btn yellow' onClick={this.handleShow}>
+                <Button className='header-btn dark-blue' onClick={this.handleShow}>
                     Contact me
                 </Button>
 

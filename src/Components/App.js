@@ -1,4 +1,4 @@
-import React,{Component} from 'react'
+import React from 'react'
 import Header from './Header'
 import RecentWork from './RecentWork'
 import Footer from './Footer'
@@ -6,22 +6,22 @@ import About from './About'
 import Intro from './intro'
 import '../index.css'
 import '../Style/style.css'
+import HowItWorks from './HowItWorks'
 
-class App extends Component{
-
-   
-    render(){
+const App =()=>{
        
-        return(
-            <>
-            <Header/>
-            <Intro/>
-            <About/>
-            <RecentWork/>
+    return(
+        <>
+            <div className='page'>
+                <Header/>
+                <HowItWorks/>
+                {/* <Intro/>
+                <About/>*/}
+                <RecentWork/> 
+            </div>
             <Footer/>
-            </>
-        )
-    }
+        </>
+    )
 }
 
 export default App;

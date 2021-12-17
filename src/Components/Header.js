@@ -1,48 +1,37 @@
-import React, { Component } from 'react'
-import { Container, Col, Row, Navbar } from 'react-bootstrap'
-import ContactPage from './ContactPage'
-class Header extends Component {
-
-    render() {
+import { Button } from '@mui/material'
+import React from 'react'
+import { Navbar } from 'react-bootstrap'
+const Header =()=>{
         return (
-            <>
-            <div className='header-bgColor red'>
-               
-
-                <div className='headerTextContainer'>
-                    <h1 style={{fontSize:'180%',color:'white'}}>
-                    Hi, my name is Matthew Renda.
-                    </h1>
-                    <h4 style={{fontSize:'130%',color:'white'}}>
-                    Full stack developer.
-                    </h4>
-                </div>
-                <div className='header-logo-container'>
-                    <img alt="header-design" className='header-logo-size' src={require('../imgs/MatthewRenda-logo.png')}/>
-                </div>
-            
-            </div>
-            <div class="custom-shape-divider-top-1610406512">
-                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                    <path d="M649.97 0L550.03 0 599.91 54.12 649.97 0z" class="shape-fill"></path>
-                </svg>
-            </div>
-        
-            <ContactPage/>
-               
-           <Navbar.Brand className='header-brand'>
+            <div>
+                <div style={{display:'flex', justifyContent:'space-between',marginTop:'10vh',marginBottom:'5vh', marginLeft:'3px', marginRight:'5px'}}>
+                    <Navbar.Brand >
                         <a href='https://www.matthewrenda.com/'>
                         <img
-                            src={require('../imgs/portfolio_logo_yellow.png')}
-                            width="75"
-                            height="75"
+                            src={require('../imgs/portfolio_logo.png')}
+                            width="100"
+                            height="60"
                             alt="Matthew Renda logo"
                         />
                         </a>
                     </Navbar.Brand>
-           </>
+
+                    <Button >Login</Button>
+                </div>  
+               
+                <div className='hero'>
+                    
+                    <div>
+                        <h1 class="display-5 fw-bold lh-1 mb-3">Matthew Renda - Web Developer & Designer</h1>
+                        <p class="lead">Hiring a web developer means saying good bye to things like, the website not looking quite "Right", poor mobile experience, Cookie-cutter templates, Missing key Search Engine Optimization elements, and limited ecommerce functionality.</p>
+                    </div>
+                    <div>
+                        <img src="https://getbootstrap.com/docs/5.1/examples/heroes/bootstrap-themes.png" class="d-block mx-lg-auto img-fluid" alt="img" width="1200" height="700" loading="lazy"/>
+                    </div>
+                </div>
+            </div>
         )
-    }
+    
 }
 
 export default Header;

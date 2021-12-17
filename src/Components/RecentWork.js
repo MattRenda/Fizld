@@ -7,8 +7,8 @@ class RecentWork extends Component {
     render() {
         return (
             <>
-                <div style={{textAlign:'center', marginTop:'10rem'}}>
-                    <h4><b>My recent work</b></h4>
+                <div style={{textAlign:'center', marginTop:'10vh'}}>
+                    <h4><b>What we offer</b></h4>
                     
                 </div>
 
@@ -26,9 +26,8 @@ class RecentWork extends Component {
                                 alt="CHAMP logo"
                             />
                         </div>
-                        <strong>My Vaccine Record</strong>
                         <p>
-                            React, Redux, HTML5/CSS3, .NET, Snowflake
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit
                         </p>
                     </a>
 
@@ -44,9 +43,8 @@ class RecentWork extends Component {
                                 alt="CHAMP logo"
                             />
                         </div>
-                        <strong>Vaccine Finder</strong>
                         <p>
-                            React, Redux, HTML5/CSS3, Nodejs, Azure
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit
                         </p>
                     </a>
 
@@ -62,9 +60,8 @@ class RecentWork extends Component {
                                 alt="CHAMP logo"
                             />
                         </div>
-                        <strong>CHAMP</strong>
                         <p>
-                            React, Redux, MaterialUI, HTML5/CSS3, Azure
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit
                         </p>
                     </a>
 
@@ -79,9 +76,8 @@ class RecentWork extends Component {
                                 alt="RendaStudios"
                             />
                         </div>
-                        <strong>Renda Studios</strong>
                         <p>
-                            React, Redux, Azure function app,<br/> MaterialUI, HTML5/CSS3, Azure
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit
                         </p>
                     </a>
                     <a
@@ -95,9 +91,8 @@ class RecentWork extends Component {
                                 alt="ACHeatinglogo"
                             />
                         </div>
-                        <strong>Vaughns A/C and Heating</strong>
                         <p>
-                            React, Redux ,Node, Express, Mongo,<br/> HTML5/CSS3
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit
                         </p>
                     </a>
 
@@ -112,9 +107,8 @@ class RecentWork extends Component {
                                 alt="Button"
                             />
                         </div>
-                        <strong>Button Challenge</strong>
                         <p>
-                            HTML5/CSS3, Javascript
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit
                         </p>
                     </a>
                 </div>
