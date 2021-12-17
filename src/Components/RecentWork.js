@@ -6,14 +6,56 @@ class RecentWork extends Component {
 
     render() {
         return (
-            <>
-                <div style={{textAlign:'center', marginTop:'10vh'}}>
+            <div >
+
+                <div style={{ textAlign: 'center', marginTop: '10vh' }}>
                     <h4><b>What we offer</b></h4>
-                    
+
                 </div>
 
-                <div className='recentWorkContainer'>
-            
+                <div className='row justify-content-center'>
+                    <div class="col-md card shadow-sm m-2">
+                        <img src={require('../imgs/RendaStudios.png')} width="100%" height="225" className='card-img-top' />
+                        <div class="card-body">
+                            <p class="card-text"> ipsum dolor sit amet, consectetur adipiscing elit</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">View Example</button>
+                                </div>
+                                <small class="text-muted">info</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md card shadow-sm m-2">
+                        <img src={require('../imgs/RendaStudios.png')} width="100%" height="225" className='card-img-top' />
+                        <div class="card-body">
+                            <p class="card-text"> ipsum dolor sit amet, consectetur adipiscing elit</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">View Example</button>
+                                </div>
+                                <small class="text-muted">info</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md card shadow-sm m-2">
+                        <img src={require('../imgs/RendaStudios.png')} width="100%" height="225" className='card-img-top' />
+                        <div class="card-body">
+                            <p class="card-text"> ipsum dolor sit amet, consectetur adipiscing elit</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">View Example</button>
+                                </div>
+                                <small class="text-muted">info</small>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+                    {/*             
                     <a
                     href='https://myvaccinerecord.cdph.ca.gov/'
                     target='_blank'
@@ -110,9 +152,9 @@ class RecentWork extends Component {
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit
                         </p>
-                    </a>
+                    </a> */}
                 </div>
-                </>
+            </div>
         )
     }
 }

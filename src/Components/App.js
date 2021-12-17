@@ -1,26 +1,28 @@
-import React from 'react'
-import Header from './Header'
-import RecentWork from './RecentWork'
-import Footer from './Footer'
-import About from './About'
-import Intro from './intro'
-import '../index.css'
-import '../Style/style.css'
-import HowItWorks from './HowItWorks'
+import React from 'react';
 
-const App =()=>{
+import '../index.css';
+import '../Style/style.css';
+import {
+    BrowserRouter as Router,
+    Routes,
+    Route
+  } from "react-router-dom";
+  
+import Login from './Login';
+import Home from './Home';
+
+  const App =()=>{
        
     return(
-        <>
-            <div className='page'>
-                <Header/>
-                <HowItWorks/>
-                {/* <Intro/>
-                <About/>*/}
-                <RecentWork/> 
-            </div>
-            <Footer/>
-        </>
+        <div className='container'>
+            <Router>
+                <Routes>
+                    <Route exact path="/" element={<Home/>}/>
+                    <Route path="/Login" element={<Login/>}/>
+
+                </Routes>
+            </Router>
+        </div>
     )
 }
 

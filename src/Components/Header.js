@@ -1,7 +1,10 @@
 import { Button } from '@mui/material'
 import React from 'react'
 import { Navbar } from 'react-bootstrap'
+import { useNavigate } from "react-router-dom";
 const Header =()=>{
+    let navigate = useNavigate();
+
         return (
             <div>
                 <div style={{display:'flex', justifyContent:'space-between',marginTop:'10vh',marginBottom:'5vh', marginLeft:'3px', marginRight:'5px'}}>
@@ -16,7 +19,7 @@ const Header =()=>{
                         </a>
                     </Navbar.Brand>
 
-                    <Button >Login</Button>
+                    <Button onClick={()=> navigate("/Login")}>Login</Button>
                 </div>  
                
                 <div className='hero'>
