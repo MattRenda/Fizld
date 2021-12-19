@@ -1,14 +1,15 @@
 import React, {useState} from 'react';
+import { useNavigate } from "react-router-dom";
 
 const Login = ()=> {
   const year = new Date();
-
+  const navigate = useNavigate();
     const handleChange=()=>{
 
     }
     return (
         <div className='form-signin text-center'>
-          <form>
+          <form onSubmit={()=>navigate("/")}>
             <img class="mb-4" src={require('../imgs/portfolio_logo.png')} alt="" width="72" height="47"/>
             <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
         
