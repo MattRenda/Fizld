@@ -178,7 +178,9 @@
 .dark-blue{
    background-color: #1d236b;
 }
-
+h1{
+   color:rgb(112, 112, 112);
+}
 .hero{
    display:flex;
    flex-wrap:wrap;

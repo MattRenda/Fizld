@@ -19,7 +19,7 @@ const Header =()=>{
                         </a>
                     </Navbar.Brand>
 
-                    <Button onClick={()=> navigate("/Login")}>Login</Button>
+                    <Button style={{color:"#6D8FAB"}} onClick={()=> navigate("/Login")}>Login</Button>
                 </div>  
                
                 <div className='hero'>
