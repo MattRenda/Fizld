@@ -1,7 +1,7 @@
 import { Button } from '@mui/material'
 import React from 'react'
 import { Navbar } from 'react-bootstrap'
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 const Header =()=>{
     let navigate = useNavigate();
 
@@ -9,14 +9,14 @@ const Header =()=>{
             <div>
                 <div style={{display:'flex', justifyContent:'space-between',marginTop:'10vh',marginBottom:'5vh', marginLeft:'3px', marginRight:'5px'}}>
                     <Navbar.Brand >
-                        <a href='https://www.matthewrenda.com/'>
+                        <Link to={'/'}>
                         <img
                             src={require('../../imgs/portfolio_logo.png')}
                             width="100"
                             height="60"
                             alt="Matthew Renda logo"
                         />
-                        </a>
+                        </Link>
                     </Navbar.Brand>
 
                     <Button style={{color:"#6D8FAB"}} onClick={()=> navigate("/Login")}>Login</Button>
