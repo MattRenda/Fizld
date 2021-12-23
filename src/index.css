@@ -163,6 +163,10 @@
 .padding{
    padding:20vh 20vw;
 }
+.grey{
+   background-color: rgb(205, 221, 255);
+   width:100%;
+}
 .yellow{
    background-color: #d78b7d;
 }
@@ -179,6 +183,9 @@
    background-color: #1d236b;
 }
 h1{
+   color:rgb(112, 112, 112);
+}
+h2{
    color:rgb(112, 112, 112);
 }
 .hero{

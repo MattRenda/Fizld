@@ -10,7 +10,7 @@ const Home =()=>{
        let img = 'https://getbootstrap.com/docs/5.1/examples/heroes/bootstrap-themes.png';
     return(
         <>
-            <div className='container'>
+            <div >
                 <Header/>
                 <Intro header={header} description={description} img={img}/>
                 <Plans/>

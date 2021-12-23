@@ -5,7 +5,7 @@ class Footer extends Component {
     render() {
         const year = new Date();
         return (
-            <footer class="pt-4 my-md-5 pt-md-5 border-top">
+            <footer class="pt-4 my-md-5 pt-md-5 border-top container">
             <div class="row justify-content-md-center">
               <div class="col col-4 col-lg offset-md-2">
                 <h5>Features</h5>

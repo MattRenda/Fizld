@@ -6,7 +6,7 @@ const Header =()=>{
     let navigate = useNavigate();
 
         return (
-            <div>
+            <div className='container'>
                 <div style={{display:'flex', justifyContent:'space-between',marginTop:'10vh',marginBottom:'5vh', marginLeft:'3px', marginRight:'5px'}}>
                     <Navbar.Brand >
                         <Link to={'/'}>

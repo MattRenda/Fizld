@@ -17,7 +17,7 @@ import Premium from './Pages/Premium/Premium'
   const App =()=>{
        
     return(
-        <div className='container'>
+        <div>
             <Router>
                 <Routes>
                     <Route exact path="/" element={<Home/>}/>

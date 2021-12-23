@@ -2,7 +2,7 @@ import React from 'react';
 
 const Intro = ({header,description,img})=>{
     return(
-        <div className='hero'>
+        <div className='hero container'>
                     
             <div>
                 <h1 class="display-5 fw-bold lh-1 mb-3">{header}</h1>

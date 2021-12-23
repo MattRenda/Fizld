@@ -5,7 +5,7 @@ const Plans = () => {
   let navigate = useNavigate();
 
   return (
-    <div>
+    <div className='container'>
      {/* <div className='row text-center' style={{marginTop:'15vh'}}>
          <div className='col-md'>
            <h2>LOW COST SOLUTIONS</h2>
