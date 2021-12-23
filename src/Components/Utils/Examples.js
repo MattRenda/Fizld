@@ -27,7 +27,7 @@ class Examples extends Component {
                             <div class="card-body">
                                 <p class="card-text"> SEO</p>
                                 <div class="d-flex justify-content-between align-items-center">
-                                    <small class="text-muted">Completely optimmized applications</small>
+                                    <small class="text-muted">Completely optimized applications</small>
                                 </div>
                             </div>
                         </div>
