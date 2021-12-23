@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Container, Col, Row } from 'react-bootstrap'
 
 
-class RecentWork extends Component {
+class Examples extends Component {
 
     render() {
         return (
@@ -10,12 +10,11 @@ class RecentWork extends Component {
 
                 <div style={{ textAlign: 'center', marginTop: '10vh' }}>
                     <h4><b>What we offer</b></h4>
-
                 </div>
 
                 <div className='row justify-content-center'>
                     <div class="col-md card shadow-sm m-2">
-                        <img src={require('../imgs/RendaStudios.png')} width="100%" height="225" className='card-img-top' />
+                        <img src={require('../../../imgs/RendaStudios.png')} width="100%" height="225" className='card-img-top' />
                         <div class="card-body">
                             <p class="card-text"> ipsum dolor sit amet, consectetur adipiscing elit</p>
                             <div class="d-flex justify-content-between align-items-center">
@@ -27,7 +26,7 @@ class RecentWork extends Component {
                         </div>
                     </div>
                     <div class="col-md card shadow-sm m-2">
-                        <img src={require('../imgs/RendaStudios.png')} width="100%" height="225" className='card-img-top' />
+                        <img src={require('../../../imgs/RendaStudios.png')} width="100%" height="225" className='card-img-top' />
                         <div class="card-body">
                             <p class="card-text"> ipsum dolor sit amet, consectetur adipiscing elit</p>
                             <div class="d-flex justify-content-between align-items-center">
@@ -39,7 +38,7 @@ class RecentWork extends Component {
                         </div>
                     </div>
                     <div class="col-md card shadow-sm m-2">
-                        <img src={require('../imgs/RendaStudios.png')} width="100%" height="225" className='card-img-top' />
+                        <img src={require('../../../imgs/RendaStudios.png')} width="100%" height="225" className='card-img-top' />
                         <div class="card-body">
                             <p class="card-text"> ipsum dolor sit amet, consectetur adipiscing elit</p>
                             <div class="d-flex justify-content-between align-items-center">
@@ -159,4 +158,4 @@ class RecentWork extends Component {
     }
 }
 
-export default RecentWork
+export default Examples

@@ -1,6 +1,8 @@
 import * as React from 'react';
+import { useNavigate } from "react-router-dom";
 
-const HowItWorks = () => {
+const Plans = () => {
+  let navigate = useNavigate();
 
   return (
     <div>
@@ -26,7 +28,7 @@ const HowItWorks = () => {
       <div class="card-deck mb-3 mt-5 text-center">
       <div class="card mb-4 box-shadow">
         <div class="card-header">
-          <h4 class="my-0 font-weight-normal">Single Page</h4>
+          <h4 class="my-0 font-weight-normal">Basic</h4>
         </div>
         <div class="card-body">
           <h1 class="card-title pricing-card-title">$100</h1>
@@ -34,13 +36,14 @@ const HowItWorks = () => {
             <li>1 page</li>
             <li>Ssl Certificate</li>
             <li>Free Hosting</li>
+            <li>2 Revisions</li>
           </ul>
-          <button type="button" class="btn btn-lg btn-block btn-outline-primary">Get started</button>
+          <button onClick={()=>navigate('/Basic')} type="button" class="btn btn-lg btn-block btn-outline-primary">Get started</button>
         </div>
       </div>
       <div class="card mb-4 box-shadow">
         <div class="card-header">
-          <h4 class="my-0 font-weight-normal">Multi Page</h4>
+          <h4 class="my-0 font-weight-normal">Plus</h4>
         </div>
         <div class="card-body">
           <h1 class="card-title pricing-card-title">$250</h1>
@@ -48,13 +51,14 @@ const HowItWorks = () => {
             <li>Multiple pages</li>
             <li>Ssl Certificate</li>
             <li>Free Hosting</li>
+            <li>3 Revisions</li>
           </ul>
-          <button type="button" class="btn btn-lg btn-block btn-primary">Get started</button>
+          <button onClick={()=>navigate('/Plus')} type="button" class="btn btn-lg btn-block btn-primary">Get started</button>
         </div>
       </div>
       <div class="card mb-4 box-shadow">
         <div class="card-header">
-          <h4 class="my-0 font-weight-normal">Custom</h4>
+          <h4 class="my-0 font-weight-normal">Premium</h4>
         </div>
         <div class="card-body">
           <h1 class="card-title pricing-card-title">$500</h1>
@@ -62,9 +66,10 @@ const HowItWorks = () => {
             <li>Multiple pages</li>
             <li>Ssl Certificate</li>
             <li>Free Hosting</li>
+            <li>5 Revisions</li>
             <li>Design planning sessions</li>
           </ul>
-          <button type="button" class="btn btn-lg btn-block btn-primary">Contact us</button>
+          <button onClick={()=>navigate('/Premium')} type="button" class="btn btn-lg btn-block btn-primary">Get started</button>
         </div>
       </div>
       </div>
@@ -74,4 +79,4 @@ const HowItWorks = () => {
   );
 }
 
-export default HowItWorks;
+export default Plans;
