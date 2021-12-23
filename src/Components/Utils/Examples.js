@@ -14,7 +14,7 @@ class Examples extends Component {
 
                 <div className='row justify-content-center'>
                     <div class="col-md card shadow-sm m-2">
-                        <img src={require('../../../imgs/RendaStudios.png')} width="100%" height="225" className='card-img-top' />
+                        <img src={require('../../imgs/RendaStudios.png')} width="100%" height="225" className='card-img-top' />
                         <div class="card-body">
                             <p class="card-text"> ipsum dolor sit amet, consectetur adipiscing elit</p>
                             <div class="d-flex justify-content-between align-items-center">
@@ -26,7 +26,7 @@ class Examples extends Component {
                         </div>
                     </div>
                     <div class="col-md card shadow-sm m-2">
-                        <img src={require('../../../imgs/RendaStudios.png')} width="100%" height="225" className='card-img-top' />
+                        <img src={require('../../imgs/RendaStudios.png')} width="100%" height="225" className='card-img-top' />
                         <div class="card-body">
                             <p class="card-text"> ipsum dolor sit amet, consectetur adipiscing elit</p>
                             <div class="d-flex justify-content-between align-items-center">
@@ -38,7 +38,7 @@ class Examples extends Component {
                         </div>
                     </div>
                     <div class="col-md card shadow-sm m-2">
-                        <img src={require('../../../imgs/RendaStudios.png')} width="100%" height="225" className='card-img-top' />
+                        <img src={require('../../imgs/RendaStudios.png')} width="100%" height="225" className='card-img-top' />
                         <div class="card-body">
                             <p class="card-text"> ipsum dolor sit amet, consectetur adipiscing elit</p>
                             <div class="d-flex justify-content-between align-items-center">

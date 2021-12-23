@@ -1,5 +1,5 @@
 import React from 'react'
-import Examples from './Examples'
+import Examples from '../../Utils/Examples'
 import Plans from './Plans'
 import Intro from '../../Utils/Intro'
 import Header from '../../Utils/Header';
