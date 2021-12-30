@@ -158,7 +158,7 @@
 
 }
 .page{
-   margin: auto 10vw;
+   padding: auto 10vw;
 }
 .padding{
    padding:20vh 20vw;
@@ -181,6 +181,9 @@
 }
 .dark-blue{
    background-color: #1d236b;
+}
+.off-white{
+   background-color: #efecf8;
 }
 h1{
    color:rgb(112, 112, 112);

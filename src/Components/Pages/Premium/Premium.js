@@ -2,6 +2,7 @@ import React from 'react'
 import Header from '../../Utils/Header';
 import Footer from '../../Utils/Footer';
 import Intro from '../../Utils/Intro';
+import CollectData from '../../Utils/CollectData';
 const Premium =()=>{
     let header ='Premium Plan';
     let description ='Here you will be able to create most anything you\'d like.';
@@ -11,6 +12,7 @@ const Premium =()=>{
             <div className='container'>
                 <Header/>
                 <Intro header={header} description={description}/>
+                <CollectData/>
                 <Footer/>
 
             </div>

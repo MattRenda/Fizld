@@ -25,45 +25,26 @@
     color:white !important;
 }
 
-.custom-shape-divider-top-1610246505 {
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    background-color: #13334C;
-}
-
-.custom-shape-divider-top-1610246505 svg {
-    position: relative;
-    display: block;
-    width: calc(119% + 1.3px);
-    height: 86px;
-    transform: rotateY(180deg);
-}
-
-.custom-shape-divider-top-1610246505 .shape-fill {
-    fill: #FFFFFF;
-}
-
-.custom-shape-divider-top-1610406512 {
-    position: relative;
-    bottom: 0;
+.custom-shape-divider-top {
+    position: absolute;
+    top: 0;
     left: 0;
     width: 100%;
     overflow: hidden;
     line-height: 0;
 }
 
-.custom-shape-divider-top-1610406512 svg {
+.custom-shape-divider-top svg {
     position: relative;
     display: block;
     width: calc(100% + 1.3px);
-    height: 56px;
+    height: 311px;
+    transform: rotateY(180deg);
 }
 
-.custom-shape-divider-top-1610406512 .shape-fill {
-    fill: #f06023;
+.custom-shape-divider-top .shape-fill {
+    fill: #FFFFFF;
 }
-
 .form-signin {
     position: absolute;
     top: 50%;  /* position the top  edge of the element at the middle of the parent */
@@ -72,4 +53,15 @@
     transform: translate(-50%, -50%); /* This is a shorthand of
                                          translateX(-50%) and translateY(-50%) */
     width: 330px;
+}
+.card-columns {
+    @include media-breakpoint-only(lg) {
+      column-count: 4;
+    }
+  }
+
+@media only screen and (max-width: 768px) {
+    .custom-shape-divider-top svg {
+        height: 150px;
+    }
 }

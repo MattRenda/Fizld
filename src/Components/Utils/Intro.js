@@ -9,7 +9,7 @@ const Intro = ({header,description,img})=>{
                 <p class="lead">{description}</p>
             </div>
             <div>
-                {img? <img src={img} class="d-block mx-lg-auto img-fluid" alt="img" width="1200" height="700" loading="lazy"/>: ''}
+                {img? <img src={img} class="d-block mx-lg-auto img-fluid" alt="img" width="2000" height="1500" loading="lazy"/>: ''}
             </div>
         </div>
     )

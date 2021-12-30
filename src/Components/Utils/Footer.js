@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 
-class Footer extends Component {
+const Footer =()=>{
 
-    render() {
         const year = new Date();
         return (
             <footer class="pt-4 my-md-5 pt-md-5 border-top container">
@@ -42,7 +41,6 @@ class Footer extends Component {
               </div>
           </footer>
         )
-    }
 }
 
 export default Footer;
