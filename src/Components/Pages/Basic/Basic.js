@@ -24,7 +24,7 @@ const Basic =()=>{
             <div className='container'>
                 <Header/>
                 <Intro header={header} img={img} description={description}/>
-                <CollectData/>
+                {/* <CollectData/> */}
                 <Footer/>
 
             </div>

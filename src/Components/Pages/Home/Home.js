@@ -5,6 +5,7 @@ import Intro from '../../Utils/Intro'
 import Header from '../../Utils/Header';
 import CollectData from '../../Utils/CollectData';
 import Footer from '../../Utils/Footer';
+import ContactPage from '../../ContactPage';
 const Home = () => {
     let header = 'Matthew Renda - Web Developer & Designer';
     let description = 'Hiring a web developer means saying good bye to things like, the website not looking quite "Right", poor mobile experience, Cookie-cutter templates, Missing key Search Engine Optimization elements, and limited ecommerce functionality.';
@@ -28,6 +29,18 @@ const Home = () => {
             img: 'https://leap.mediumra.re/assets/img/article-1.jpg'
         }
     ]
+    const inputFields =[
+        {
+            id:'',
+            type:'',
+            value:''
+        },
+        {
+            id:'',
+            type:'',
+            value:''
+        }
+    ]
     return (
         <>
             <div >
@@ -41,7 +54,7 @@ const Home = () => {
                         </svg>
                     </div>
                     <Examples title={title} cards={cards} description={cardDescription} />
-                    <CollectData/>
+                    <ContactPage/>
                 </div>
                
                 <Footer />

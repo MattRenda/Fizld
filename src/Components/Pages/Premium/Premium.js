@@ -12,7 +12,7 @@ const Premium =()=>{
             <div className='container'>
                 <Header/>
                 <Intro header={header} description={description}/>
-                <CollectData/>
+                {/* <CollectData/> */}
                 <Footer/>
 
             </div>
