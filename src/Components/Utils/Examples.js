@@ -16,7 +16,7 @@ const Examples = ({ title, description, cards }) => {
                             return (
                                 card.href ?
 
-                                    <div class="col-lg card shadow-sm m-2">
+                                    <div style={{padding:'0px'}} class="col-lg card shadow-sm m-2">
                                         <a href={card.href} target='_blank'>
                                             <img src={card.img} width="100%" height="225" className='card-img-top' />
                                             <div class="card-body">
@@ -29,7 +29,7 @@ const Examples = ({ title, description, cards }) => {
                                     </div>
 
                                     :
-                                    <div class="col-lg card shadow-sm m-2">
+                                    <div style={{padding:'0px'}} class="col-lg card shadow-sm m-2">
                                         <img src={card.img} width="100%" height="225" className='card-img-top' />
                                         <div class="card-body">
                                             <p class="card-text"> {card.title}</p>

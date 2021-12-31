@@ -54,11 +54,7 @@
                                          translateX(-50%) and translateY(-50%) */
     width: 330px;
 }
-.card-columns {
-    @include media-breakpoint-only(lg) {
-      column-count: 4;
-    }
-  }
+
 
 @media only screen and (max-width: 768px) {
     .custom-shape-divider-top svg {

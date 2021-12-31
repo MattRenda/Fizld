@@ -207,5 +207,17 @@ h2{
    .divider{
       display: none;
    }
+
  }
 
+ @media only screen and (min-width: 574px) {
+   .list-unstyled{
+      height:190px
+   }
+ }
+ 
+@media only screen and (min-width: 768px) {
+   .list-unstyled{
+      height:120px
+   }
+ }

@@ -6,8 +6,8 @@ import Examples from '../../Utils/Examples';
 import CollectData from '../../Utils/CollectData';
 const Basic =()=>{
     let header ='Basic Plan';
-    let description ='Here you will be able to create portfolios, blogs, ect...';
-    let img = 'https://lh3.googleusercontent.com/DdO4EtwzMPrHk1_ICy2CUuJp_flijkJ0VEJ1GAyXUHW-s7qHKTIy3AxiwyYdN42p7HVVi3AxOK6qWG5ABrtTm-8D9w_9yoE4w8wM0SSpmJXYwxmmN_A=s0';
+    let description ='Here you will be able to create portfolios, blogs, ect...Here you will be able to create portfolios, blogs, ect...Here you will be able to create portfolios, blogs, ect...Here you will be able to create portfolios, blogs, ect...';
+    let img = 'https://cdn.pixabay.com/photo/2020/04/06/13/37/coffee-5009730__340.png';
 
     const title = 'Basic plan Examples'
     const cardDescription ='These businesses are using single page applications';
@@ -24,7 +24,6 @@ const Basic =()=>{
             <div className='container'>
                 <Header/>
                 <Intro header={header} img={img} description={description}/>
-                <Examples title={title} cards={cards} description={cardDescription}/>
                 <CollectData/>
                 <Footer/>
 

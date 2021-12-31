@@ -20,12 +20,12 @@ const Home = () => {
         {
             title: 'SEO',
             description: 'Completely optimized applications',
-            img: 'https://www.singlegrain.com/wp-content/uploads/2021/08/SG-6-SEO-Trends-You-Cant-Ignore-in-2022.png'
+            img: 'https://themes.getbootstrap.com/wp-content/themes/bootstrap-marketplace/assets/images/official-themes/review-process.svg'
         },
         {
             title: 'Customer care',
             description: 'Rest assured knowing you have 24/7 support',
-            img: 'https://eduport.webestica.com/assets/images/courses/4by3/15.jpg'
+            img: 'https://leap.mediumra.re/assets/img/article-1.jpg'
         }
     ]
     return (
