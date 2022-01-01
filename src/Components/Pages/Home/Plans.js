@@ -38,7 +38,7 @@ const Plans = () => {
             <li>Free Hosting</li>
             <li>2 Revisions</li>
           </ul>
-          <button onClick={()=>navigate('/Basic')} type="button" class="btn btn-lg btn-block btn-outline-primary">Get started</button>
+          <button onClick={()=>navigate('/Basic')} type="button" class="btn btn-lg btn-block btn-primary">Get started</button>
         </div>
       </div>
       <div class="card mb-4 box-shadow">
