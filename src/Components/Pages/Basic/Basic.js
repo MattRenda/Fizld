@@ -4,6 +4,7 @@ import Footer from '../../Utils/Footer';
 import Intro from '../../Utils/Intro';
 import ContactPage from '../../ContactPage';
 const Basic = () => {
+    window.scrollTo(0, 0);
 
     //Intro props
     let header = 'Basic Plan';

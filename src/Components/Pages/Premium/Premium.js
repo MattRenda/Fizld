@@ -4,6 +4,8 @@ import Footer from '../../Utils/Footer';
 import Intro from '../../Utils/Intro';
 import ContactPage from '../../ContactPage';
 const Premium =()=>{
+    window.scrollTo(0, 0);
+
     let header ='Premium Plan';
     let description =`Here you will be able to create most anything you\'d like. 
     This package offers a multiple page application, free SSL certificate, free hosting, 5 revisions, and design planning sessions.`;
