@@ -29,18 +29,6 @@ const Home = () => {
             img: 'https://leap.mediumra.re/assets/img/article-1.jpg'
         }
     ]
-    const inputFields =[
-        {
-            id:'',
-            type:'',
-            value:''
-        },
-        {
-            id:'',
-            type:'',
-            value:''
-        }
-    ]
     return (
         <>
             <div >
@@ -54,7 +42,7 @@ const Home = () => {
                         </svg>
                     </div>
                     <Examples title={title} cards={cards} description={cardDescription} />
-                    <ContactPage/>
+                    <ContactPage title={'Like more information?'}/>
                 </div>
                
                 <Footer />
