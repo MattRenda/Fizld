@@ -25,8 +25,8 @@ const ContactPage =({title,plan})=> {
     }
 
         return (
-            <div className='container form'>
-                <h2>{title}</h2>
+            <div id='contact' className='container form'>
+                <h2 >{title}</h2>
         
                 <Form onSubmit={(e)=>{e.preventDefault(); sendEmail();}}>
                     <Form.Row >
@@ -52,8 +52,11 @@ const ContactPage =({title,plan})=> {
                             <Form.Label>Message</Form.Label>
                             <Form.Control
                                 onChange={handleChange}
-                                type="textarea"
-                                name='message' />
+                                as="textarea"
+                                name='message' 
+                                rows={4}
+                                value={plan?`Hi, I am contacting you in regards to your ${plan} plan, I would love to talk more about the pricing and options available to me.`:''}
+                            />
                         </Form.Group>
                     </Form.Row>
                     <button className='btn' type='submit' >Submit</button>

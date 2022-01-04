@@ -13,6 +13,7 @@ import Home from './Pages/Home/Home';
 import Basic from './Pages/Basic/Basic'
 import Plus from './Pages/Plus/Plus'
 import Premium from './Pages/Premium/Premium'
+import Account from './Pages/Account/Account'
 
   const App =()=>{
        
@@ -25,6 +26,7 @@ import Premium from './Pages/Premium/Premium'
                     <Route path="/Basic" element={<Basic/>}/>
                     <Route path="/Plus" element={<Plus/>}/>
                     <Route path="/Premium" element={<Premium/>}/>
+                    <Route path="/Account" element={<Account/>}/>
 
                 </Routes>
             </Router>

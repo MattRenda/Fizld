@@ -188,7 +188,7 @@
 h1{
    color:rgb(112, 112, 112);
 }
-h2{
+h2,h3{
    color:rgb(112, 112, 112);
 }
 .hero{
@@ -198,7 +198,7 @@ h2{
    align-items:center;
 }
 .form{
-   padding:10vh 5vw;
+   padding:5vh 5vw;
 }
 @media only screen and (min-width: 768px) {
    .hero{
@@ -220,7 +220,7 @@ h2{
       height:190px
    }
    .form{
-      padding:10vh 10vw;
+      padding:5vh 10vw;
    }
  }
  
