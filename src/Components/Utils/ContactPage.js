@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Modal, Button, Form, Col } from 'react-bootstrap';
+import {Form, Col } from 'react-bootstrap';
 import axios from 'axios';
 
 const ContactPage =({title,plan})=> {
@@ -7,7 +7,7 @@ const ContactPage =({title,plan})=> {
     const[state,setState] = useState({
         name: '',
         email: '',
-        message: '',
+        message: plan?`Hi, I am contacting you in regards to your ${plan} plan, I would love to talk more about the pricing and options available to me.`:'',
         subject: 'messaged you from your Portfolio!'
     })
 
@@ -23,19 +23,24 @@ const ContactPage =({title,plan})=> {
     const handleChange =(event) => {
         setState({...state, [event.target.name]: event.target.value });
     }
-
+    const clearFields =()=>{
+        setState({...state,message:'',email:'',name:''});
+    }
         return (
             <div id='contact' className='container form'>
                 <h2 >{title}</h2>
         
-                <Form onSubmit={(e)=>{e.preventDefault(); sendEmail();}}>
+                <Form onSubmit={(e)=>{e.preventDefault(); sendEmail(); clearFields();}}>
                     <Form.Row >
                         <Form.Group as={Col} controlId="formGridEmail">
                             <Form.Label>Email</Form.Label>
                             <Form.Control
                                 onChange={handleChange}
                                 type="email"
-                                name='email' />
+                                name='email' 
+                                value={state.email}
+                                required
+                            />
                         </Form.Group>
 
                         <Form.Group as={Col} controlId="formGridPassword">
@@ -43,19 +48,23 @@ const ContactPage =({title,plan})=> {
                             <Form.Control
                                 onChange={handleChange}
                                 type="text"
-                                name='name' />
+                                name='name' 
+                                value={state.name}    
+                                required
+                            />
                         </Form.Group>
                     </Form.Row>
                     <Form.Row>
-                        <Form.Group as={Col} controlId="formGridMessage">
+                        <Form.Group as={Col}>
 
                             <Form.Label>Message</Form.Label>
                             <Form.Control
                                 onChange={handleChange}
                                 as="textarea"
                                 name='message' 
+                                id='message'
                                 rows={4}
-                                value={plan?`Hi, I am contacting you in regards to your ${plan} plan, I would love to talk more about the pricing and options available to me.`:''}
+                                value={state.message}
                             />
                         </Form.Group>
                     </Form.Row>

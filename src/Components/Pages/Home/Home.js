@@ -3,7 +3,6 @@ import Examples from '../../Utils/Examples'
 import Plans from './Plans'
 import Intro from '../../Utils/Intro'
 import Header from '../../Utils/Header';
-import CollectData from '../../Utils/CollectData';
 import Footer from '../../Utils/Footer';
 import ContactPage from '../../Utils/ContactPage';
 const Home = () => {

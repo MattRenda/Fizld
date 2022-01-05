@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 
 import '../index.css';
 import '../Style/style.css';
@@ -9,20 +9,29 @@ import {
   } from "react-router-dom";
   
 import Login from './Pages/Login/Login';
+import CreateAccount from './Pages/Login/CreateAccount';
 import Home from './Pages/Home/Home';
-import Basic from './Pages/Basic/Basic'
-import Plus from './Pages/Plus/Plus'
-import Premium from './Pages/Premium/Premium'
-import Account from './Pages/Account/Account'
+import Basic from './Pages/Basic/Basic';
+import Plus from './Pages/Plus/Plus';
+import Premium from './Pages/Premium/Premium';
+import Account from './Pages/Account/Account';
+import { createStructuredSelector } from 'reselect';
+import { connect } from 'react-redux';
+import * as actions from './Redux/actions';
+import * as selectors from './Redux/selectors';
 
-  const App =()=>{
-       
+  const App =({Init, user})=>{
+    useEffect(()=>{
+        Init();
+    },[])
+
     return(
         <div>
             <Router>
                 <Routes>
-                    <Route exact path="/" element={<Home/>}/>
+                    <Route exact path="/" element={user._id?<Account/>:<Home/>}/>
                     <Route path="/Login" element={<Login/>}/>
+                    <Route path="/CreateAccount" element={<CreateAccount/>}/>
                     <Route path="/Basic" element={<Basic/>}/>
                     <Route path="/Plus" element={<Plus/>}/>
                     <Route path="/Premium" element={<Premium/>}/>
@@ -33,5 +42,13 @@ import Account from './Pages/Account/Account'
         </div>
     )
 }
+const mapStateToProps =createStructuredSelector({
+    user: selectors.getUser(),
+})
 
-export default App;
+const mapDispatchToProps =(dispatch)=>({
+    Init: () => dispatch(actions.Init())
+})
+
+const withRedux = connect(mapStateToProps, mapDispatchToProps)(App);
+export default withRedux;

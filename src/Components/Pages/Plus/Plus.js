@@ -8,8 +8,8 @@ const Plus =()=>{
     window.scrollTo(0, 0);
 
     let header ='Plus Plan';
-    let description = `Here you will be able to create a store or blog. This package offers a multiple page application, free SSL certificate, free hosting, and 3 revisions.`;
-    let img = '';
+    let description = `Here you will be able to create a store or blog. This package offers a multiple page application, free SSL certificate, free hosting, and 3 revisions. If you would like continued support after your initial site has been created, optional monthly support is available as well.`;
+    // let img = '';
  return(
         <>
             <div className='container'>

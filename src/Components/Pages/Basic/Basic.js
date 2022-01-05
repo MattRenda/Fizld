@@ -9,9 +9,9 @@ const Basic = () => {
     //Intro props
     let header = 'Basic Plan';
 
-    let description = `Here you will be able to create portfolios, blogs, ect... This package offers a one page application, free SSL certificate, free hosting, and 2 revisions.`;
+    let description = `Here you will be able to create portfolios, blogs, ect... This package offers a one page application, free SSL certificate, free hosting, and 2 revisions. If you would like continued support after your initial site has been created, optional monthly support is available as well.`;
 
-    let img = 'https://cdn.pixabay.com/photo/2020/04/06/13/37/coffee-5009730__340.png';
+    // let img = 'https://cdn.pixabay.com/photo/2020/04/06/13/37/coffee-5009730__340.png';
     /******************************************** */
     return (
         <>
