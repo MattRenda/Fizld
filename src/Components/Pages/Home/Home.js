@@ -6,8 +6,8 @@ import Header from '../../Utils/Header';
 import Footer from '../../Utils/Footer';
 import ContactPage from '../../Utils/ContactPage';
 const Home = () => {
-    let header = 'Matthew Renda - Web Developer & Designer';
-    let description = 'Hiring a web developer means saying good bye to things like, the website not looking quite "Right", poor mobile experience, Cookie-cutter templates, Missing key Search Engine Optimization elements, and limited ecommerce functionality.';
+    let header = `Build websites with Mend`;
+    let description = 'Quickly design and customize responsive mobile-first sites with Mend.';
     let img = require('../../../imgs/heroImg.png');
     const title = 'What we offer'
     const cardDescription = 'Checkout the most desirable features we offer'

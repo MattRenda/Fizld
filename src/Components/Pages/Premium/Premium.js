@@ -69,16 +69,7 @@ const Premium =()=>{
                             </div>
                         </div>
                     </div>
-                    <div class="list-group">
-                        <div class="list-group-item list-group-item-action d-flex gap-3 py-3">
-                            <div class="d-flex w-100 justify-content-between">
-                                <div>
-                                    <h6 class="mb-0">24/7 Support</h6>
-                                </div>
-                                <small class="opacity-50 text-nowrap">100$/month</small>
-                            </div>
-                        </div>
-                    </div>
+               
                 </div>
                 <ContactPage title={'Contact me to get started'} plan={'Premium'}/>
                 <Footer/>

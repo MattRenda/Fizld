@@ -64,11 +64,12 @@ const ContactPage =({title,plan})=> {
                                 name='message' 
                                 id='message'
                                 rows={4}
+                                required
                                 value={state.message}
                             />
                         </Form.Group>
                     </Form.Row>
-                    <button className='btn' type='submit' >Submit</button>
+                    <button className='btn btn-secondary' type='submit' >Submit</button>
                 </Form>
             </div>
         );

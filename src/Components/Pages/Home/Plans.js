@@ -31,7 +31,7 @@ const Plans = () => {
           <h4 class="my-0 font-weight-normal">Basic</h4>
         </div>
         <div class="card-body">
-          <h1 class="card-title pricing-card-title">$100</h1>
+          <h1 class="card-title pricing-card-title">$100/Month</h1>
           <ul class="list-unstyled mt-3 mb-4">
             <li>1 page</li>
             <li>Ssl Certificate</li>
@@ -46,7 +46,7 @@ const Plans = () => {
           <h4 class="my-0 font-weight-normal">Plus</h4>
         </div>
         <div class="card-body">
-          <h1 class="card-title pricing-card-title">$250</h1>
+          <h1 class="card-title pricing-card-title">$250/Month</h1>
           <ul class="list-unstyled mt-3 mb-4">
             <li>Multiple pages</li>
             <li>Ssl Certificate</li>
@@ -61,7 +61,7 @@ const Plans = () => {
           <h4 class="my-0 font-weight-normal">Premium</h4>
         </div>
         <div class="card-body">
-          <h1 class="card-title pricing-card-title">$500</h1>
+          <h1 class="card-title pricing-card-title">$400/Month</h1>
           <ul class="list-unstyled mt-3 mb-4">
             <li>Multiple pages</li>
             <li>Ssl Certificate</li>

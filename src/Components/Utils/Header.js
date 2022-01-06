@@ -15,20 +15,20 @@ const Header = ({user,setUser}) => {
 
     return (
         <div className='container'>
-            <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '10vh', marginBottom: '5vh', marginLeft: '3px', marginRight: '5px' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '10vh', marginBottom: '5vh' }}>
                 <Navbar.Brand >
                     <Link to={'/'}>
                         <img
-                            src={require('../../imgs/portfolio_logo.png')}
-                            width="100"
-                            height="60"
+                            src={require('../../imgs/Logo.png')}
+                            width="180"
+                            height="80"
                             alt="Matthew Renda logo"
                         />
                     </Link>
                 </Navbar.Brand>
                 {
-                    user._id ? <Button style={{ color: "#6D8FAB" }} onClick={() => setUser()}>Logout</Button>
-                        : <Button style={{ color: "#6D8FAB" }} onClick={() => navigate("/Login")}>Login</Button>
+                    user._id ? <Button style={{ color: "#6D8FAB" }} onClick={() => setUser()}><b>Logout</b></Button>
+                        : <Button style={{ color: "#6D8FAB" }} onClick={() => navigate("/Login")}><b>Login</b></Button>
                 }
 
             </div>

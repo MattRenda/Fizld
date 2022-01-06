@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { createStructuredSelector } from 'reselect';
 import { connect } from 'react-redux';
 import * as actions from '../../Redux/actions';
@@ -23,7 +23,7 @@ const CreateAccount = ({createUser}) => {
     <>
       
       <div className='form-signin text-center p-2'>
-          <img class="mb-4" src={require('../../../imgs/portfolio_logo.png')} alt="" width="72" height="47" />
+        <Link to='/'><img class="mb-4" src={require('../../../imgs/Logo.png')} alt="" width="120" height="60" /></Link>
           <h1 class="h3 mb-3 fw-normal">Create Account</h1>
 
           <div class="form-floating text-left">
