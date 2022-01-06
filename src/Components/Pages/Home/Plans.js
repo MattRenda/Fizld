@@ -31,7 +31,11 @@ const Plans = () => {
           <h4 class="my-0 font-weight-normal">Basic</h4>
         </div>
         <div class="card-body">
-          <h1 class="card-title pricing-card-title">$100/Month</h1>
+        <h3 class="card-title pricing-card-title">
+            <span style={{position:'relative',top:'-15px', fontWeight:'lighter'}}>$</span>
+            <b style={{fontSize:'200%'}}>100</b>
+            <span style={{fontSize:'65%'}}>/month</span>
+          </h3>          
           <ul class="list-unstyled mt-3 mb-4">
             <li>1 page</li>
             <li>Ssl Certificate</li>
@@ -46,7 +50,11 @@ const Plans = () => {
           <h4 class="my-0 font-weight-normal">Plus</h4>
         </div>
         <div class="card-body">
-          <h1 class="card-title pricing-card-title">$250/Month</h1>
+        <h3 class="card-title pricing-card-title">
+            <span style={{position:'relative',top:'-15px', fontWeight:'lighter'}}>$</span>
+            <b style={{fontSize:'200%'}}>250</b>
+            <span style={{fontSize:'65%'}}>/month</span>
+          </h3>          
           <ul class="list-unstyled mt-3 mb-4">
             <li>Multiple pages</li>
             <li>Ssl Certificate</li>
@@ -61,7 +69,11 @@ const Plans = () => {
           <h4 class="my-0 font-weight-normal">Premium</h4>
         </div>
         <div class="card-body">
-          <h1 class="card-title pricing-card-title">$400/Month</h1>
+          <h3 class="card-title pricing-card-title">
+            <span style={{position:'relative',top:'-15px', fontWeight:'lighter'}}>$</span>
+            <b style={{fontSize:'200%'}}>400</b>
+            <span style={{fontSize:'65%'}}>/month</span>
+          </h3>
           <ul class="list-unstyled mt-3 mb-4">
             <li>Multiple pages</li>
             <li>Ssl Certificate</li>
@@ -73,6 +85,7 @@ const Plans = () => {
         </div>
       </div>
       </div>
+      
     </div>
      
 

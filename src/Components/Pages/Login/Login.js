@@ -25,10 +25,10 @@ const Login = ({setUser, user}) => {
     <>
       
       <div className='form-signin text-center p-2'>
-      <Link to='/'><img class="mb-4" src={require('../../../imgs/Logo.png')} alt="" width="120" height="60" /></Link>
-          <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
-
-      <form onSubmit={(e)=> {e.preventDefault();setUser(state)}}>
+        <Link to='/'><img class="mb-4" src={require('../../../imgs/Logo.png')} alt="" width="120" height="60" /></Link>
+        <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+        {user.error? <span style={{color:'red'}}>{user.error}</span>:''}
+        <form onSubmit={(e)=> {e.preventDefault();setUser(state)}}>
           <div class="form-floating text-left">
             <input 
               onChange={handleChange} 
