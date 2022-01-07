@@ -3,7 +3,7 @@ import React from 'react'
 const Examples = ({ title, description, cards }) => {
     return (
         <div className='p-5'>
-            <div style={{ position: 'relative', zIndex: '2', textAlign: 'center' }}>
+            <div className='p-3' style={{ position: 'relative', zIndex: '2', textAlign: 'center' }}>
                 <h2>{title}</h2>
                 <p className='mb-0'>{description}</p>
             </div>

@@ -19,11 +19,8 @@ const Home = () => {
                 <Intro header={header} description={description} img={img} />
                 <Plans />
                 <Examples title={title} description={cardDescription} />
-                <div style={{position:'relative'}} className='off-white pb-5'>
-                    <ContactPage title={'Need to contact me?'}/>
-                    <Footer />
-                </div>
-
+                <Footer />
+               
             </div>
         </>
     )

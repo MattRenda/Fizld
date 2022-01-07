@@ -7,7 +7,6 @@ import { createStructuredSelector } from 'reselect';
 import { connect } from 'react-redux';
 import * as actions from '../Redux/actions';
 import * as selectors from '../Redux/selectors';
-import { setUser } from '../Redux/saga';
 
 
 const Header = ({user,setUser}) => {
@@ -15,7 +14,7 @@ const Header = ({user,setUser}) => {
 
     return (
         <div className='container'>
-            <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '10vh', marginBottom: '5vh' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '10vh', marginBottom: '5vh', marginRight:'10px' }}>
                 <Navbar.Brand >
                     <Link to={'/'}>
                         <img
@@ -27,8 +26,12 @@ const Header = ({user,setUser}) => {
                     </Link>
                 </Navbar.Brand>
                 {
-                    user._id ? <Button style={{ color: "#6D8FAB" }} onClick={() => setUser()}><b>Logout</b></Button>
-                        : <Button style={{ color: "#6D8FAB" }} onClick={() => navigate("/Login")}><b>Login</b></Button>
+                    user._id ?
+                    <div > 
+                        <Link className='btn' to={'/Account'}> {user.FirstName+ " " + user.LastName} </Link>
+                        <Button style={{ color: "#6D8FAB" }} onClick={() => setUser()}><b style={{color:'#707070'}}>Logout</b></Button>
+                    </div>
+                        : <Button style={{ color: "#6D8FAB" }} onClick={() => navigate("/Login")}><b style={{color:'#707070'}}>Login</b></Button>
                 }
 
             </div>

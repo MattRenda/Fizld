@@ -5,7 +5,8 @@ import '../Style/style.css';
 import {
     BrowserRouter as Router,
     Routes,
-    Route
+    Route,
+    Navigate
   } from "react-router-dom";
   
 import Login from './Pages/Login/Login';
@@ -19,8 +20,9 @@ import { createStructuredSelector } from 'reselect';
 import { connect } from 'react-redux';
 import * as actions from './Redux/actions';
 import * as selectors from './Redux/selectors';
+import Payment from './Pages/Payment/Payment';
 
-  const App =({Init, user})=>{
+const App =({Init, user})=>{
     useEffect(()=>{
         Init();
     },[])
@@ -29,13 +31,14 @@ import * as selectors from './Redux/selectors';
         <div>
             <Router>
                 <Routes>
-                    <Route exact path="/" element={user._id?<Account/>:<Home/>}/>
-                    <Route path="/Login" element={<Login/>}/>
-                    <Route path="/CreateAccount" element={<CreateAccount/>}/>
-                    <Route path="/Basic" element={<Basic/>}/>
-                    <Route path="/Plus" element={<Plus/>}/>
-                    <Route path="/Premium" element={<Premium/>}/>
-                    <Route path="/Account" element={<Account/>}/>
+                    <Route exact path="/" element={<Home/>}/>
+                    <Route path="/Login" element={user._id?<Navigate replace to={'/'}/>:<Login/>}/>
+                    <Route path="/CreateAccount" element={user._id?<Navigate replace to={'/'}/>:<CreateAccount/>}/>
+                    <Route path="/Basic" element={user._id?<Basic/>:<Navigate replace to={'/Login'}/>}/>
+                    <Route path="/Plus" element={user._id?<Plus/>:<Navigate replace to={'/Login'}/>}/>
+                    <Route path="/Premium" element={user._id?<Premium/>:<Navigate replace to={'/Login'}/>}/>
+                    <Route path="/Account" element={user._id?<Account/>:<Navigate replace to={'/'}/>}/>
+                    <Route path="/Payment" element={user._id?<Payment/>:<Navigate replace to={'/'}/>}/>
 
                 </Routes>
             </Router>

@@ -220,9 +220,9 @@ h2,h3{
  }
 
  @media only screen and (min-width: 574px) {
-   .list-unstyled{
+   /* .list-unstyled{
       height:190px
-   }
+   } */
    .form{
       padding:5vh 10vw;
    }

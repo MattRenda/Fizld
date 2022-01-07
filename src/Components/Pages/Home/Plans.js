@@ -25,7 +25,7 @@ const Plans = () => {
         </div>
       </div> */}
 
-      <div class="card-deck mb-3 mt-5 text-center">
+      <div class="card-deck mb-3 text-center">
       <div class="card mb-4 box-shadow">
         <div class="card-header">
           <h4 class="my-0 font-weight-normal">Basic</h4>

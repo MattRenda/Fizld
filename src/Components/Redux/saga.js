@@ -15,21 +15,21 @@ export function* Init(){
 }
 
 export function* setUser(input){
-    const user = yield fetch("https://portfoliocontact.azurewebsites.net/api/DB?code=AzG0nKQ149jo9gnaRpp10XWYbZdahfJLja5n45GX8xhdDAmdOzEcEw==",{
+    const response = yield fetch("https://portfoliocontact.azurewebsites.net/api/DB?code=AzG0nKQ149jo9gnaRpp10XWYbZdahfJLja5n45GX8xhdDAmdOzEcEw==",{
       method:"POST",
       body:JSON.stringify({
         Email:input.payload.email,
         Password:input.payload.password
       })
-    }).then(res=>res.json())
-    console.log(user)
-    if(user.status === 404){
-      yield put(actions.setUserSuccess({error:"You have entered an invalid email / password combination."}));
-    }
-    else if(user.status === 200){
-      yield put(actions.setUserSuccess(user));
-    }
- 
+    }).then(res=>{ 
+      if(res.status === 200){
+        return res.json();
+      }
+      else if(res.status === 404){
+        return {error:"You have entered an invalid email / password combination."};
+      }
+    })
+    yield put(actions.setUserSuccess(response));
 }
 
 export function* CreateUser(input){
