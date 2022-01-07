@@ -204,6 +204,12 @@ h2,h3{
 .table td, .table th{
    vertical-align:middle;
 }
+.mobile{
+   display:flex;
+}
+.desktop{
+   display: none;
+}
 @media only screen and (min-width: 768px) {
    .hero{
       display:flex;
@@ -225,6 +231,13 @@ h2,h3{
    } */
    .form{
       padding:5vh 10vw;
+   }
+   .mobile{
+      display:none;
+   }
+   .desktop{
+      display: flex;
+      align-items: center;
    }
  }
  
