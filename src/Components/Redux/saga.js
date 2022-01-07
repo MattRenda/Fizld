@@ -27,7 +27,7 @@ function getCookie(name) {
 }
 
 export function* setUser(input){
-    const response = yield fetch("https://portfoliocontact.azurewebsites.net/api/DB?code=AzG0nKQ149jo9gnaRpp10XWYbZdahfJLja5n45GX8xhdDAmdOzEcEw==",{
+    const response = yield fetch("https://freelance.azurewebsites.net/api/Get?code=No8rC6GOux4kWdnEZ5cxDOna3dbHbsk4gKpqU6x1ZLeIAlplg3lGqQ==",{
       method:"POST",
       body:JSON.stringify({
         Email:input.payload.email,
@@ -52,7 +52,7 @@ export function* setUser(input){
 
 export function* CreateUser(input){
   try {
-    yield fetch("https://portfoliocontact.azurewebsites.net/api/DB-Create?code=w05TKorbZ2ZxivVakKPDhgmgv/iFrwKMzeZQynMjevuz5PFmTwvgpg==",{
+    yield fetch("https://freelance.azurewebsites.net/api/Create?code=TGyfjkyQYpmbJ6DaJqOA8XDwig3WA8wjnNQ6CaiahgMbPoK/5REDDQ==",{
       method:"POST",
       body:JSON.stringify({
         Email:input.payload.email,
