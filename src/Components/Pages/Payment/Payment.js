@@ -2,7 +2,7 @@ import React from 'react';
 const Payment = ({ plan, price }) => {
 
     return (
-        <div className='container m-5'>
+        <div className='container'>
             <div className='row'>
                 <div className='shadow-sm col-md p-5 m-3'>
                     <div>Payment Method</div>
