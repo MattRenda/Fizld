@@ -39,7 +39,6 @@ const App =({Init, user})=>{
                     <Route path="/Premium" element={user._id?<Premium/>:<Navigate replace to={'/Login'}/>}/>
                     <Route path="/Account" element={user._id?<Account/>:<Navigate replace to={'/'}/>}/>
                     <Route path="/Payment" element={user._id?<Payment/>:<Navigate replace to={'/'}/>}/>
-
                 </Routes>
             </Router>
         </div>

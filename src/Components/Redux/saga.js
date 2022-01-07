@@ -18,7 +18,9 @@ function getCookie(name) {
 }
   try {
     const user = getCookie("ms_id")
-    yield put(actions.setUserSuccess(JSON.parse(user)));
+    if(user){
+      yield put(actions.setUserSuccess(JSON.parse(user)));
+    }
   } catch (error) {
     console.log(error);
   }
