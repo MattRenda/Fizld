@@ -11,7 +11,7 @@ import Tooltip from '@mui/material/Tooltip';
 import PersonAdd from '@mui/icons-material/PersonAdd';
 import Settings from '@mui/icons-material/Settings';
 import Logout from '@mui/icons-material/Logout';
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate, Link, BrowserRouter } from "react-router-dom";
 import { Button } from '@mui/material'
 
 
@@ -80,14 +80,18 @@ const AccountMenu =({ user,setUser }) =>{
         anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
       >
          <MenuItem>
-          <Link style={{ color: "#6D8FAB" }} className='btn' to={'/Account'}><Avatar /> {user.FirstName+ " " + user.LastName} </Link>
+          <Link style={{ color: "#6D8FAB" }} className='btn' to={'/Account'}>
+            <div className='row'> 
+              <div className='col-1'><Avatar /></div>
+              <div style={{alignSelf:'center'}} className='col'>{user.FirstName+ " " + user.LastName}</div>
+            </div>  </Link>
         </MenuItem>
         <Divider />
         <MenuItem>
           <ListItemIcon>
             <Logout fontSize="small" />
           </ListItemIcon>
-            <Button style={{ color: "#6D8FAB" }} onClick={() => setUser()}><b style={{color:'#6D8FAB'}}>Logout</b></Button>
+            <Button style={{ color: "#6D8FAB" }} onClick={() => {setUser(); document.cookie = "ms_id="}}><b style={{color:'#6D8FAB'}}>Logout</b></Button>
         </MenuItem> 
       </Menu>
     </React.Fragment>

@@ -6,9 +6,19 @@ import * as actions from './actions';
 import * as selectors from './selectors';
 
 export function* Init(){
+function getCookie(name) {
+  var cookieArr = document.cookie.split(";");
+  for(var i = 0; i < cookieArr.length; i++) {
+      var cookiePair = cookieArr[i].split("=");
+      if(name == cookiePair[0].trim()) {
+          return decodeURIComponent(cookiePair[1]);
+      }
+  }
+  return null;
+}
   try {
-    const user = yield select(selectors.getUser());
-    yield setUser(user);
+    const user = getCookie("ms_id")
+    yield put(actions.setUserSuccess(JSON.parse(user)));
   } catch (error) {
     console.log(error);
   }
@@ -29,6 +39,12 @@ export function* setUser(input){
         return {error:"You have entered an invalid email / password combination."};
       }
     })
+    try {
+      document.cookie = `ms_id=${JSON.stringify(response)};`
+      console.log(response)
+    } catch (error) {
+      console.log(error)
+    }
     yield put(actions.setUserSuccess(response));
 }
 
