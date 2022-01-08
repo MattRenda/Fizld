@@ -14,7 +14,7 @@ const Examples = ({ title, description, cards }) => {
                             <tr>
                                 <th scope="col"></th>
                                 <th scope="col">
-                                    Mend <br/>
+                                    MendaSoft <br/>
                                     <span style={{position:'relative',top:'-15px', fontWeight:'lighter'}}>$</span>
                                     <b style={{fontSize:'200%'}}>100</b>
                                     <span style={{fontSize:'65%'}}>/month</span>
