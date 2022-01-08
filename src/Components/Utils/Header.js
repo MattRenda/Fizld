@@ -15,13 +15,13 @@ const Header = ({ user, setUser }) => {
 
     return (
         <div className='container'>
-            <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '10vh', marginBottom: '5vh', marginRight: '10px' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '5vh', marginBottom: '8vh', marginRight: '10px' }}>
                 <Navbar.Brand >
                     <Link to={'/'}>
                         <img
                             src={require('../../imgs/Logo.png')}
-                            width="180"
-                            height="80"
+                            width="250"
+                            height="70"
                             alt="Matthew Renda logo"
                         />
                     </Link>
@@ -30,10 +30,10 @@ const Header = ({ user, setUser }) => {
                     {
                         user._id ?
                             <div>
-                                <Link style={{ color: "#6D8FAB" }} className='btn' to={'/Account'}> {user.FirstName + " " + user.LastName} </Link>
-                                <Button style={{ color: "#6D8FAB" }} onClick={() => setUser()}><b style={{ color: '#6D8FAB' }}>Logout</b></Button>
+                                <Link  className='btn'  to={'/Account'}><b style={{ color: "#6D8FAB" }}> {user.FirstName + " " + user.LastName} </b></Link>
+                                <button className='btn' style={{ color: "#6D8FAB" }} onClick={() => setUser()}><b style={{ color: "#6D8FAB" }}>Logout</b></button>
                             </div>
-                            : <Button style={{ color: "#6D8FAB" }} onClick={() => navigate("/Login")}><b style={{ color: '#6D8FAB' }}>Login</b></Button>
+                            : <button className='btn' style={{ color: "#6D8FAB" }} onClick={() => navigate("/Login")}><b style={{ color: "#6D8FAB" }}>Login</b></button>
                     }
                 </div>
                 <div className="mobile">
