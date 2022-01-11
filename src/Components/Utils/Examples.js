@@ -3,18 +3,18 @@ import React from 'react'
 const Examples = ({ title, description, cards }) => {
     return (
         <div className='p-5'>
-            <div className='p-3' style={{ position: 'relative', zIndex: '2', textAlign: 'center' }}>
+            <div className='p-3' style={{ position: 'relative', textAlign: 'center' }}>
                 <h2>{title}</h2>
                 <p className='mb-0'>{description}</p>
             </div>
-            <div  style={{ position: 'relative', zIndex: '2', textAlign: 'center' }} className='container'>
+            <div  style={{ position: 'relative', textAlign: 'center' }} className='container'>
                 <div className='row justify-content-center'>
                     <table class="table table-bordered">
                         <thead>
                             <tr>
                                 <th scope="col"></th>
                                 <th scope="col">
-                                    MendaSoft <br/>
+                                    Fizld <br/>
                                     <span style={{position:'relative',top:'-15px', fontWeight:'lighter'}}>$</span>
                                     <b style={{fontSize:'200%'}}>100</b>
                                     <span style={{fontSize:'65%'}}>/month</span>

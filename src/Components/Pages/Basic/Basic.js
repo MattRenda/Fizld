@@ -7,7 +7,7 @@ const Basic = () => {
     window.scrollTo(0, 0);
 
     return (
-        <div>
+        <div className='headerSpacing'>
             <Header />
             <Payment plan={'Basic'} price={'$100.00'}/>
             <Footer />

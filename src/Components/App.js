@@ -2,6 +2,7 @@ import React, {useEffect} from 'react';
 
 import '../index.css';
 import '../Style/style.css';
+
 import {
     BrowserRouter as Router,
     Routes,
