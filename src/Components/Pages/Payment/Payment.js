@@ -13,7 +13,7 @@ import secure from '../../../lotties-animations/Secure.json';
 // Sign in to see your own test API key embedded in code samples.
 const stripePromise = loadStripe("pk_live_51KGXrHC5jJgfrH90JGNtRgxVKZ0COX1xW1KRTVYa5YdIsKJxhkA7g13jFgYDWiwWYVVwiE7MbrjKTet0DkxDVyGL000vkf3dW2");
 
-const Payment = ({plan, price}) => {
+const Payment = ({ plan, price }) => {
   const [clientSecret, setClientSecret] = useState("");
 
   useEffect(() => {
@@ -41,19 +41,45 @@ const Payment = ({plan, price}) => {
         <h2 >Complete Your Purchase</h2>
       </div>
       {clientSecret ? (
-            <Elements options={options} stripe={stripePromise}>
-              <CheckoutForm price={price} plan={plan}/>
-            </Elements>
-          ) :
-            <Lottie
-              options={{
-                loop: true,
-                autoplay: true,
-                animationData: loading
-              }}
-              height={'200px'}
-              width={'200px'}
-            />}
+        <Elements options={options} stripe={stripePromise}>
+          <CheckoutForm price={price} plan={plan} />
+        </Elements>
+      ) :
+        <div className='row'>
+          <div className='shadow-sm col-md p-3 m-3'>
+            <span class="placeholder col-6"></span>
+          </div>
+          <div className='shadow-sm col-md p-3 m-3'>
+            <p aria-hidden="true">
+              <span class="placeholder col-6"></span>
+            </p>            <div className='d-flex justify-content-between mb-3'>
+              <p aria-hidden="true">
+                <span class="placeholder col-6"></span>
+              </p>            <p aria-hidden="true">
+                <span class="placeholder col-6"></span>
+              </p>            </div>
+            <hr />
+            <div className='d-flex justify-content-between mb-3'>
+              <p aria-hidden="true">
+                <span class="placeholder col-6"></span>
+              </p>            <p aria-hidden="true">
+                <span class="placeholder col-6"></span>
+              </p>            </div>
+            <hr />
+            <div className='mb-3'>
+              <p aria-hidden="true">
+                <span class="placeholder col-6"></span>
+              </p>
+            </div>
+            <button href="#" tabindex="-1" class="btn btn-primary disabled placeholder col-4" aria-hidden="true"></button>
+
+            {/* Show any error or success messages */}
+            <p aria-hidden="true">
+              <span class="placeholder col-6"></span>
+            </p>          
+          </div>
+        </div>
+      }
       <Lottie
         options={{
           loop: true,
