@@ -26,6 +26,17 @@ function getCookie(name) {
   }
 }
 
+export function* updateUser(input){
+  const response = yield fetch("https://fizld.azurewebsites.net/api/update?code=twqTM2opMbNoURUn43DdB3cO3M6PaTCSVhsJuxiJHkKaeEPKa42Pyw==",{
+    method:"POST",
+    body:JSON.stringify({
+      Email:input.payload.email,
+      Password:input.payload.password,
+      plan:input.payload.plan
+    })
+  })
+}
+
 export function* setUser(input){
     const response = yield fetch("https://fizld.azurewebsites.net/api/get?code=fbznshVrSIWHW94/1/afGnk1SolpHMt7PTlP8Haer1wUSfvik9oGmQ==",{
       method:"POST",
@@ -50,7 +61,7 @@ export function* setUser(input){
     yield put(actions.setUserSuccess(response));
 }
 
-export function* CreateUser(input){
+export function* createUser(input){
   try {
     yield fetch("https://fizld.azurewebsites.net/api/create?code=QBEhXISsIHWzI9aIe5qeiff5ilVEPBz7KZ080fAkb7Z/skurQziSKA==",{
       method:"POST",
@@ -70,7 +81,8 @@ export default function* saga() {
     yield all([
       takeEvery(C.SET_USER,withAsync(setUser)),
       takeEvery(C.INIT,withAsync(Init)),
-      takeEvery(C.CREATE_USER,withAsync(CreateUser)),
+      takeEvery(C.CREATE_USER,withAsync(createUser)),
+      takeEvery(C.UPDATE_USER,withAsync(updateUser)),
     ]);
   }
   

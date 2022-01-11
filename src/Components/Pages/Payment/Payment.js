@@ -37,7 +37,9 @@ const Payment = ({plan, price}) => {
 
   return (
     <div className="container">
-      <h2 className="text-center m-3">Complete Your Purchase</h2>
+      <div className="text-center m-3 p-3" >
+        <h2 >Complete Your Purchase</h2>
+      </div>
       {clientSecret ? (
             <Elements options={options} stripe={stripePromise}>
               <CheckoutForm price={price} plan={plan}/>

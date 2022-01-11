@@ -5,6 +5,8 @@ export const Init = createAction(C.INIT);
 
 export const createUser = createAction(C.CREATE_USER); 
 
+export const updateUser = createAction(C.UPDATE_USER); 
+
 export const setUser = createAction(C.SET_USER); 
 export const setUserSuccess = createAction(C.SET_USER_SUCCESS); 
 
