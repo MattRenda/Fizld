@@ -16,7 +16,7 @@ const Payment =()=> {
 
   useEffect(() => {
     // Create PaymentIntent as soon as the page loads
-    fetch("https://freelance.azurewebsites.net/api/transaction?code=Cs02UnGuP49dg07sUkGB9qwNQ8Rpiyxd5QdkIEJDXGVWXyuG15veIQ==", {
+    fetch("https://fizld.azurewebsites.net/api/transaction?code=YVdAiSCQZRbc1GC6gqJJyYraiB/0a/70wyxXDhV5fws4QAd92fLaNg==", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ items: [{ id: "xl-tshirt", price:100 }] }),

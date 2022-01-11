@@ -27,7 +27,7 @@ function getCookie(name) {
 }
 
 export function* setUser(input){
-    const response = yield fetch("https://freelance.azurewebsites.net/api/Get?code=No8rC6GOux4kWdnEZ5cxDOna3dbHbsk4gKpqU6x1ZLeIAlplg3lGqQ==",{
+    const response = yield fetch("https://fizld.azurewebsites.net/api/get?code=fbznshVrSIWHW94/1/afGnk1SolpHMt7PTlP8Haer1wUSfvik9oGmQ==",{
       method:"POST",
       body:JSON.stringify({
         Email:input.payload.email,
@@ -52,7 +52,7 @@ export function* setUser(input){
 
 export function* CreateUser(input){
   try {
-    yield fetch("https://freelance.azurewebsites.net/api/Create?code=TGyfjkyQYpmbJ6DaJqOA8XDwig3WA8wjnNQ6CaiahgMbPoK/5REDDQ==",{
+    yield fetch("https://fizld.azurewebsites.net/api/create?code=QBEhXISsIHWzI9aIe5qeiff5ilVEPBz7KZ080fAkb7Z/skurQziSKA==",{
       method:"POST",
       body:JSON.stringify({
         Email:input.payload.email,

@@ -16,7 +16,7 @@ const ContactPage =({title,plan})=> {
         const { name, email, message, subject } = state
         console.log(name + ' ' + email + ' ' + message + ' ' + subject)
 
-        axios.post('https://freelance.azurewebsites.net/api/Contact?code=bRpmHPuctOrjEvNJhDaUUNkbY56PsznUKLXVcXsjcnNDs6mcD7yG3Q==', { name, email, message, subject,plan })
+        axios.post('https://fizld.azurewebsites.net/api/contact?code=8SBmQ8LUUkGeFuZ1qK2C9Us6qvLl1ToBpp9Z4EVDspGfUFMSRNDN4Q==', { name, email, message, subject,plan })
             .catch(err => { console.log(err) })
     }
 
