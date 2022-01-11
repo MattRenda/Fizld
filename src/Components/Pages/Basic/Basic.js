@@ -9,7 +9,8 @@ const Basic = () => {
     return (
         <div className='headerSpacing'>
             <Header />
-            <Payment plan={'Basic'} price={'$100.00'}/>
+            <Intro/>
+            <Payment plan={'Basic'} price={100}/>
             <Footer />
         </div>
     )

@@ -9,7 +9,7 @@ const Plus =()=>{
     return(
         <div className='headerSpacing'>
             <Header/>
-            <Payment plan={'Plus'} price={'$250.00'}/>
+            <Payment plan={'Plus'} price={250}/>
             <Footer/>
         </div>
     )

@@ -9,7 +9,7 @@ const Premium =()=>{
     return(
         <div className='headerSpacing'>
             <Header/>
-            <Payment plan={'Premium'} price={'$400.00'}/>
+            <Payment plan={'Premium'} price={500}/>
             <Footer/>
         </div>
     )

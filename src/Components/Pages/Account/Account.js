@@ -5,7 +5,7 @@ const Basic = () => {
     window.scrollTo(0, 0);
 
     return (
-        <>
+        <div className='headerSpacing'>
             <Header />
             <div className='text-center'>
                 <button className='btn btn-outline-success m-2'>Basic</button>
@@ -15,7 +15,7 @@ const Basic = () => {
             </div>
             <h1 className='text-center'>THIS PAGE IS UNDER CONSTRUCTION</h1>
             <Footer />
-        </>
+        </div>
     )
 }
 

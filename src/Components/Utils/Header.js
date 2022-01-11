@@ -14,9 +14,9 @@ const Header = ({ user, setUser }) => {
     let navigate = useNavigate();
 
     return (
-            <div className='shadow-sm' style={{position:'fixed',top:'0', width:'100%', backgroundColor:'white', height:'70px', zIndex:1}}>
+            <div className='shadow-sm headerContainer'>
               
-                <div style={{position:'absolute',top:'10px', left:'50px'}}>
+                <div className='headerElementLeft'>
                     <Navbar.Brand >
                         <Link to={'/'}>
                             <img
@@ -28,13 +28,13 @@ const Header = ({ user, setUser }) => {
                         </Link>
                     </Navbar.Brand>
                 </div>
-                <div style={{position:'absolute',top:'20px', right:'50px'}}>
+                <div className='headerElementRight'>
                     <div className='desktop'>
                         {
                             user._id ?
                                 <div>
                                     <Link  className='btn'  to={'/Account'}><b style={{ color: "#6D8FAB" }}> {user.FirstName + " " + user.LastName} </b></Link>
-                                    <button className='btn' style={{ color: "#6D8FAB" }} onClick={() => setUser()}><b style={{ color: "#6D8FAB" }}>Logout</b></button>
+                                    <button className='btn' style={{ color: "#6D8FAB" }} onClick={() => {setUser(); document.cookie = `ms_id=`}}><b style={{ color: "#6D8FAB" }}>Logout</b></button>
                                 </div>
                                 : <button className='btn' style={{ color: "#6D8FAB" }} onClick={() => navigate("/Login")}><b style={{ color: "#6D8FAB" }}>Login</b></button>
                         }
