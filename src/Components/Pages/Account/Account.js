@@ -1,9 +1,8 @@
 import React from 'react'
 import Header from '../../Utils/Header';
 import Footer from '../../Utils/Footer';
-const Basic = () => {
+const Account = () => {
     window.scrollTo(0, 0);
-
     return (
         <div className='headerSpacing'>
             <Header />
@@ -19,4 +18,4 @@ const Basic = () => {
     )
 }
 
-export default Basic;
+export default Account;
