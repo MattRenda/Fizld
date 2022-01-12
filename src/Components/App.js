@@ -22,24 +22,23 @@ import { connect } from 'react-redux';
 import * as actions from './Redux/actions';
 import * as selectors from './Redux/selectors';
 import Payment from './Pages/Payment/Payment';
-
 const App =({Init, user})=>{
     useEffect(()=>{
         Init();
     },[])
-
     return(
         <div>
             <Router>
                 <Routes>
-                    <Route exact path="/" element={<Home/>}/>
+                    <Route path="/" element={<Home/>}/>
                     <Route path="/Login" element={user._id?<Navigate replace to={'/'}/>:<Login/>}/>
                     <Route path="/CreateAccount" element={user._id?<Navigate replace to={'/'}/>:<CreateAccount/>}/>
                     <Route path="/Basic" element={user._id?<Basic/>:<Navigate replace to={'/Login'}/>}/>
                     <Route path="/Plus" element={user._id?<Plus/>:<Navigate replace to={'/Login'}/>}/>
                     <Route path="/Premium" element={user._id?<Premium/>:<Navigate replace to={'/Login'}/>}/>
-                    <Route path="/Account" element={user._id?<Account/>:<Navigate replace to={'/'}/>}/>
+                    <Route path="/Account" element={<Account/>}/>
                     <Route path="/Payment" element={user._id?<Payment/>:<Navigate replace to={'/'}/>}/>
+                    <Route element={<Navigate replace to={'/'}/>}/>
                 </Routes>
             </Router>
         </div>
