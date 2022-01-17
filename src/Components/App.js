@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, lazy, Suspense} from 'react';
 
 import '../index.css';
 import '../Style/style.css';
@@ -27,7 +27,7 @@ const App =({Init, user})=>{
         Init();
     },[])
     return(
-        <div>
+        <Suspense fallback={<></>}>
             <Router>
                 <Routes>
                     <Route path="/" element={<Home/>}/>
@@ -41,7 +41,7 @@ const App =({Init, user})=>{
                     <Route element={<Navigate replace to={'/'}/>}/>
                 </Routes>
             </Router>
-        </div>
+        </Suspense>
     )
 }
 const mapStateToProps =createStructuredSelector({
