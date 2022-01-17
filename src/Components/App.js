@@ -12,7 +12,6 @@ import {
   
 import Login from './Pages/Login/Login';
 import CreateAccount from './Pages/Login/CreateAccount';
-import Home from './Pages/Home/Home';
 import Basic from './Pages/Basic/Basic';
 import Plus from './Pages/Plus/Plus';
 import Premium from './Pages/Premium/Premium';
@@ -22,6 +21,8 @@ import { connect } from 'react-redux';
 import * as actions from './Redux/actions';
 import * as selectors from './Redux/selectors';
 import Payment from './Pages/Payment/Payment';
+const Home  = lazy(() => import('./Pages/Home/Home'));
+
 const App =({Init, user})=>{
     useEffect(()=>{
         Init();

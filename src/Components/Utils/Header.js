@@ -7,7 +7,6 @@ import { connect } from 'react-redux';
 import * as actions from '../Redux/actions';
 import * as selectors from '../Redux/selectors';
 import AccountMenu from './AccountMenu';
-import { Button } from '@mui/material'
 
 
 const Header = ({ user, setUser }) => {
@@ -20,7 +19,7 @@ const Header = ({ user, setUser }) => {
                     <Navbar.Brand >
                         <Link to={'/'}>
                             <img
-                                src={require('../../imgs/Logo.png')}
+                                src={require('../../imgs/Logo.webp')}
                                 width="100"
                                 height="45"
                                 alt="Matthew Renda logo"
