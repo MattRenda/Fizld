@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Suspense} from 'react';
 
 const Intro = ({header,description,img})=>{
     return(
@@ -8,9 +8,9 @@ const Intro = ({header,description,img})=>{
                 <h1 class="display-5 fw-bold lh-1 mb-3">{header}</h1>
                 <p class="lead">{description}</p>
             </div>
-            <div>
+            <Suspense fallback={""}>
                 {img? <img src={img} class="d-block mx-lg-auto img-fluid" alt="img" width="800" height="500" loading="lazy"/>: ''}
-            </div>
+            </Suspense>
         </div>
     )
 }

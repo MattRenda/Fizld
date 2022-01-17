@@ -1,4 +1,4 @@
-import React, {useEffect, lazy, Suspense} from 'react';
+import React, {useEffect} from 'react';
 
 import '../index.css';
 import '../Style/style.css';
@@ -21,14 +21,13 @@ import { connect } from 'react-redux';
 import * as actions from './Redux/actions';
 import * as selectors from './Redux/selectors';
 import Payment from './Pages/Payment/Payment';
-const Home  = lazy(() => import('./Pages/Home/Home'));
+import Home from './Pages/Home/Home';
 
 const App =({Init, user})=>{
     useEffect(()=>{
         Init();
     },[])
     return(
-        <Suspense fallback={<></>}>
             <Router>
                 <Routes>
                     <Route path="/" element={<Home/>}/>
@@ -42,7 +41,6 @@ const App =({Init, user})=>{
                     <Route element={<Navigate replace to={'/'}/>}/>
                 </Routes>
             </Router>
-        </Suspense>
     )
 }
 const mapStateToProps =createStructuredSelector({
