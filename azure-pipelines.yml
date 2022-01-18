@@ -9,7 +9,6 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 
-
 steps:
 - task: NodeTool@0
   inputs:
@@ -19,10 +18,18 @@ steps:
 - task: Npm@1
   inputs:
     command: 'install'
-    
 - script: npm run build
   displayName: "npm build"
   
+- task: ArchiveFiles@2
+  displayName: 'Compress Files'
+  inputs:
+    rootFolderOrFile: '$(Build.BinariesDirectory)'
+    includeRootFolder: false
+    archiveType: '7z'
+    sevenZipCompression: 'maximum'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildNumber).zip'
+    replaceExistingArchive: true
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: 'build'
