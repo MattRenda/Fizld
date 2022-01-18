@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Examples = ({ title, description, cards }) => {
+const Examples = ({ title, description }) => {
     return (
         <div className='p-5'>
             <div className='p-3' style={{ position: 'relative', textAlign: 'center' }}>

@@ -24,7 +24,7 @@ const Login = ({setUser, user}) => {
     if(user._id){
       navigate('/')
     }
-   },[user])
+   },[navigate, user])
   return (
     <div className='form-signin text-center p-2'>
     {state.submitted?
@@ -39,7 +39,7 @@ const Login = ({setUser, user}) => {
        />
       :
       <div>
-        <Link to='/'><img class="mb-4" src={require('../../../imgs/Logo.webp')} alt="" width="100" height="45" /></Link>
+        <Link to='/'><img class="mb-4" src='/imgs/Logo.webp' alt="" width="100" height="45" /></Link>
         <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
         {user.error? <span style={{color:'red'}}>{user.error}</span>:''}
         <form onSubmit={(e)=> {e.preventDefault();setUser(state); setState({...state,submitted:true})}}>

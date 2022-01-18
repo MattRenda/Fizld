@@ -19,10 +19,11 @@ const Header = ({ user, setUser }) => {
                     <Navbar.Brand >
                         <Link to={'/'}>
                             <img
-                                src={require('../../imgs/Logo.webp')}
+                                src='/imgs/Logo.webp'
                                 width="100"
                                 height="45"
                                 alt="Matthew Renda logo"
+                                loading='lazy'
                             />
                         </Link>
                     </Navbar.Brand>
