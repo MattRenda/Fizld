@@ -10,7 +10,7 @@ const Account = () => {
                 <button className='btn btn-outline-success m-2'>Basic</button>
                 <button className='btn btn-outline-primary m-2'>Status</button>
                 <button className='btn btn-outline-primary m-2'>Iterations</button>
-                <a href='' className='m-2'>View Site</a>
+                <a href='/' className='m-2'>View Site</a>
             </div>
             <h1 className='text-center'>THIS PAGE IS UNDER CONSTRUCTION</h1>
             <Footer />

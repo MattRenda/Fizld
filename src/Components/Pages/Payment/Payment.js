@@ -4,7 +4,6 @@ import { Elements } from "@stripe/react-stripe-js";
 import CheckoutForm from "./CheckoutForm";
 
 import Lottie from 'react-lottie';
-import loading from '../../../lotties-animations/loading.json';
 import secure from '../../../lotties-animations/Secure.json';
 // Make sure to call loadStripe outside of a component’s render to avoid
 // recreating the Stripe object on every render.
@@ -25,6 +24,7 @@ const Payment = ({ plan, price }) => {
     })
       .then((res) => res.json())
       .then((data) => setClientSecret(data.clientSecret));
+  // eslint-disable-next-line
   }, []);
 
   const appearance = {

@@ -20,7 +20,7 @@ const Header = ({ user, setUser }) => {
                         <Link to={'/'}>
                             <img
                                 src='/imgs/Logo.webp'
-                                width="100"
+                                width="110"
                                 height="45"
                                 alt="Matthew Renda logo"
                                 loading='lazy'
@@ -33,10 +33,10 @@ const Header = ({ user, setUser }) => {
                         {
                             user._id ?
                                 <div>
-                                    <Link  className='btn'  to={'/Account'}><b style={{ color: "#6D8FAB" }}> {user.FirstName + " " + user.LastName} </b></Link>
-                                    <button className='btn' style={{ color: "#6D8FAB" }} onClick={() => {setUser(); document.cookie = `ms_id=`}}><b style={{ color: "#6D8FAB" }}>Logout</b></button>
+                                    <Link  className='btn'  to={'/Account'}><b> {user.FirstName + " " + user.LastName} </b></Link>
+                                    <button className='btn' onClick={() => {setUser(); document.cookie = `ms_id=`}}><b >Logout</b></button>
                                 </div>
-                                : <button className='btn' style={{ color: "#6D8FAB" }} onClick={() => navigate("/Login")}><b style={{ color: "#6D8FAB" }}>Login</b></button>
+                                : <button className='btn' onClick={() => navigate("/Login")}><b >Login</b></button>
                         }
                     </div>
                     <div className="mobile">

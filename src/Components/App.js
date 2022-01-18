@@ -26,6 +26,7 @@ import Home from './Pages/Home/Home';
 const App =({Init, user})=>{
     useEffect(()=>{
         Init();
+    // eslint-disable-next-line
     },[])
     return(
             <Router>

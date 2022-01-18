@@ -55,14 +55,13 @@ const ContactPage =({title,plan})=> {
                         </Form.Group>
                     </Form.Row>
                     <Form.Row>
-                        <Form.Group as={Col}>
+                        <Form.Group as={Col} controlId="formGridTextbox">
 
                             <Form.Label>Message</Form.Label>
                             <Form.Control
                                 onChange={handleChange}
                                 as="textarea"
-                                name='message' 
-                                id='message'
+                                name='formGridTextbox' 
                                 rows={4}
                                 required
                                 value={state.message}

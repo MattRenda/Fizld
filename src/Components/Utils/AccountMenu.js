@@ -6,12 +6,9 @@ import MenuItem from '@mui/material/MenuItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
 import Tooltip from '@mui/material/Tooltip';
-import PersonAdd from '@mui/icons-material/PersonAdd';
-import Settings from '@mui/icons-material/Settings';
 import Logout from '@mui/icons-material/Logout';
-import { useNavigate, Link, BrowserRouter } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { Button } from '@mui/material'
 
 
@@ -24,6 +21,7 @@ const AccountMenu =({ user,setUser }) =>{
   };
   const handleClose = () => {
     setAnchorEl(null);
+    navigate("/Login")
   };
   return (
     <React.Fragment>
@@ -38,7 +36,7 @@ const AccountMenu =({ user,setUser }) =>{
             aria-expanded={open ? 'true' : undefined}
           >
             {user._id? <Avatar style={{ backgroundColor: '#6D8FAB' }} sx={{ width: 32, height: 32 }}>{user.FirstName.split('')[0]}</Avatar>:
-            <Button style={{ color: "#6D8FAB" }} onClick={() => navigate("/Login")}><b style={{color:'#6D8FAB'}}>Login</b></Button>
+            <b style={{color:'#6D8FAB'}}>Login</b>
             }
         
           </IconButton>

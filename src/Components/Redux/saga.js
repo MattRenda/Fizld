@@ -1,16 +1,15 @@
 import {
-    all, takeEvery,put,select} from 'redux-saga/effects';
+    all, takeEvery,put} from 'redux-saga/effects';
 import * as C from './constants';
 import withAsync from '../ReduxUtility/withAsync';
 import * as actions from './actions';
-import * as selectors from './selectors';
 
 export function* Init(){
 function getCookie(name) {
   var cookieArr = document.cookie.split(";");
   for(var i = 0; i < cookieArr.length; i++) {
       var cookiePair = cookieArr[i].split("=");
-      if(name == cookiePair[0].trim()) {
+      if(name === cookiePair[0].trim()) {
           return decodeURIComponent(cookiePair[1]);
       }
   }
@@ -27,14 +26,14 @@ function getCookie(name) {
 }
 
 export function* updateUser(input){
-  const response = yield fetch("https://fizld.azurewebsites.net/api/update?code=twqTM2opMbNoURUn43DdB3cO3M6PaTCSVhsJuxiJHkKaeEPKa42Pyw==",{
-    method:"POST",
-    body:JSON.stringify({
-      Email:input.payload.email,
-      Password:input.payload.password,
-      plan:input.payload.plan
-    })
-  })
+  // const response = yield fetch("https://fizld.azurewebsites.net/api/update?code=twqTM2opMbNoURUn43DdB3cO3M6PaTCSVhsJuxiJHkKaeEPKa42Pyw==",{
+  //   method:"POST",
+  //   body:JSON.stringify({
+  //     Email:input.payload.email,
+  //     Password:input.payload.password,
+  //     plan:input.payload.plan
+  //   })
+  // })
 }
 
 export function* setUser(input){
