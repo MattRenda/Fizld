@@ -9,7 +9,6 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 
-
 steps:
 - task: NodeTool@0
   inputs:
@@ -19,10 +18,9 @@ steps:
 - task: Npm@1
   inputs:
     command: 'install'
-    
 - script: npm run build
   displayName: "npm build"
-  
+
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: 'build'
