@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from "react";
-import {
+import React, { useEffect, useState,Suspense, lazy } from "react";
+
+const reactStripe = lazy(import('@stripe/react-stripe-js'));
+const {
   PaymentElement,
   useStripe,
   useElements
-} from "@stripe/react-stripe-js";
-
+} = reactStripe;
 const CheckoutForm = ({ price, plan }) => {
   const stripe = useStripe();
   const elements = useElements();
@@ -80,7 +81,9 @@ const CheckoutForm = ({ price, plan }) => {
     <form id="payment-form" onSubmit={handleSubmit}>
       <div className='row'>
         <div className='shadow-sm col-md p-3 m-3'>
-          <PaymentElement id="payment-element" />
+          <Suspense>
+            <PaymentElement id="payment-element" />
+          </Suspense>
         </div>
         <div className='shadow-sm col-md p-3 m-3'>
           <b>{plan}</b>

@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Suspense, lazy } from "react";
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
 import CheckoutForm from "./CheckoutForm";
 
-import Lottie from 'react-lottie';
-import secure from '../../../lotties-animations/Secure.json';
+const Lottie = lazy(import('react-lottie'));
+const secure = lazy(import('../../../lotties-animations/Secure.json'));
+
 // Make sure to call loadStripe outside of a component’s render to avoid
 // recreating the Stripe object on every render.
 // This is a public sample test API key.
@@ -41,9 +42,11 @@ const Payment = ({ plan, price }) => {
         <h2 >Complete Your Purchase</h2>
       </div>
       {clientSecret ? (
-        <Elements options={options} stripe={stripePromise}>
-          <CheckoutForm price={price} plan={plan} />
-        </Elements>
+        <Suspense fallback="">
+          <Elements options={options} stripe={stripePromise}>
+            <CheckoutForm price={price} plan={plan} />
+          </Elements>
+        </Suspense>
       ) :
         <div className='row'>
           <div className='shadow-sm col-md p-3 m-3'>
@@ -80,15 +83,18 @@ const Payment = ({ plan, price }) => {
           </div>
         </div>
       }
-      <Lottie
-        options={{
-          loop: true,
-          autoplay: true,
-          animationData: secure
-        }}
-        height={'200px'}
-        width={'200px'}
-      />
+      <Suspense fallback="">
+        <Lottie
+          options={{
+            loop: true,
+            autoplay: true,
+            animationData: secure
+          }}
+          height={'200px'}
+          width={'200px'}
+        />
+      </Suspense>
+    
 
     </div>
   );
