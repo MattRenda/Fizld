@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate, Link, useLocation } from "react-router-dom";
 import { createStructuredSelector } from 'reselect';
 import { connect } from 'react-redux';
 import * as actions from '../../Redux/actions';
@@ -7,8 +7,10 @@ import * as selectors from '../../Redux/selectors';
 import Lottie from 'react-lottie';
 import loading from '../../../lotties-animations/loading.json';
 
-const Login = ({setUser, user}) => {
+const Login = ({setUser, user,}) => {
   const year = new Date();
+  let location = useLocation();
+  let from = location.state?.from?.pathname || '/';
   const[state,setState] = useState({
     email:'',
     password:'',
@@ -22,9 +24,13 @@ const Login = ({setUser, user}) => {
 
   useEffect(()=>{
     if(user._id){
-      navigate('/')
+      navigate(from);
     }
-   },[navigate, user])
+    else if(user.error){
+      setState({...state,submitted:false})
+    }
+  },[user])
+
   return (
     <div className='form-signin text-center p-2'>
     {state.submitted?
@@ -39,36 +45,38 @@ const Login = ({setUser, user}) => {
        />
       :
       <div>
-        <Link to='/'><img class="mb-4" src='/imgs/Logo.webp' alt="" width="100" height="45" /></Link>
-        <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+        <Link to='/'><img className="mb-4" src='/imgs/Logo.webp' alt="" width="100" height="45" /></Link>
+        <h1 className="h3 mb-3 fw-normal">Please sign in</h1>
         {user.error? <span style={{color:'red'}}>{user.error}</span>:''}
         <form onSubmit={(e)=> {e.preventDefault();setUser(state); setState({...state,submitted:true})}}>
-          <div class="form-floating text-left">
+          <div className="form-floating text-left">
             <input 
               onChange={handleChange} 
               type="email" 
               name='email' 
-              class="form-control" 
+              className="form-control" 
               id="floatingInput" 
               placeholder="name@example.com" 
               required
+              autoComplete='email'
             />
-            <label for="floatingInput">Email address</label>
+            <label htmlFor="floatingInput">Email address</label>
           </div>
-          <div class="form-floating text-left">
+          <div className="form-floating text-left">
             <input 
               onChange={handleChange} 
               type="password" 
               name='password' 
-              class="form-control" 
+              className="form-control" 
               id="floatingPassword" 
               placeholder="Password" 
               required
+              autoComplete='current-password'
             />
-            <label for="floatingPassword">Password</label>
+            <label htmlFor="floatingPassword">Password</label>
           </div>
 
-          <button class="w-100 btn btn-lg btn-primary" type='submit'>Sign in</button>
+          <button className="w-100 btn btn-lg btn-primary" type='submit'>Sign in</button>
           <small>Copyright &copy; {year.getFullYear()}</small>
           <p className='mt-4 mb-0'>Dont have an account?</p>
           <Link to={'/CreateAccount'} className=''>Create Account</Link>

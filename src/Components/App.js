@@ -22,6 +22,7 @@ import * as actions from './Redux/actions';
 import * as selectors from './Redux/selectors';
 import Payment from './Pages/Payment/Payment';
 import Home from './Pages/Home/Home';
+import Protected from './Utils/Protected';
 
 const App =({Init, user})=>{
     useEffect(()=>{
@@ -32,12 +33,22 @@ const App =({Init, user})=>{
             <Router>
                 <Routes>
                     <Route path="/" element={<Home/>}/>
-                    <Route path="/Login" element={user._id?<Navigate replace to={'/'}/>:<Login/>}/>
+                    <Route path="/Login" element={<Login/>}/>
                     <Route path="/CreateAccount" element={user._id?<Navigate replace to={'/'}/>:<CreateAccount/>}/>
-                    <Route path="/Basic" element={user._id?<Basic/>:<Navigate replace to={'/Login'}/>}/>
-                    <Route path="/Plus" element={user._id?<Plus/>:<Navigate replace to={'/Login'}/>}/>
-                    <Route path="/Premium" element={user._id?<Premium/>:<Navigate replace to={'/Login'}/>}/>
-                    <Route path="/Account" element={<Account/>}/>
+                    <Route path="/Basic" element={ 
+                        <Protected>
+                            <Basic/>
+                        </Protected>}/>
+                    <Route path="/Plus" element={
+                        <Protected>
+                            <Plus/>
+                        </Protected>}/>
+                    <Route path="/Premium" element={ 
+                        <Protected>
+                            <Premium/>
+                        </Protected>}/>
+                   
+                    <Route path="/Account" element={ <Protected> <Account/> </Protected>}/>
                     <Route path="/Payment" element={user._id?<Payment/>:<Navigate replace to={'/'}/>}/>
                     <Route element={<Navigate replace to={'/'}/>}/>
                 </Routes>
