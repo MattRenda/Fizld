@@ -37,7 +37,7 @@ export function* updateUser(input){
 }
 
 export function* setUser(input){
-    const response = yield fetch("https://fizld.azurewebsites.net/api/get?code=fbznshVrSIWHW94/1/afGnk1SolpHMt7PTlP8Haer1wUSfvik9oGmQ==",{
+    const response = yield fetch("https://fizldget.azurewebsites.net/api/get?code=Gq0rlPqmzTe/6FHJ3y2TTpXoTXkANGb9FcdggzpCN8E82mtDAd9y3A==",{
       method:"POST",
       body:JSON.stringify({
         Email:input.payload.email,
