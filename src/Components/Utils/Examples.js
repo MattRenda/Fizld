@@ -30,18 +30,18 @@ const Examples = ({ title, description }) => {
                         <tbody >
                             <tr>
                                 <th style={{alignSelf:'center',fontWeight:'lighter'}} scope="row">Secure online payments</th>
-                                <td><i style={{fontSize:'165%'}} className="bi bi-check"></i></td>
-                                <td><i style={{fontSize:'165%'}} className="bi bi-check"></i></td>
+                                <td><img alt='check' src='/imgs/check.svg'/></td>
+                                <td><img alt='check' src='/imgs/check.svg'/></td>
                             </tr>
                             <tr>
                                 <th style={{fontWeight:'lighter'}} scope="row">Custom Domain</th>
-                                <td><i style={{fontSize:'165%'}} className="bi bi-check"></i></td>
-                                <td><i style={{fontSize:'165%'}} className="bi bi-check"></i></td>
+                                <td><img alt='check' src='/imgs/check.svg'/></td>
+                                <td><img alt='check' src='/imgs/check.svg'/></td>
                             </tr>
                             <tr>
                                 <th style={{fontWeight:'lighter'}} scope="row">Customer care</th>
-                                <td><i style={{fontSize:'165%'}} className="bi bi-check"></i></td>
-                                <td><i style={{fontSize:'165%'}} className="bi bi-check"></i></td>
+                                <td><img alt='check' src='/imgs/check.svg'/></td>
+                                <td><img alt='check' src='/imgs/check.svg'/></td>
                             </tr>
                             <tr>
                                 <th style={{fontWeight:'lighter'}} scope="row">Storage space</th>
@@ -50,17 +50,17 @@ const Examples = ({ title, description }) => {
                             </tr>
                             <tr>
                                 <th style={{fontWeight:'lighter'}} scope="row">Professional Logo</th>
-                                <td><i style={{fontSize:'165%'}} className="bi bi-check"></i></td>
+                                <td><img alt='check' src='/imgs/check.svg'/></td>
                                 <td><span style={{fontSize:'200%'}}>-</span></td>
                             </tr>
                             <tr>
                                 <th style={{fontWeight:'lighter'}} scope="row">Custom functionality</th>
-                                <td><i style={{fontSize:'165%'}} className="bi bi-check"></i></td>
+                                <td><img alt='check' src='/imgs/check.svg'/></td>
                                 <td><span style={{fontSize:'200%'}}>-</span></td>
                             </tr>
                             <tr>
                                 <th style={{fontWeight:'lighter'}} scope="row">Advanced SEO</th>
-                                <td><i style={{fontSize:'165%'}} className="bi bi-check"></i></td>
+                                <td><img alt='check' src='/imgs/check.svg'/></td>
                                 <td><span style={{fontSize:'200%'}}>-</span></td>
                             </tr>
                         </tbody>
