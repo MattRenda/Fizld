@@ -7,7 +7,7 @@ const ContactPage =({title,plan})=> {
     const[state,setState] = useState({
         name: '',
         email: '',
-        message: plan?`Hi, I am contacting you in regards to your ${plan} plan, I would love to talk more about the pricing and options available to me.`:'',
+        message: '',
         subject: 'messaged you from your Portfolio!'
     })
 
@@ -55,13 +55,13 @@ const ContactPage =({title,plan})=> {
                         </Form.Group>
                     </Form.Row>
                     <Form.Row>
-                        <Form.Group as={Col} controlId="formGridTextbox">
+                        <Form.Group as={Col} controlId="message">
 
                             <Form.Label>Message</Form.Label>
                             <Form.Control
                                 onChange={handleChange}
                                 as="textarea"
-                                name='formGridTextbox' 
+                                name='message' 
                                 rows={4}
                                 required
                                 value={state.message}

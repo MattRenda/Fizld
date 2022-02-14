@@ -21,7 +21,9 @@ const Plans = () => {
             <li>1 page</li>
             <li>Ssl Certificate</li>
             <li>Free Hosting</li>
-            <li>2 Revisions</li>
+            <li>Bug fixes</li>
+            <li>Analytics</li>
+
           </ul>
           <button onClick={()=>navigate('/Basic')} type="button" style={{backgroundColor:'#0156a7', color:'white'}} className="btn btn-lg btn-block">Get started</button>
         </div>
@@ -40,7 +42,9 @@ const Plans = () => {
             <li>Multiple pages</li>
             <li>Ssl Certificate</li>
             <li>Free Hosting</li>
-            <li>3 Revisions</li>
+            <li>Bug fixes</li>
+            <li>Analytics</li>
+            <li>+1 feature</li>
           </ul>
           <button onClick={()=>navigate('/Plus')} type="button" style={{backgroundColor:'#0156a7', color:'white'}} className="btn btn-lg btn-block">Get started</button>
         </div>
@@ -59,8 +63,9 @@ const Plans = () => {
             <li>Multiple pages</li>
             <li>Ssl Certificate</li>
             <li>Free Hosting</li>
-            <li>5 Revisions</li>
-            <li>Design planning sessions</li>
+            <li>Bug fixes</li>
+            <li>Analytics</li>
+            <li>+2 feature</li>
           </ul>
           <button onClick={()=>navigate('/Premium')} type="button" style={{backgroundColor:'#0156a7', color:'white'}} className="btn btn-lg btn-block">Get started</button>
         </div>
