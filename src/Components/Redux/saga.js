@@ -37,7 +37,7 @@ export function* updateUser(input){
 }
 
 export function* setUser(input){
-    const response = yield fetch("https://fizld.azurewebsites.net/api/get?code=fbznshVrSIWHW94/1/afGnk1SolpHMt7PTlP8Haer1wUSfvik9oGmQ==",{
+    const response = yield fetch("https://b1jfi6brah.execute-api.us-east-1.amazonaws.com/default/Fizld-Get",{
       method:"POST",
       body:JSON.stringify({
         Email:input.payload.email,
@@ -50,13 +50,12 @@ export function* setUser(input){
       else if(res.status === 404){
         return {error:"You have entered an invalid email / password combination."};
       }
+      else
+        return {error:"server Error"}
     })
-    try {
-      document.cookie = `ms_id=${JSON.stringify(response)};`
-      console.log(response)
-    } catch (error) {
-      console.log(error)
-    }
+    document.cookie = `ms_id=${JSON.stringify(response)};`
+    console.log(response)
+  
     yield put(actions.setUserSuccess(response));
 }
 
