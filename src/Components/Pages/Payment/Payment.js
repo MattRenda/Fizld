@@ -17,13 +17,13 @@ const Payment = ({ plan, price }) => {
 
   useEffect(() => {
     // Create PaymentIntent as soon as the page loads
-    fetch("https://fizld.azurewebsites.net/api/transaction?code=YVdAiSCQZRbc1GC6gqJJyYraiB/0a/70wyxXDhV5fws4QAd92fLaNg==", {
+    fetch("https://4tgrm96sfd.execute-api.us-east-1.amazonaws.com/default/Fizld-payment", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ items: [{ id: plan, price: 100 }] }),
+      body: JSON.stringify({ price: price }),
     })
-      .then((res) => res.json())
-      .then((data) => setClientSecret(data.clientSecret));
+      .then((res) => res.text())
+      .then((data) => setClientSecret(data))
+      .catch(error=>console.log(error))
   // eslint-disable-next-line
   }, []);
 
