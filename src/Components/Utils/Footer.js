@@ -5,7 +5,7 @@ const Footer = () => {
   const year = new Date();
   return (
     <div style={{ position: 'relative' }} className='off-white pb-5'>
-      <ContactPage title={'Need to contact me?'} />
+      <ContactPage title={'Need to contact us?'} />
       <footer className="pt-4 my-md-5 pt-md-5 border-top container">
         <div className="row justify-content-md-center">
           <div className="col col-4 col-lg offset-md-2">
