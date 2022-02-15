@@ -21,7 +21,6 @@ const AccountMenu =({ user,setUser }) =>{
   };
   const handleClose = () => {
     setAnchorEl(null);
-    navigate("/Login")
   };
   return (
     <React.Fragment>
@@ -35,13 +34,17 @@ const AccountMenu =({ user,setUser }) =>{
             aria-haspopup="true"
             aria-expanded={open ? 'true' : undefined}
           >
-            {user._id? <Avatar style={{ backgroundColor: '#6D8FAB' }} sx={{ width: 32, height: 32 }}>{user.FirstName.split('')[0]}</Avatar>:
-            <b style={{color:'#6D8FAB'}}>Login</b>
+            {
+            user._id? 
+              <Avatar style={{ backgroundColor: '#6D8FAB' }} sx={{ width: 32, height: 32 }}>{user.FirstName.split('')[0]}</Avatar>
+              :
+              <b style={{color:'#6D8FAB'}}  onClick={() => {setUser(); navigate("/Login")}}>Login</b>
             }
-        
           </IconButton>
         </Tooltip>
       </Box>
+      {
+            user._id? 
       <Menu
         anchorEl={anchorEl}
         id="account-menu"
@@ -91,7 +94,7 @@ const AccountMenu =({ user,setUser }) =>{
           </ListItemIcon>
             <Button style={{ color: "#6D8FAB" }} onClick={() => {setUser(); document.cookie = "ms_id="}}><b style={{color:'#6D8FAB'}}>Logout</b></Button>
         </MenuItem> 
-      </Menu>
+      </Menu>:""}
     </React.Fragment>
   );
 }

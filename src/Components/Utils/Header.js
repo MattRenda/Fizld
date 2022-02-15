@@ -11,7 +11,7 @@ import AccountMenu from './AccountMenu';
 
 const Header = ({ user, setUser }) => {
     let navigate = useNavigate();
-
+    console.log(user)
     return (
             <div className='shadow-sm headerContainer'>
               
@@ -31,6 +31,7 @@ const Header = ({ user, setUser }) => {
                 <div className='headerElementRight'>
                     <div className='desktop'>
                         {
+                            
                             user._id ?
                                 <div>
                                     <Link  className='btn'  to={'/Account'}><b> {user.FirstName + " " + user.LastName} </b></Link>
