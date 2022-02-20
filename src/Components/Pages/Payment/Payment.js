@@ -12,14 +12,15 @@ import secure from '../../../lotties-animations/Secure.json'
 // Sign in to see your own test API key embedded in code samples.
 const stripePromise = loadStripe("pk_live_51KGXrHC5jJgfrH90JGNtRgxVKZ0COX1xW1KRTVYa5YdIsKJxhkA7g13jFgYDWiwWYVVwiE7MbrjKTet0DkxDVyGL000vkf3dW2");
 
-const Payment = ({ plan, price }) => {
+
+const Payment = ({ plan, price, user }) => {
   const [clientSecret, setClientSecret] = useState("");
 
   useEffect(() => {
     // Create PaymentIntent as soon as the page loads
     fetch("https://4tgrm96sfd.execute-api.us-east-1.amazonaws.com/default/Fizld-payment", {
       method: "POST",
-      body: JSON.stringify({ price: price }),
+      body: JSON.stringify({ price: price, email: user.Email}),
     })
       .then((res) => res.json())
       .then((data) => setClientSecret(data.client_secret))
