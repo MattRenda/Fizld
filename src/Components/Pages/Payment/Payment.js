@@ -21,8 +21,8 @@ const Payment = ({ plan, price }) => {
       method: "POST",
       body: JSON.stringify({ price: price }),
     })
-      .then((res) => res.text())
-      .then((data) => setClientSecret(data))
+      .then((res) => res.json())
+      .then((data) => setClientSecret(data.client_secret))
       .catch(error=>console.log(error))
   // eslint-disable-next-line
   }, []);
