@@ -5,6 +5,9 @@ import CheckoutForm from "./CheckoutForm";
 import Lottie from "react-lottie";
 import secure from '../../../lotties-animations/Secure.json'
 
+import { createStructuredSelector } from 'reselect';
+import { connect } from 'react-redux';
+import * as selectors from '../../Redux/selectors';
 // Make sure to call loadStripe outside of a component’s render to avoid
 // recreating the Stripe object on every render.
 // This is a public sample test API key.
@@ -96,4 +99,12 @@ const Payment = ({ plan, price, user }) => {
   );
 }
 
-export default Payment;
+const mapStateToProps =createStructuredSelector({
+  user: selectors.getUser(),
+})
+
+const mapDispatchToProps =(dispatch)=>({
+})
+
+const withRedux = connect(mapStateToProps, mapDispatchToProps)(Payment);
+export default withRedux;
