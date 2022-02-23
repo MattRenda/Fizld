@@ -1,11 +1,11 @@
 import React from 'react'
 import ContactPage from './ContactPage';
-const Footer = () => {
+const Footer = ({contact}) => {
 
   const year = new Date();
   return (
     <div style={{ position: 'relative' }} className='off-white pb-5'>
-      <ContactPage title={'Need to contact us?'} />
+     <div hidden={!contact}><ContactPage title={'Need to contact us?'} /></div> 
       <footer className="pt-4 my-md-5 pt-md-5 border-top container">
         <div className="row justify-content-md-center">
           <div className="col col-4 col-lg offset-md-2">

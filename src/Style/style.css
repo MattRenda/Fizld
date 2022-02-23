@@ -55,7 +55,7 @@
     width: 330px;
 }
 .headerSpacing{
-    margin-top: 15vh;
+    margin-top: 10vh;
 }
 .headerContainer{
     position:fixed;
@@ -63,7 +63,7 @@
     width:100%;
     background-color:white;
     height:70px;
-    z-index: 1
+    z-index: 200
 }
 .headerElementRight{
     position: absolute; 
@@ -74,6 +74,18 @@
     position: absolute; 
     top:10px;
     left:50px;
+}
+.btnStyle{
+	border: none;
+	position: absolute;
+	top:50%;
+	left: 30%;
+	transition: .5s;
+}
+
+.btnStyle:active,
+.btnStyle:focus{
+	outline: none;
 }
 @media only screen and (max-width: 768px) {
     .headerElementRight{

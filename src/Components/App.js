@@ -12,6 +12,7 @@ import {
   
 import Login from './Pages/Login/Login';
 import CreateAccount from './Pages/Login/CreateAccount';
+import PricingPage from './Pages/Pricing/PricingPage';
 import Basic from './Pages/Basic/Basic';
 import Plus from './Pages/Plus/Plus';
 import Premium from './Pages/Premium/Premium';
@@ -35,6 +36,7 @@ const App =({Init, user})=>{
                     <Route path="/" element={<Home/>}/>
                     <Route path="/Login" element={<Login/>}/>
                     <Route path="/CreateAccount" element={user._id?<Navigate replace to={'/'}/>:<CreateAccount/>}/>
+                    <Route path="/Pricing" element={<PricingPage/>}/>
                     <Route path="/Basic" element={ 
                         <Protected>
                             <Basic/>

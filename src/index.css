@@ -185,12 +185,6 @@
 .off-white{
    background-color: #efecf8;
 }
-h1{
-   color:rgb(112, 112, 112);
-}
-h2,h3{
-   color:rgb(112, 112, 112);
-}
 .hero{
    display:flex;
    flex-wrap:wrap;
