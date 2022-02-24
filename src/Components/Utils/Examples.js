@@ -54,26 +54,26 @@ const Examples = ({ title, description }) => {
                             </tr>
                             <tr>
                                 <th style={{fontWeight:'lighter'}} scope="row">Storage space</th>
-                                <td>Unlimited</td>
-                                <td style={{backgroundColor:'#efecf8'}}>100 GB</td>
+                                <td >100 GB</td>
+                                <td style={{backgroundColor:'#efecf8'}}>Unlimited</td>
                                 <td>100 GB</td>
                             </tr>
                             <tr>
                                 <th style={{fontWeight:'lighter'}} scope="row">Professional Logo</th>
-                                <td><img alt='check' src='/imgs/check.svg'/></td>
-                                <td style={{backgroundColor:'#efecf8'}}><span style={{fontSize:'200%'}}>-</span></td>
+                                <td><span style={{fontSize:'200%'}}>-</span></td>
+                                <td style={{backgroundColor:'#efecf8'}}><img alt='check' src='/imgs/check.svg'/></td>
                                 <td><span style={{fontSize:'200%'}}>-</span></td>
                             </tr>
                             <tr>
                                 <th style={{fontWeight:'lighter'}} scope="row">Custom functionality</th>
-                                <td><img alt='check' src='/imgs/check.svg'/></td>
-                                <td style={{backgroundColor:'#efecf8'}}><span style={{fontSize:'200%'}}>-</span></td>
+                                <td><span style={{fontSize:'200%'}}>-</span></td>
+                                <td style={{backgroundColor:'#efecf8'}}><img alt='check' src='/imgs/check.svg'/></td>
                                 <td><span style={{fontSize:'200%'}}>-</span></td>
                             </tr>
                             <tr>
                                 <th style={{fontWeight:'lighter'}} scope="row">Advanced SEO</th>
-                                <td><img alt='check' src='/imgs/check.svg'/></td>
-                                <td style={{backgroundColor:'#efecf8'}}><span style={{fontSize:'200%'}}>-</span></td>
+                                <td><span style={{fontSize:'200%'}}>-</span></td>
+                                <td style={{backgroundColor:'#efecf8'}}><img alt='check' src='/imgs/check.svg'/></td>
                                 <td><span style={{fontSize:'200%'}}>-</span></td>
                             </tr>
                         </tbody>
