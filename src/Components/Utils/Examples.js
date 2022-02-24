@@ -73,7 +73,7 @@ const Examples = ({ title, description }) => {
                             <tr>
                                 <th style={{fontWeight:'lighter'}} scope="row">Advanced SEO</th>
                                 <td><span style={{fontSize:'200%'}}>-</span></td>
-                                <td style={{backgroundColor:'#efecf8'}}><img alt='check' src='/imgs/check.svg'/></td>
+                                <td style={{backgroundColor:'#efecf8'}}><img alt='check ' src='/imgs/check.svg'/></td>
                                 <td><span style={{fontSize:'200%'}}>-</span></td>
                             </tr>
                         </tbody>
