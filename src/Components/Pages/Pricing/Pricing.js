@@ -27,7 +27,7 @@ const Pricing = () => {
                         <span style={{ color: '#508096', position: 'relative', top: '-15px', fontWeight: 'lighter' }}>$</span>
                             <b style={{ color: '#508096', fontSize: '150%' }}>100</b>
                     </div>
-                    <img alt='static Example' width={'290px'} height={'auto'} src='/imgs/Img_text_Example.png' />
+                    <img alt='static Example' width={'300px'} height={'auto'} src='/imgs/Img_text_Example.png' />
                 </div>
                 <div style={{backgroundColor:'#035946', display: 'flex', justifyContent: 'space-around', flexWrap: 'wrap', alignItems: 'center', padding:'50px 20px' }}>
                     <div style={{fontSize:'170%', textAlign:'center'}}>
@@ -61,7 +61,7 @@ const Pricing = () => {
                         <img alt='logo Example' style={{ borderRadius: '100%' }} width={'200px'} height={'auto'} src='/imgs/Example_logo.png' />
                     </div>
                 </div>
-                <div style={{backgroundColor:'#f6f6f6', display: 'flex', justifyContent:'space-around', flexWrap: 'wrap', alignItems: 'center',padding:'50px 20px' }}>
+                <div style={{backgroundColor:'#f6f6f6', display: 'flex', justifyContent:'space-around', flexDirection: 'column', alignItems: 'center',padding:'50px 20px' }}>
                     <div style={{fontSize:'170%', textAlign:'center'}}>
                         <h2 style={{fontSize: '150%', color: '#508096' }}>Logical Components</h2>
                         <p>(Components built to "do" something)</p>
@@ -69,7 +69,7 @@ const Pricing = () => {
                         <span style={{ color: '#508096', position: 'relative', top: '-15px', fontWeight: 'lighter' }}>$</span>
                         <b style={{ color: '#508096', fontSize: '150%' }}>100</b>
                     </div>
-                    <div style={{ width: '400px', height: '200px', position: 'relative', alignItems: 'center' }}>
+                    <div style={{ width: '300px', height: '200px', position: 'relative', alignItems: 'center' }}>
                         <ButtonGame />
                     </div>
                 </div>
