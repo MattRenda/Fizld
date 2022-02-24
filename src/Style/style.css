@@ -55,7 +55,10 @@
     width: 330px;
 }
 .headerSpacing{
-    margin-top: 10vh;
+    margin-top: 90px;
+}
+.exampleText{
+    font-size:100%;
 }
 .headerContainer{
     position:fixed;
@@ -97,5 +100,8 @@
         position: absolute; 
         top:10px;
         left:15px;
+    }
+    .exampleText{
+        font-size:60%;
     }
 }
