@@ -11,7 +11,7 @@ const Pricing = () => {
             <div style={{height:'227px', display: 'flex', alignItems: 'center', flexDirection: 'column', position: 'relative', zIndex: 1,paddingTop: '30px' }}>
                 <h3>
                     <span style={{ color: '#508096', position: 'relative', top: '-15px', fontWeight: 'lighter' }}>$</span>
-                    <b style={{ color: '#508096', fontSize: '200%' }}>100</b>
+                    <b style={{ color: '#508096', fontSize: '200%' }}>50</b>
                     <span style={{ fontSize: '65%' }}>/month</span>
                 </h3>
                 <h3 style={{ fontSize: '100%', margin: '5px 0px', color: '#508096' }}>For any site</h3>
