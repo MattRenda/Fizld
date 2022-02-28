@@ -5,6 +5,7 @@ import ExampleAnimation from '../../../lotties-animations/ExampleAnimation.json'
 import ButtonGame from '../../Utils/ButtonGame';
 import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
 const Pricing = () => {
+    
     return (
         <div className=''>
             <div style={{ position: 'absolute', backgroundColor: '#f9eff1', width: '100%', height: '300px', top: '0px', left: '0px', zIndex: 0 }}></div>
