@@ -12,20 +12,23 @@ const Home = () => {
     const cardDescription = 'If you want a site with no limitations, your in the right place.'
 
     return (
-        <div style={{backgroundImage: "url(/imgs/BackgroundImg.png)",backgroundRepeat:'no-repeat',paddingTop:'50px', backgroundColor:'#f6f6f6'}}>
+        <div >
             <div className='headerSpacing'>
                 <Header />
-                <div style={{textAlign:'center'}}>
-                    <Intro header={header} description={description} />
+                <div style={{backgroundImage: "url(/imgs/BackgroundImg.png)",backgroundRepeat:'no-repeat',backgroundSize:'cover',paddingTop:'50px', backgroundColor:'#fafbfb'}}>
+                    <div style={{textAlign:'center'}}>
+                        <Intro header={header} description={description} />
+                    </div>
+                    <div style={{ display: 'flex', justifyContent: 'center', margin:'50px 0px' }}>
+                        <Link to={'/Pricing'} style={{ fontSize: '20px', color: 'white', padding: '15px 25px', borderRadius: '70px' }} className='btn btn-primary'>Get Started</Link>
+                    </div>
+                    <div style={{ textAlign: 'center' }}>
+                        <img width='80%' alt='homepageimg' src='/imgs/HomePageImg.png' />
+                    </div>
                 </div>
-                <div style={{ display: 'flex', justifyContent: 'center', margin:'50px 0px' }}>
-                    <Link to={'/Pricing'} style={{ fontSize: '20px', color: 'white', padding: '15px 25px', borderRadius: '70px' }} className='btn btn-primary'>Get Started</Link>
-                </div>
-                <div style={{ textAlign: 'center' }}>
-                    <img width='80%' alt='homepageimg' src='/imgs/HomePageImg.png' />
-                </div>
+               
                 <Examples title={title} description={cardDescription} />
-                <Footer />
+                <Footer contact={true} />
 
             </div>
         </div>

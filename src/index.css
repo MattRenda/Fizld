@@ -1,8 +1,6 @@
  
  *{
     font-family: Open Sans, sans-serif;
-    color:rgb(75, 77, 79);
-
  }
 
  .left{
@@ -204,6 +202,10 @@
 .desktop{
    display: none;
 }
+.introHeader{
+   font-size: 300%;
+   font-weight: bolder;
+}
 @media only screen and (min-width: 768px) {
    .hero{
       display:flex;
@@ -216,6 +218,10 @@
    }
    .list-unstyled{
       height:140px
+   }
+   .introHeader{
+      font-size: 400%;
+      font-weight: bolder;
    }
  }
 
@@ -232,6 +238,10 @@
    .desktop{
       display: flex;
       align-items: center;
+   }
+   .introHeader{
+      font-size: 500%;
+      font-weight: bolder;
    }
  }
  
