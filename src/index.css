@@ -1,7 +1,8 @@
  
- *{
-    font-family: Open Sans, sans-serif;
- }
+  *{
+   font-family: Open Sans, sans-serif;
+   font-size: 13px;
+}
 
  .left{
     text-align: left;
@@ -206,7 +207,7 @@
    font-size: 200%;
    font-weight: bolder;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 574px) {
    .hero{
       display:flex;
       flex-wrap:nowrap;
@@ -220,13 +221,19 @@
       height:140px
    }
    .introHeader{
-      font-size: 400%;
+      font-size: 350%;
       font-weight: bolder;
    }
+   *{
+      font-family: Open Sans, sans-serif;
+      font-size: 13px;
+   }
  }
+@media only screen and (min-width: 768px) {
+ 
+ 
 
- @media only screen and (min-width: 574px) {
-   /* .list-unstyled{
+     /* .list-unstyled{
       height:190px
    } */
    .form{
@@ -240,8 +247,14 @@
       align-items: center;
    }
    .introHeader{
-      font-size: 500%;
+      font-size: 450%;
       font-weight: bolder;
    }
+   *{
+      font-family: Open Sans, sans-serif;
+      font-size: 15px;
+   }
  }
+
+
  

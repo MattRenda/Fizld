@@ -7,9 +7,13 @@ import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrow
 const Pricing = () => {
     return (
         <div className=''>
-            <div style={{ position: 'absolute', backgroundColor: '#f9eff1', width: '100%', height: '300px', top: '0px', left: '0px', zIndex: 0 }}></div>
-            <div style={{height:'227px', display: 'flex', alignItems: 'center', flexDirection: 'column', position: 'relative', zIndex: 1,paddingTop: '30px' }}>
-                <h3>
+            <div style={{ position: 'absolute', backgroundColor: '#f9eff1', width: '100%', height: '85vh', top: '0px', left: '0px', zIndex: 0 }}></div>
+            <div style={{height:'85vh', display: 'flex', alignItems: 'center', flexDirection: 'column', position: 'relative', zIndex: 1,paddingTop: '100px' }}>
+                <div style={{textAlign:'center'}} className='container'>
+                   <h3 style={{fontWeight:'bolder',padding:'50px 0',fontSize:'300%', color: '#508096'}}>"Its like Subway, but for web development."</h3>
+                   <h3 style={{padding:'50px 0'}}>Pick and choose from the components offered below and let us take care of the rest!</h3>
+                </div>
+                <h3 style={{marginTop:'50px'}}>
                     <span style={{ color: '#508096', position: 'relative', top: '-15px', fontWeight: 'lighter' }}>$</span>
                     <b style={{ color: '#508096', fontSize: '200%' }}>50</b>
                     <span style={{ fontSize: '65%' }}>/month</span>
@@ -17,10 +21,10 @@ const Pricing = () => {
                 <h3 style={{ fontSize: '100%', margin: '5px 0px', color: '#508096' }}>For any site</h3>
                 <h3 style={{ fontSize: '100%', margin: '5px 0px', color: '#508096' }}>+</h3>
                 <h3 style={{ fontSize: '100%', margin: '5px 0px', color: '#508096' }}>Priced per feature</h3>
-                <KeyboardDoubleArrowDownIcon style={{position:'absolute',bottom:'0px', fontSize:'200%', fill:'#508096'}}/>
+                <button className='btn' onClick={()=>{document.getElementById('start').scrollIntoView({behavior:'smooth'})}} style={{position:'absolute',bottom:'0px'}}><KeyboardDoubleArrowDownIcon style={{fontSize:'200%', fill:'#508096'}}/></button>
             </div>
             <div className='mt-5 mb-5'>
-                <div style={{ display: 'flex', justifyContent: 'space-around', flexWrap: 'wrap', alignItems: 'center',padding:'50px 20px' }}>
+                <div id='start' style={{ display: 'flex', justifyContent: 'space-around', flexWrap: 'wrap', alignItems: 'center',padding:'50px 20px' }}>
                     <div style={{fontSize:'170%', textAlign:'center'}}>
                         <h2 style={{fontSize:'150%', color: '#508096' }}>Static Content</h2>
                         <p>(Text and images per page)</p>
@@ -34,7 +38,7 @@ const Pricing = () => {
                         <h2 style={{fontSize:'150%', color: 'white' }}>Animations</h2>
                         <p>
                             <span style={{ color: 'white', position: 'relative', top: '-15px', fontWeight: 'lighter' }}>$</span>
-                            <b style={{ color: 'white', fontSize: '150%' }}>200</b>
+                            <b style={{ color: 'white', fontSize: '250%' }}>200</b>
                         </p>
                     </div>
                     <div style={{ textAlign: 'center' }}>
@@ -54,7 +58,7 @@ const Pricing = () => {
                         <h2 style={{ fontSize: '150%',color: '#508096' }}>Logos</h2>
                         <p>
                             <span style={{ color: '#508096', position: 'relative', top: '-15px', fontWeight: 'lighter' }}>$</span>
-                            <b style={{ color: '#508096', fontSize: '150%' }}>150</b>
+                            <b style={{ color: '#508096', fontSize: '250%' }}>150</b>
                         </p>
                     </div>
                     <div style={{ textAlign: 'center' }}>
