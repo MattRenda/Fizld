@@ -1,7 +1,6 @@
 import React from 'react'
 import Header from '../../Utils/Header';
 import Footer from '../../Utils/Footer';
-import Intro from '../../Utils/Intro';
 import Payment from '../Payment/Payment';
 import Pricing from '../Pricing/Pricing';
 
@@ -11,7 +10,6 @@ const Basic = () => {
     return (
         <div className='headerSpacing'>
             <Header />
-            <Intro />
             <div className='container'>
               
             <Pricing/>  

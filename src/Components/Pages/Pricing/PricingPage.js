@@ -1,7 +1,6 @@
 import React from 'react'
 import Header from '../../Utils/Header';
 import Footer from '../../Utils/Footer';
-import Intro from '../../Utils/Intro';
 import Pricing from '../Pricing/Pricing';
 
 const PricingPage = () => {
@@ -10,7 +9,6 @@ const PricingPage = () => {
     return (
         <div className='headerSpacing'>
             <Header />
-            <Intro />
             <Pricing/>  
             <Footer contact={false}/>
         </div>
