@@ -2,6 +2,7 @@ import React from 'react';
 import ContactPage from '../../Utils/ContactPage';
 import Lottie from 'react-lottie';
 import ExampleAnimation from '../../../lotties-animations/ExampleAnimation.json';
+import Components from '../../../lotties-animations/components.json';
 import ButtonGame from '../../Utils/ButtonGame';
 import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
 const Pricing = () => {
@@ -10,8 +11,6 @@ const Pricing = () => {
             <div style={{ position: 'absolute', backgroundColor: '#f9eff1', width: '100%', height: '650px', top: '0px', left: '0px', zIndex: 0 }}></div>
             <div style={{height:'590px', display: 'flex', alignItems: 'center', flexDirection: 'column', position: 'relative', zIndex: 1,paddingTop: '30px' }}>
                 <div style={{textAlign:'center'}} className='container'>
-                   <h3 style={{fontWeight:'bolder',paddingBottom:'60px', paddingTop:'50px',fontSize:'300%', color: '#508096'}}>"Its like Subway, but for web development."</h3>
-                </div>
                 <h3>
                     <span style={{ color: '#508096', position: 'relative', top: '-15px', fontWeight: 'lighter' }}>$</span>
                     <b style={{ color: '#508096', fontSize: '200%' }}>50</b>
@@ -19,7 +18,17 @@ const Pricing = () => {
                 </h3>
                 <h3 style={{margin:'0px', fontSize: '100%', color: '#508096' }}>For any site</h3>
                 <h3 style={{ margin:'0px',fontSize: '100%', color: '#508096' }}>+</h3>
-                <h3 style={{ margin:'0px',fontSize: '100%', color: '#508096',paddingBottom:'60px'}}>Priced per feature</h3>
+                <h3 style={{ margin:'0px',fontSize: '100%', color: '#508096'}}>Priced per feature</h3>
+                    <Lottie
+                        options={{
+                            loop: true,
+                            autoplay: true,
+                            animationData: Components
+                        }}
+                        height={'300px'}
+                        width={'300px'}
+                    />                
+                </div>
                 <h3 className='container' style={{color: '#508096', textAlign:'center'}}>Pick and choose from the components offered below and let us take care of the rest!</h3>
 
                 <button id='start' className='btn' onClick={()=>{document.getElementById('start').scrollIntoView({behavior:'smooth'})}} style={{position:'absolute',bottom:'0px'}}><KeyboardDoubleArrowDownIcon style={{fontSize:'200%', fill:'#508096'}}/></button>
