@@ -11,7 +11,6 @@ import AccountMenu from './AccountMenu';
 
 const Header = ({ user, setUser }) => {
     let navigate = useNavigate();
-    console.log(user)
     return (
             <div className='shadow-sm headerContainer'>
               

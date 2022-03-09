@@ -12,13 +12,13 @@ const Pricing = () => {
             <div style={{height:'590px', display: 'flex', alignItems: 'center', flexDirection: 'column', position: 'relative', zIndex: 1,paddingTop: '30px' }}>
                 <div style={{textAlign:'center'}} className='container'>
                 <h3>
-                    <span style={{ color: '#508096', position: 'relative', top: '-15px', fontWeight: 'lighter' }}>$</span>
-                    <b style={{ color: '#508096', fontSize: '200%' }}>50</b>
+                    <span style={{ color: '#508096', position: 'relative', top: '-15px', fontWeight: 'lighter', fontSize: '150%' }}>$</span>
+                    <b style={{ color: '#508096', fontSize: '250%' }}>50</b>
                     <span style={{ fontSize: '65%' }}>/month</span>
                 </h3>
-                <h3 style={{margin:'0px', fontSize: '100%', color: '#508096' }}>For any site</h3>
-                <h3 style={{ margin:'0px',fontSize: '100%', color: '#508096' }}>+</h3>
-                <h3 style={{ margin:'0px',fontSize: '100%', color: '#508096'}}>Priced per feature</h3>
+                <h3 style={{margin:'0px', fontSize: '120%', color: '#508096' }}>For any site</h3>
+                <h3 style={{ margin:'0px',fontSize: '120%', color: '#508096' }}>+</h3>
+                <h3 style={{ margin:'0px',fontSize: '120%', color: '#508096'}}>Priced per feature</h3>
                     <Lottie
                         options={{
                             loop: true,

@@ -12,9 +12,8 @@ const Examples = ({ title, description }) => {
                     <table className="table table-bordered">
                         <thead>
                             <tr>
-                                <th scope="col"></th>
                                 <th scope="col" style={{backgroundColor:'#efecf8'}}>
-                                    Fizld <br/>
+                                    <p style={{fontSize:'120%', margin:'0px'}}>Fizld</p> 
                                     <span style={{position:'relative',top:'-10px', fontWeight:'lighter'}}>$</span>
                                     <b style={{fontSize:'200%'}}>50</b>
                                     <span style={{fontSize:'65%'}}>/month</span>
@@ -29,39 +28,28 @@ const Examples = ({ title, description }) => {
                         </thead>
                         <tbody >
                             <tr>
-                                <th style={{alignSelf:'center',fontWeight:'lighter'}} scope="row">Secure online payments</th>
-                                <td style={{backgroundColor:'#efecf8'}}><img alt='check' src='/imgs/check.svg'/></td>
-                                <td><img alt='check' src='/imgs/check.svg'/></td>
+                                <td style={{backgroundColor:'#efecf8'}}>No fizld branding</td>
+                                <td>Charges to remove branding</td>
                             </tr>
                             <tr>
-                                <th style={{fontWeight:'lighter'}} scope="row">Custom Domain</th>
-                                <td style={{backgroundColor:'#efecf8'}}><img alt='check' src='/imgs/check.svg'/></td>
-                                <td><img alt='check' src='/imgs/check.svg'/></td>
+                                <td style={{backgroundColor:'#efecf8'}}>No fizld ads</td>
+                                <td>Charges to remove ads</td>
                             </tr>
                             <tr>
-                                <th style={{fontWeight:'lighter'}} scope="row">Customer care</th>
-                                <td style={{backgroundColor:'#efecf8'}}><img alt='check' src='/imgs/check.svg'/></td>
-                                <td><span style={{fontSize:'200%'}}>-</span></td>
+                                <td style={{backgroundColor:'#efecf8'}}>Complete customization</td>
+                                <td>Charges extra for templates</td>
+                            </tr>  
+                            <tr>
+                                <td style={{backgroundColor:'#efecf8'}}>Mobile first design (Responsive)</td>
+                                <td>Charges extra for responsive design</td>
                             </tr>
                             <tr>
-                                <th style={{fontWeight:'lighter'}} scope="row">Storage space</th>
-                                <td style={{backgroundColor:'#efecf8'}}>Unlimited</td>
-                                <td >100 GB</td>
+                                <td style={{backgroundColor:'#efecf8'}}>SEO included</td>
+                                <td>Charges extra for SEO</td>
                             </tr>
                             <tr>
-                                <th style={{fontWeight:'lighter'}} scope="row">Professional Logo</th>
-                                <td style={{backgroundColor:'#efecf8'}}><img alt='check' src='/imgs/check.svg'/></td>
-                                <td><span style={{fontSize:'200%'}}>-</span></td>
-                            </tr>
-                            <tr>
-                                <th style={{fontWeight:'lighter'}} scope="row">Custom functionality</th>
-                                <td style={{backgroundColor:'#efecf8'}}><img alt='check' src='/imgs/check.svg'/></td>
-                                <td><span style={{fontSize:'200%'}}>-</span></td>
-                            </tr>
-                            <tr>
-                                <th style={{fontWeight:'lighter'}} scope="row">Advanced SEO</th>
-                                <td style={{backgroundColor:'#efecf8'}}><img alt='check ' src='/imgs/check.svg'/></td>
-                                <td><span style={{fontSize:'200%'}}>-</span></td>
+                                <td style={{backgroundColor:'#efecf8'}}>Professional developer on standby</td>
+                                <td>Difficult to update</td>
                             </tr>
                         </tbody>
 

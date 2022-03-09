@@ -204,7 +204,7 @@
    display: none;
 }
 .introHeader{
-   font-size: 200%;
+   font-size: 400%;
    font-weight: bolder;
 }
 @media only screen and (min-width: 574px) {
@@ -219,10 +219,6 @@
    }
    .list-unstyled{
       height:140px
-   }
-   .introHeader{
-      font-size: 350%;
-      font-weight: bolder;
    }
    *{
       font-family: Open Sans, sans-serif;

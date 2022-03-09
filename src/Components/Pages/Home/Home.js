@@ -14,7 +14,7 @@ const Home = () => {
         <div >
             <div className='headerSpacing'>
                 <Header />
-                <div style={{ backgroundImage: "url(/imgs/BackgroundImg.png)", backgroundRepeat: 'no-repeat', backgroundSize: 'cover', paddingTop: '50px', backgroundColor: '#fafbfb' }}>
+                <div style={{height:'100vh', backgroundImage: "url(/imgs/BackgroundImg.png)", backgroundRepeat: 'no-repeat', backgroundSize: 'cover', paddingTop: '50px', backgroundColor: '#fafbfb' }}>
                     <div style={{ textAlign: 'center' }}>
                         <div className='container'>
                             <div>
