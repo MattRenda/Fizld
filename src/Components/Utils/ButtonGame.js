@@ -1,7 +1,9 @@
 import React, { useEffect } from 'react';
 const ButtonGame =()=>{
         let chest; 
-
+        useEffect(()=>{
+          moving();
+        },[])
         function move(){
           chest.style.top = Math.floor(Math.random()*20)+'px';
           chest.style.left =  Math.floor(Math.random()*100)+'px';
