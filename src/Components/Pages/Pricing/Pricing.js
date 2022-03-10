@@ -4,12 +4,27 @@ import ExampleAnimation from '../../../lotties-animations/ExampleAnimation.json'
 import Components from '../../../lotties-animations/components.json';
 import Border from '../../../lotties-animations/border.json';
 import ButtonGame from '../../Utils/ButtonGame';
+import ContactPage from '../../Utils/ContactPage';
 import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
 const Pricing = () => {    
     const [selectedContent,setSelectedContent] = useState('hiding')
     const [selectedAnimations,setSelectedAnimations] = useState('hiding')
     const [selectedLogos,setSelectedLogos] = useState('hiding')
     const [selectedComponents,setSelectedComponents] = useState('hiding')
+
+    const plan = [];
+    if(selectedContent === 'visible'){
+        plan.push('static content')
+    }
+    if(selectedAnimations === 'visible'){
+        plan.push('animations')
+    }
+    if(selectedLogos === 'visible'){
+        plan.push('logos')
+    }
+    if(selectedComponents === 'visible'){
+        plan.push('logical components')
+    }
     return (
         <div className=''>
             <div style={{ position: 'absolute', backgroundColor: '#f9eff1', width: '100%', height: '650px', top: '0px', left: '0px', zIndex: 0 }}></div>
@@ -63,7 +78,7 @@ const Pricing = () => {
                         </div>  
                       
                     </div>
-                    <div style={{width:'300px',height:'300px', display: 'flex', alignItems:'center', flexDirection:'column',textAlign:'center', cursor:'pointer'}}>
+                    <div style={{width:'300px',height:'300px', display: 'flex', alignItems:'center', flexDirection:'column',textAlign:'center', cursor:'pointer', margin:'10px'}}>
                         <div  style={{position:'relative',height:'350px', width:'320px'}}>
                             <div className={selectedAnimations}>
                                 <Lottie
@@ -95,7 +110,7 @@ const Pricing = () => {
                             </div>
                         </div>
                     </div>
-                    <div style={{width:'300px',height:'300px', display: 'flex', alignItems:'center', flexDirection:'column',textAlign:'center', cursor:'pointer'}}>
+                    <div style={{width:'300px',height:'300px', display: 'flex', alignItems:'center', flexDirection:'column',textAlign:'center', cursor:'pointer', margin:'10px'}}>
                         <div  style={{position:'relative',height:'350px', width:'320px'}}>
                             <div className={selectedLogos}>
                                 <Lottie
@@ -120,7 +135,7 @@ const Pricing = () => {
                             </div>
                         </div>
                     </div>
-                    <div style={{width:'300px',height:'300px', display: 'flex', alignItems:'center', flexDirection:'column',textAlign:'center', cursor:'pointer'}}>
+                    <div  style={{width:'300px',height:'300px', display: 'flex', alignItems:'center', flexDirection:'column',textAlign:'center', cursor:'pointer', margin:'10px'}}>
                         <div  style={{position:'relative',height:'350px', width:'320px'}}>
                             <div className={selectedComponents}>
                                 <Lottie
@@ -132,7 +147,7 @@ const Pricing = () => {
                                     }}
                                 /> 
                             </div>
-                            <div onClick={()=>setSelectedComponents(selectedComponents == 'visible'? 'hiding' : 'visible')}>
+                            <div  onClick={()=>setSelectedComponents(selectedComponents == 'visible'? 'hiding' : 'visible')}>
                                 <h2 style={{fontSize: '150%', color: '#508096' }}>Logical Components</h2>
                                 <p>(Components built to "do" something)</p>
                                 <div style={{width: '300px',height:'40px', position: 'relative' }}>
@@ -148,7 +163,9 @@ const Pricing = () => {
                     </div>
                 </div>
             </div>
-
+            <div className='mt-5 mb-5' style={{ display: 'flex', justifyContent: 'center', }}>
+                <ContactPage title={'Message us to get started!'} plan={plan}/>
+            </div>
            
         </div>
     )

@@ -7,10 +7,10 @@ const ContactPage =({title,plan})=> {
     const[state,setState] = useState({
         name: '',
         email: '',
-        message: '',
+        message: plan?`Hello, I am interested in creating a website!`:'',
         subject: 'messaged you from your Portfolio!'
     })
-
+    console.log(plan)
     const sendEmail=()=> {
         
         const { name, email, message, subject } = state
@@ -64,7 +64,7 @@ const ContactPage =({title,plan})=> {
                                 name='message' 
                                 rows={4}
                                 required
-                                value={state.message}
+                                value={plan && plan.length > 0?state.message + ' I would like ' + plan.map(item=>item):state.message}
                             />
                         </Form.Group>
                     </Form.Row>
