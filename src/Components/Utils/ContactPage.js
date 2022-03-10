@@ -64,7 +64,7 @@ const ContactPage =({title,plan})=> {
                                 name='message' 
                                 rows={4}
                                 required
-                                value={plan && plan.length > 0?state.message + ' I would like ' + plan.map(item=>item):state.message}
+                                value={plan && plan.length > 0?state.message + ' I would like ' + plan.map(item=>item)+ '.':state.message }
                             />
                         </Form.Group>
                     </Form.Row>
