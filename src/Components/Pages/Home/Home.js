@@ -27,7 +27,7 @@ const Home = () => {
                         <Link to={'/Pricing'} style={{color: 'white', padding: '15px 25px', borderRadius: '70px' }} className='btn btn-primary'>Get Started</Link>
                     </div>
                     <div style={{ textAlign: 'center' }}>
-                        <img width='70%' alt='homepageimg' src='/imgs/HomePageImg.png' />
+                        <img width='70%' alt='homepageimg' src='/imgs/BackgroundImg2.png' />
                     </div>
                 </div>
 
