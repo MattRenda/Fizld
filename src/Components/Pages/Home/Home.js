@@ -9,12 +9,12 @@ const Home = () => {
     let description = 'Quickly design and customize responsive mobile-first sites with Fizld. Unlike website builders, we have no limitations.';
     const title = 'Why Choose Us?'
     const cardDescription = 'If you want a site with no limitations, your in the right place.'
-
+    const src = window.screen.width >= 1024 && window.screen.height >= 768? '/imgs/BackgroundImg2.png': '/imgs/BackgroundImg2Mobile.png'
     return (
         <div >
             <div className='headerSpacing'>
                 <Header />
-                <div style={{height:'100vh', backgroundImage: "url(/imgs/BackgroundImg.png)", backgroundRepeat: 'no-repeat', backgroundSize: 'cover', paddingTop: '50px', backgroundColor: '#fafbfb' }}>
+                <div style={{ backgroundImage: "url(/imgs/BackgroundImg.png)", backgroundRepeat: 'no-repeat', backgroundSize: 'cover', paddingTop: '50px', backgroundColor: '#fafbfb' }}>
                     <div style={{ textAlign: 'center' }}>
                         <div className='container'>
                             <div>
@@ -23,14 +23,14 @@ const Home = () => {
                             </div>
                         </div>                    
                     </div>
-                    <div style={{ display: 'flex', justifyContent: 'center', margin: '50px 0px' }}>
+                    <div style={{ display: 'flex', justifyContent: 'center', margin: '50px 0px 0px 0px' }}>
                         <Link to={'/Pricing'} style={{color: 'white', padding: '15px 25px', borderRadius: '70px' }} className='btn btn-primary'>Get Started</Link>
                     </div>
                     <div style={{ textAlign: 'center' }}>
-                        <img width='70%' alt='homepageimg' src='/imgs/BackgroundImg2.png' />
+                        <img width='70%' alt='homepageimg' src={src} />
                     </div>
                 </div>
-
+              
                 <Examples title={title} description={cardDescription} />
                 <Footer contact={true} />
 
