@@ -13,8 +13,8 @@ const Footer = ({contact}) => {
             <ul className="list-unstyled text-small">
               <li><a style={{color:'black'}} href="/">Web development</a></li>
               <li><a style={{color:'black'}} href="/">Web design</a></li>
-              <li><a style={{color:'black'}} href="/">web hosting</a></li>
-              <li><a style={{color:'black'}} href="/">support</a></li>
+              <li><a style={{color:'black'}} href="/">Web hosting</a></li>
+              <li><a style={{color:'black'}} href="/">Support</a></li>
             </ul>
           </div>
           <div>

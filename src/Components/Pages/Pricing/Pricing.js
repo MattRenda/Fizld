@@ -37,7 +37,7 @@ const Pricing = () => {
                 </h3>
                 <h3 style={{margin:'0px', fontSize: '120%', color: '#508096' }}>For any site</h3>
                 <h3 style={{ margin:'0px',fontSize: '120%', color: '#508096' }}>+</h3>
-                <h3 style={{ margin:'0px',fontSize: '120%', color: '#508096'}}>Priced per feature</h3>
+                <h3 style={{ margin:'0px',fontSize: '120%', color: '#508096'}}><b style={{ color: '#508096', fontSize: '120%', paddingRight:'5px' }}>ONE TIME</b>  payment per feature</h3>
                     <Lottie
                         options={{
                             loop: true,
