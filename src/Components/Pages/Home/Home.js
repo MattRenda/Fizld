@@ -23,7 +23,7 @@ const Home = () => {
                             </div>
                         </div>                    
                     </div>
-                    <div style={{ display: 'flex', justifyContent: 'center', margin: '50px 0px 0px 0px' }}>
+                    <div style={{ display: 'flex', justifyContent: 'center', margin: '50px 0px 40px 0px' }}>
                         <Link to={'/Pricing'} style={{color: 'white', padding: '15px 25px', borderRadius: '70px' }} className='btn btn-primary'>Get Started</Link>
                     </div>
                     <div style={{ textAlign: 'center' }}>
