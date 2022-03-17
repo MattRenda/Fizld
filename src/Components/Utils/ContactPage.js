@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {Form, Col } from 'react-bootstrap';
 import axios from 'axios';
 
@@ -10,6 +10,8 @@ const ContactPage =({title,plan})=> {
         message: plan?`Hello, I am interested in creating a website!`:'',
         subject: 'messaged you from your Portfolio!'
     })
+
+
     console.log(plan)
     const sendEmail=()=> {
         
@@ -64,7 +66,7 @@ const ContactPage =({title,plan})=> {
                                 name='message' 
                                 rows={4}
                                 required
-                                value={plan && plan.length > 0?state.message + ' I would like ' + plan.map(item=>item)+ '.':state.message }
+                                value={state.message}
                             />
                         </Form.Group>
                     </Form.Row>
