@@ -61,7 +61,7 @@ export function* setUser(input){
 
 export function* createUser(input){
   try {
-    yield fetch("https://fizld.azurewebsites.net/api/create?code=QBEhXISsIHWzI9aIe5qeiff5ilVEPBz7KZ080fAkb7Z/skurQziSKA==",{
+    yield fetch(" https://vknlufsno3.execute-api.us-east-1.amazonaws.com/default/Fizld-create",{
       method:"POST",
       body:JSON.stringify({
         Email:input.payload.email,

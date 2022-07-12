@@ -5,7 +5,7 @@ import Footer from '../../Utils/Footer';
 import { createStructuredSelector } from 'reselect';
 import { connect } from 'react-redux';
 import * as selectors from '../../Redux/selectors';
-
+import ContactPage from '../../Utils/ContactPage';
 const Account = ({ user }) => {
     window.scrollTo(0, 0);
     return (
@@ -13,9 +13,14 @@ const Account = ({ user }) => {
             <Header />
             <div className='container'>
 
-                {user.SiteUrl == "no plan" ? <h2 style={{position:'relative',height: '80vh',top:'30vh', textAlign:'center'}}>Please subscribe to a plan <a href='/'>here</a></h2>
+                {
+                user.SiteUrl == "no plan" ? 
+                    <div style={{height: '70vh', marginTop:'30vh'}}>
+                        <h2 style={{position:'relative', textAlign:'center'}}>Please contact us to get started</h2>
+                        <ContactPage/>
+                    </div>
                     :
-                    <>
+                    <div style={{marginTop:'10vh'}}>
                         <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                             <div style={{ display: 'flex', flexDirection: 'column' }}>
                                 <p className='btn btn-success'>{user.Plan}</p>
@@ -57,7 +62,7 @@ const Account = ({ user }) => {
                                 </ul>
                             </div>
                         </div>
-                    </>
+                    </div>
                 }
             </div>
             <Footer />

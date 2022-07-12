@@ -27,7 +27,7 @@ const Header = ({ user, setUser }) => {
                         </Link>
                     </Navbar.Brand>
                 </div>
-                {/* <div className='headerElementRight'>
+                <div className='headerElementRight'>
                     <div className='desktop'>
                         {
                             
@@ -42,7 +42,7 @@ const Header = ({ user, setUser }) => {
                     <div className="mobile">
                         <AccountMenu user={user} setUser={setUser} />
                     </div>
-                </div> */}
+                </div>
                
             </div>
     )
