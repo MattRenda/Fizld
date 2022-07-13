@@ -35,23 +35,14 @@ const Account = ({ user }) => {
                             <iframe title='Site' style={{ width: '100%', height: '70vh' }} src={user.SiteUrl} />
 
                         </div>
-                        <div className='mt-2 mb-5'>
-                            <h2>Change Log</h2>
-                            <ul>
-                                <li>updated feature</li>
-                                <li>updated feature</li>
-                                <li>updated feature</li>
-                                <li>updated feature</li>
-                            </ul>
-                        </div>
+                    
                         <div style={{display:'flex',justifyContent:'space-between'}} className='mt-2 mb-5'>
                             <div>
                                 <h2>Agreed upon contract</h2>
                                 <ul>
-                                    <li> feature</li>
-                                    <li> feature</li>
-                                    <li> feature</li>
-                                    <li> feature</li>
+                                    {user.features?.map(feature=>
+                                    <li>{feature}</li>
+                                    )}
                                 </ul>
                             </div>
                             <div>
