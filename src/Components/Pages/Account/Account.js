@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from '../../Utils/Header';
 import Footer from '../../Utils/Footer';
+import { Link } from 'react-router-dom';
 
 import { createStructuredSelector } from 'reselect';
 import { connect } from 'react-redux';
@@ -36,12 +37,15 @@ const Account = ({ user }) => {
 
                         </div>
                     
-                        <div style={{display:'flex',justifyContent:'space-between'}} className='mt-2 mb-5'>
+                        <div style={{display:'flex',justifyContent:'space-between', flexWrap:'wrap'}} className='mt-2 mb-5'>
                             <div>
                                 <h2>Agreed upon contract</h2>
                                 <ul>
                                     {user.features?.map(feature=>
-                                    <li>{feature}</li>
+                                    <li style={{display:'flex',justifyContent:'space-between',marginBottom:'10px'}}>
+                                        {feature.name}
+                                        <Link to={'/basic'} state={{plan:feature.name,cost:feature.cost}} className='btn btn-light'>{feature.status}</Link>    
+                                    </li>
                                     )}
                                 </ul>
                             </div>
@@ -49,10 +53,15 @@ const Account = ({ user }) => {
                                 <h2>Monthly support</h2>
                                 <ul>
                                     <li> Bug fixes</li>
-                                    <li> Q/A </li>                                   
+                                    <li> Q/A </li>   
+                                    <li> Add Feat</li> 
+                                    <li> Storage fees</li>
+                                    <li> SSL certificate</li>  
                                 </ul>
+                                <Link to={'/basic'}  state={{plan:"Monthly Support",cost:50}} className='btn btn-success'>Sign up for auto pay</Link>                              
                             </div>
                         </div>
+                       
                     </div>
                 }
             </div>

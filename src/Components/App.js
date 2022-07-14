@@ -36,22 +36,17 @@ const App =({Init, user})=>{
                     <Route path="/" element={<Home/>}/>
                     <Route path="/Login" element={<Login/>}/>
                     <Route path="/CreateAccount" element={user._id?<Navigate replace to={'/'}/>:<CreateAccount/>}/>
-                    <Route path="/Pricing" element={<PricingPage/>}/>
                     <Route path="/Basic" element={ 
                         <Protected>
                             <Basic/>
-                        </Protected>}/>
-                    <Route path="/Plus" element={
-                        <Protected>
-                            <Plus/>
-                        </Protected>}/>
-                    <Route path="/Premium" element={ 
-                        <Protected>
-                            <Premium/>
-                        </Protected>}/>
-                   
-                    <Route path="/Account" element={ <Protected> <Account/> </Protected>}/>
-                    <Route path="/Payment" element={user._id?<Payment/>:<Navigate replace to={'/'}/>}/>
+                        </Protected>
+                    }/>
+                    <Route path="/Pricing" element={<PricingPage/>}/>
+                    <Route path="/Account" element={ 
+                        <Protected> 
+                            <Account/> 
+                        </Protected>
+                    }/>
                     <Route element={<Navigate replace to={'/'}/>}/>
                 </Routes>
             </Router>
