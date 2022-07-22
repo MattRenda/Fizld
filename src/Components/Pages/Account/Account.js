@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from '../../Utils/Header';
 import Footer from '../../Utils/Footer';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 import { createStructuredSelector } from 'reselect';
 import { connect } from 'react-redux';
@@ -9,6 +9,7 @@ import * as selectors from '../../Redux/selectors';
 import ContactPage from '../../Utils/ContactPage';
 const Account = ({ user }) => {
     window.scrollTo(0, 0);
+    const navigate = useNavigate();
     return (
         <div className='headerSpacing'>
             <Header />
@@ -44,21 +45,21 @@ const Account = ({ user }) => {
                                     {user.features?.map(feature=>
                                     <li style={{display:'flex',justifyContent:'space-between',marginBottom:'10px'}}>
                                         {feature.name}
-                                        <Link to={'/basic'} state={{plan:feature.name,cost:feature.cost}} className='btn btn-light'>{feature.status}</Link>    
+                                        <button disabled={feature.status === 'done'?false:true} onClick={()=> navigate('/basic',{state:{plan:feature.name,cost:feature.cost}})} className={`btn btn-${feature.status === 'done'?"success":"light"}`}>{feature.status.toUpperCase() == "DONE"? <span>Item Completed <br/> Pay Now</span>: feature.status.toUpperCase()}</button>    
                                     </li>
                                     )}
                                 </ul>
                             </div>
                             <div>
                                 <h2>Monthly support</h2>
-                                <ul>
+                                <ul style={{listStyle:'none', padding:'0px'}}>
                                     <li> Bug fixes</li>
                                     <li> Q/A </li>   
                                     <li> Add Feat</li> 
                                     <li> Storage fees</li>
                                     <li> SSL certificate</li>  
                                 </ul>
-                                <Link to={'/basic'}  state={{plan:"Monthly Support",cost:50}} className='btn btn-success'>Sign up for auto pay</Link>                              
+                                <button disabled={user.monthlyPayment == true?true:false} onClick={()=> navigate('/basic',{state:{plan:"Monthly Support",cost:50}})} className='btn btn-success'>{user.monthlyPayment == true?"Paid for the month!":"Pay now"}</button>    
                             </div>
                         </div>
                        

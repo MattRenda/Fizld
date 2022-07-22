@@ -86,7 +86,7 @@ const CheckoutForm = ({ price, plan }) => {
         <div className='shadow-sm col-md p-3 m-3'>
           <b>{plan}</b>
           <div className='d-flex justify-content-between mb-3'>
-            <div>${price}.00 / every month</div>
+            <div>{plan == 'Monthly Support'?`$${price}.00 / every month`:`One time payment of $${price}.00`}</div>
             <div>${price}.00</div>
           </div>
           <hr />
