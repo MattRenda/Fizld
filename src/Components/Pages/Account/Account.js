@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Header from '../../Utils/Header';
 import Footer from '../../Utils/Footer';
 import { useNavigate } from 'react-router-dom';
@@ -10,6 +10,7 @@ import ContactPage from '../../Utils/ContactPage';
 const Account = ({ user }) => {
     window.scrollTo(0, 0);
     const navigate = useNavigate();
+    const [deviceRatio,setdeviceRatio] = useState({width:1920, height:1080});
     return (
         <div className='headerSpacing'>
             <Header />
@@ -22,20 +23,26 @@ const Account = ({ user }) => {
                         <ContactPage/>
                     </div>
                     :
-                    <div style={{marginTop:'10vh'}}>
+                    <div style={{marginTop:'15vh'}}>
                         <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                             <div style={{ display: 'flex', flexDirection: 'column' }}>
                                 <p className='btn btn-success'>{user.Plan}</p>
-                                <p></p>
+                                <p></p> 
                             </div>
                             <div>
                                 <a href={user.SiteUrl} target='_blank' rel="noopener noreferrer" className='m-2'>View Site</a>
                             </div>
                         </div>
-                        <div className='mt-2 mb-5'>
-
-                            <iframe title='Site' style={{ width: '100%', height: '70vh' }} src={user.SiteUrl} />
-
+                        <div style={{display:'flex',flexDirection:'column',width:'100%',position:'relative',alignItems:'center'}}>
+                            <div style={{width:'770px', height:'500px', overflow:'hidden',textAlign:`${deviceRatio.width === 1920?'none':'center'}`}}>
+                                <iframe title='Site' style={{ width: deviceRatio.width, height: deviceRatio.height,transform:`${deviceRatio.width === 1920?'scale(0.4,0.4)':'scale(0.7,0.7)'}`,transformOrigin:`top ${deviceRatio.width === 1920?'left':''}`}} src={user.SiteUrl} />
+                            </div>
+                            <div>
+                                <button className='btn btn-primary' onClick={()=>setdeviceRatio({width:375, height: 667})}>mobile</button>
+                                <button className='btn btn-primary' onClick={()=>setdeviceRatio({width:1920, height: 1080})}>desktop</button>
+                            </div>
+                            {/* 1920 x 1080 */}
+                            {/* 360 x 740 */}
                         </div>
                     
                         <div style={{display:'flex',justifyContent:'space-between', flexWrap:'wrap'}} className='mt-2 mb-5'>
