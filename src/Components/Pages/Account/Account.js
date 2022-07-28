@@ -17,7 +17,7 @@ const Account = ({ user }) => {
             <div className='container'>
 
                 {
-                user.SiteUrl == "no plan" ? 
+                user.SiteUrl === "no plan" ? 
                     <div style={{height: '70vh', marginTop:'30vh'}}>
                         <h2 style={{position:'relative', textAlign:'center'}}>Please contact us to get started</h2>
                         <ContactPage/>
@@ -52,7 +52,7 @@ const Account = ({ user }) => {
                                     {user.features?.map(feature=>
                                     <li style={{display:'flex',justifyContent:'space-between',marginBottom:'10px'}}>
                                         {feature.name}
-                                        <button disabled={feature.status === 'done'?false:true} onClick={()=> navigate('/basic',{state:{plan:feature.name,cost:feature.cost}})} className={`btn btn-${feature.status === 'done'?"success":"light"}`}>{feature.status.toUpperCase() == "DONE"? <span>Item Completed <br/> Pay Now</span>: feature.status.toUpperCase()}</button>    
+                                        <button disabled={feature.status === 'done'?false:true} onClick={()=> navigate('/basic',{state:{plan:feature.name,cost:feature.cost}})} className={`btn btn-${feature.status === 'done'?"success":"light"}`}>{feature.status.toUpperCase() === "DONE"? <span>Item Completed <br/> Pay Now</span>: feature.status.toUpperCase()}</button>    
                                     </li>
                                     )}
                                 </ul>
@@ -66,7 +66,7 @@ const Account = ({ user }) => {
                                     <li> Storage fees</li>
                                     <li> SSL certificate</li>  
                                 </ul>
-                                <button disabled={user.monthlyPayment == true?true:false} onClick={()=> navigate('/basic',{state:{plan:"Monthly Support",cost:50}})} className='btn btn-success'>{user.monthlyPayment == true?"Paid for the month!":"Pay now"}</button>    
+                                <button disabled={user.monthlyPayment === true?true:false} onClick={()=> navigate('/basic',{state:{plan:"Monthly Support",cost:50}})} className='btn btn-success'>{user.monthlyPayment === true?"Paid for the month!":"Pay now"}</button>    
                             </div>
                         </div>
                        
