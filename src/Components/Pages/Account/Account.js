@@ -50,22 +50,26 @@ const Account = ({ user }) => {
                             <div>
                                 <h2 style={{padding:'30px 0',fontWeight:'bold',fontSize:'250%'}}>Agreed upon contract</h2>
                                     {user.features?.map(feature=>
-                                    <div style={{display:'flex',justifyContent:'space-between',marginBottom:'10px',alignItems:'center'}}>
+                                    <div style={{display:'flex',justifyContent:'space-between',marginBottom:'10px',alignItems:'center',backgroundColor:'#e9eff1', borderRadius:'10px', padding:'10px'}}>
                                         {feature.name}
                                         <button style={{margin:'5px',fontSize:'120%',fontWeight:'bold'}} disabled={feature.status === 'done'?false:true} onClick={()=> navigate('/basic',{state:{plan:feature.name,cost:feature.cost}})} className={`btn btn-${feature.status === 'done'?"success":"light"}`}>{feature.status.toUpperCase() === "DONE"? "Pay Now": feature.status.toUpperCase()}</button>    
                                     </div>
                                     )}
                             </div>
-                            <div>
+                            <div >
                                 <h2 style={{padding:'30px 0',fontWeight:'bold',fontSize:'250%'}}>Monthly support</h2>
-                                <ul style={{listStyle:'none', padding:'0px'}}>
-                                    <li> Bug fixes</li>
-                                    <li> Q/A </li>   
-                                    <li> Add Feat</li> 
-                                    <li> Storage fees</li>
-                                    <li> SSL certificate</li>  
-                                </ul>
-                                <button style={{margin:'5px',fontSize:'120%',fontWeight:'bold'}} disabled={user.monthlyPayment === true?true:false} onClick={()=> navigate('/basic',{state:{plan:"Monthly Support",cost:50}})} className='btn btn-success'>{user.monthlyPayment === true?"Paid for the month!":"Pay now"}</button>    
+                                <div style={{backgroundColor:'#e9eff1',display:'flex',alignItems:'center',justifyContent:'space-between', borderRadius:'10px', padding:'10px'}}>
+                                    <div>
+                                        <div> Bug fixes</div>
+                                        <div> Q/A </div>   
+                                        <div> Add Feat</div> 
+                                        <div> Storage fees</div>
+                                        <div> SSL certificate</div>  
+                                    </div>
+                                    <div>
+                                        <button style={{margin:'5px',fontSize:'120%',fontWeight:'bold'}} disabled={user.monthlyPayment === true?true:false} onClick={()=> navigate('/basic',{state:{plan:"Monthly Support",cost:50}})} className='btn btn-success'>{user.monthlyPayment === true?"Paid for the month!":"Pay now"}</button>    
+                                    </div>
+                                </div>
                             </div>
                         </div>
                        
