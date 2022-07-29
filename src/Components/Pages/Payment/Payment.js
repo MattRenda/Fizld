@@ -22,7 +22,7 @@ const Payment = ({ plan, price, user }) => {
     // Create PaymentIntent as soon as the page loads
     fetch("https://4tgrm96sfd.execute-api.us-east-1.amazonaws.com/default/Fizld-payment", {
       method: "POST",
-      body: JSON.stringify({ price: price, email: user.Email}),
+      body: JSON.stringify({ price: price, email: user.Email, description:plan}),
     })
       .then((res) => res.json())
       .then((data) => setClientSecret(data.client_secret))
