@@ -50,7 +50,7 @@ const Account = ({ user }) => {
                             <div>
                                 <h2 style={{padding:'30px 0',fontWeight:'bold',fontSize:'250%'}}>Agreed upon contract</h2>
                                     {user.features?.map(feature=>
-                                    <div style={{display:'flex',justifyContent:'space-between',marginBottom:'10px',alignItems:'center',backgroundColor:'#e9eff1', borderRadius:'10px', padding:'10px'}}>
+                                    <div style={{display:'flex',justifyContent:'space-between',marginBottom:'10px',alignItems:'center',backgroundColor:'#f7f7f7', borderRadius:'10px', padding:'10px'}}>
                                         {feature.name}
                                         <button style={{margin:'5px',fontSize:'120%',fontWeight:'bold'}} disabled={feature.status === 'done'?false:true} onClick={()=> navigate('/basic',{state:{plan:feature.name,cost:feature.cost}})} className={`btn btn-${feature.status === 'done'?"success":"light"}`}>{feature.status.toUpperCase() === "DONE"? "Pay Now": feature.status.toUpperCase()}</button>    
                                     </div>
@@ -58,7 +58,7 @@ const Account = ({ user }) => {
                             </div>
                             <div >
                                 <h2 style={{padding:'30px 0',fontWeight:'bold',fontSize:'250%'}}>Monthly support</h2>
-                                <div style={{backgroundColor:'#e9eff1',display:'flex',alignItems:'center',justifyContent:'space-between', borderRadius:'10px', padding:'10px'}}>
+                                <div style={{backgroundColor:'#f7f7f7',display:'flex',alignItems:'center',justifyContent:'space-between', borderRadius:'10px', padding:'10px'}}>
                                     <div>
                                         <div> Bug fixes</div>
                                         <div> Q/A </div>   
