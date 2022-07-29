@@ -14,7 +14,7 @@ const Account = ({ user }) => {
     return (
         <div className='headerSpacing'>
             <Header />
-            <div className='container'>
+            <div className='container fluid'>
 
                 {
                 user.SiteUrl === "no plan" ? 
@@ -24,41 +24,40 @@ const Account = ({ user }) => {
                     </div>
                     :
                     <div style={{marginTop:'15vh'}}>
-                        <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                        
+                        <div style={{ display: 'flex', justifyContent: 'space-between',width:'100%'}}>
                             <div style={{ display: 'flex', flexDirection: 'column' }}>
-                                <p className='btn btn-success'>{user.Plan}</p>
+                                <p style={{margin:'5px',fontSize:'120%',fontWeight:'bold'}} className='btn btn-success'>{user.Plan}</p>
                                 <p></p> 
                             </div>
                             <div>
-                                <a href={user.SiteUrl} target='_blank' rel="noopener noreferrer" className='m-2'>View Site</a>
+                                <a href={user.SiteUrl} target='_blank' rel="noopener noreferrer" style={{margin:'5px',fontSize:'120%',fontWeight:'bold',backgroundColor:'#1170a7',color:'white'}}  className='btn'>View Site</a>
                             </div>
                         </div>
-                        <div style={{display:'flex',flexDirection:'column',width:'100%',position:'relative',alignItems:'center'}}>
-                            <div style={{width:'770px', height:'500px', overflow:'hidden',textAlign:`${deviceRatio.width === 1920?'none':'center'}`}}>
+                        <div className='iframe'>
+                            <div  style={{width:'770px', height:'500px', overflow:'hidden',textAlign:`${deviceRatio.width === 1920?'none':'center'}`}}>
                                 <iframe title='Site' style={{ width: deviceRatio.width, height: deviceRatio.height,transform:`${deviceRatio.width === 1920?'scale(0.4,0.4)':'scale(0.7,0.7)'}`,transformOrigin:`top ${deviceRatio.width === 1920?'left':''}`}} src={user.SiteUrl} />
                             </div>
                             <div>
-                                <button className='btn btn-primary' onClick={()=>setdeviceRatio({width:375, height: 667})}>mobile</button>
-                                <button className='btn btn-primary' onClick={()=>setdeviceRatio({width:1920, height: 1080})}>desktop</button>
+                                <button style={{margin:'5px',fontSize:'120%',fontWeight:'bold',backgroundColor:'#1170a7',color:'white'}} className='btn' onClick={()=>setdeviceRatio({width:375, height: 667})}>Mobile</button>
+                                <button style={{margin:'5px',fontSize:'120%',fontWeight:'bold',backgroundColor:'#1170a7',color:'white'}} className='btn' onClick={()=>setdeviceRatio({width:1920, height: 1080})}>Desktop</button>
                             </div>
                             {/* 1920 x 1080 */}
                             {/* 360 x 740 */}
                         </div>
                     
-                        <div style={{display:'flex',justifyContent:'space-between', flexWrap:'wrap'}} className='mt-2 mb-5'>
+                        <div style={{display:'flex',justifyContent:'space-between',alignItems:'start', flexWrap:'wrap',height:'500px'}} className='mt-2 mb-5'>
                             <div>
-                                <h2>Agreed upon contract</h2>
-                                <ul>
+                                <h2 style={{padding:'30px 0',fontWeight:'bold',fontSize:'250%'}}>Agreed upon contract</h2>
                                     {user.features?.map(feature=>
-                                    <li style={{display:'flex',justifyContent:'space-between',marginBottom:'10px'}}>
+                                    <div style={{display:'flex',justifyContent:'space-between',marginBottom:'10px',alignItems:'center'}}>
                                         {feature.name}
-                                        <button disabled={feature.status === 'done'?false:true} onClick={()=> navigate('/basic',{state:{plan:feature.name,cost:feature.cost}})} className={`btn btn-${feature.status === 'done'?"success":"light"}`}>{feature.status.toUpperCase() === "DONE"? <span>Item Completed <br/> Pay Now</span>: feature.status.toUpperCase()}</button>    
-                                    </li>
+                                        <button style={{margin:'5px',fontSize:'120%',fontWeight:'bold'}} disabled={feature.status === 'done'?false:true} onClick={()=> navigate('/basic',{state:{plan:feature.name,cost:feature.cost}})} className={`btn btn-${feature.status === 'done'?"success":"light"}`}>{feature.status.toUpperCase() === "DONE"? "Pay Now": feature.status.toUpperCase()}</button>    
+                                    </div>
                                     )}
-                                </ul>
                             </div>
                             <div>
-                                <h2>Monthly support</h2>
+                                <h2 style={{padding:'30px 0',fontWeight:'bold',fontSize:'250%'}}>Monthly support</h2>
                                 <ul style={{listStyle:'none', padding:'0px'}}>
                                     <li> Bug fixes</li>
                                     <li> Q/A </li>   
@@ -66,7 +65,7 @@ const Account = ({ user }) => {
                                     <li> Storage fees</li>
                                     <li> SSL certificate</li>  
                                 </ul>
-                                <button disabled={user.monthlyPayment === true?true:false} onClick={()=> navigate('/basic',{state:{plan:"Monthly Support",cost:50}})} className='btn btn-success'>{user.monthlyPayment === true?"Paid for the month!":"Pay now"}</button>    
+                                <button style={{margin:'5px',fontSize:'120%',fontWeight:'bold'}} disabled={user.monthlyPayment === true?true:false} onClick={()=> navigate('/basic',{state:{plan:"Monthly Support",cost:50}})} className='btn btn-success'>{user.monthlyPayment === true?"Paid for the month!":"Pay now"}</button>    
                             </div>
                         </div>
                        
