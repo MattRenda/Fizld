@@ -28,7 +28,7 @@ const ContactPage =({title,plan})=> {
         setState({...state,message:'',email:'',name:''});
     }
         return (
-            <div id='contact' className='container form'>
+            <div id='contact' className='form' style={{backgroundColor:'white',padding:'10vh 20vw'}}>
                 <h2 >{title}</h2>
         
                 <Form onSubmit={(e)=>{e.preventDefault(); sendEmail(); clearFields();}}>
