@@ -14,19 +14,19 @@ const Examples = ({ title, description }) => {
                     <p style={{color:'black'}}>Designers are on standby to help bring your dream to life</p>
                 </div>
                 <div style={{textAlign:'center',fontFamily:'Oswald',color:'#0a6396',width:'200px'}}>
-                    <i  style={{fontSize:'200%'}} class="fa-solid fa-pen"></i>
+                    <i  style={{fontSize:'200%'}} class="fa-solid fa-code"></i>
                     <div  style={{fontSize:'150%',fontFamily:'Oswald'}}>Developer</div>
                     <p style={{color:'black'}}>Developers are on standby to help bring your dream to life</p>
 
                 </div>
                 <div style={{textAlign:'center',fontFamily:'Oswald',color:'#0a6396',width:'200px'}}>
-                    <i  style={{fontSize:'200%'}} class="fa-solid fa-pen"></i>
+                    <i  style={{fontSize:'200%'}} class="fa-solid fa-hotel"></i>
                     <div  style={{fontSize:'150%',fontFamily:'Oswald'}}>Hosting</div>
                     <p style={{color:'black'}}>We offer a low monthly cost to host and maintain your site</p>
 
                 </div>
                 <div style={{textAlign:'center',fontFamily:'Oswald',color:'#0a6396',width:'200px'}}>
-                    <i  style={{fontSize:'200%',color:'#0a6396'}} class="fa-solid fa-pen"></i>
+                    <i  style={{fontSize:'200%',color:'#0a6396'}} class="fa-solid fa-headset"></i>
                     <div  style={{fontSize:'150%',fontFamily:'Oswald',color:'#0a6396'}}>Support</div>
                     <p style={{color:'black'}}>We offer 24/7 support</p>
 
