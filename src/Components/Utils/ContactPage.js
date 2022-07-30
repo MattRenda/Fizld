@@ -12,7 +12,6 @@ const ContactPage =({title,plan})=> {
     })
 
 
-    console.log(plan)
     const sendEmail=()=> {
         
         const { name, email, message, subject } = state

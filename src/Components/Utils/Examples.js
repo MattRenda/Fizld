@@ -4,56 +4,32 @@ const Examples = ({ title, description }) => {
     return (
         <div className='p-5 exampleText' >
             <div className='p-3' style={{ position: 'relative', textAlign: 'center' }}>
-                <h3>{title}</h3>
-                <p className='mb-0'>{description}</p>
+                <h3 style={{fontSize:'350%',fontWeight:'bolder',fontFamily:'Oswald',color:'#0a6396'}}>OUR SECRET SAUCE</h3>
+                <p style={{fontSize:'200%',fontFamily:'Oswald',color:'#0a6396'}} className='mb-0'>Here's what makes fizld the smarter choice for web development. </p>
             </div>
-            <div  style={{ position: 'relative', textAlign: 'center' }} className='container'>
-                <div className='row justify-content-center'>
-                    <table className="table table-bordered">
-                        <thead>
-                            <tr>
-                                <th scope="col" style={{backgroundColor:'#efecf8'}}>
-                                    <p style={{fontSize:'120%', margin:'0px'}}>Fizld</p> 
-                                    <span style={{position:'relative',top:'-10px', fontWeight:'lighter'}}>$</span>
-                                    <b style={{fontSize:'200%'}}>50</b>
-                                    <span style={{fontSize:'65%'}}>/month</span>
-                                </th>
-                                <th scope="col">
-                                    Website Builders <br/>
-                                    <span style={{position:'relative',top:'-10px', fontWeight:'lighter'}}>$</span>
-                                    <b style={{fontSize:'200%'}}>35</b>
-                                    <span style={{fontSize:'65%'}}>/month</span>
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody >
-                            <tr>
-                                <td style={{backgroundColor:'#efecf8'}}>No fizld branding</td>
-                                <td>Charges to remove branding</td>
-                            </tr>
-                            <tr>
-                                <td style={{backgroundColor:'#efecf8'}}>No fizld ads</td>
-                                <td>Charges to remove ads</td>
-                            </tr>
-                            <tr>
-                                <td style={{backgroundColor:'#efecf8'}}>Complete customization</td>
-                                <td>Charges extra for templates</td>
-                            </tr>  
-                            <tr>
-                                <td style={{backgroundColor:'#efecf8'}}>Mobile first design (Responsive)</td>
-                                <td>Charges extra for responsive design</td>
-                            </tr>
-                            <tr>
-                                <td style={{backgroundColor:'#efecf8'}}>SEO included</td>
-                                <td>Charges extra for SEO</td>
-                            </tr>
-                            <tr>
-                                <td style={{backgroundColor:'#efecf8'}}>Professional developer on standby</td>
-                                <td>Difficult to update</td>
-                            </tr>
-                        </tbody>
+            <div  style={{display:'flex', justifyContent:'space-evenly',padding:'50px 10vw',flexWrap:'wrap'}}>
+                <div style={{textAlign:'center',fontFamily:'Oswald',color:'#0a6396',width:'200px'}}>
+                    <i  style={{fontSize:'200%'}} class="fa-solid fa-pen"></i>
+                    <div  style={{fontSize:'150%',fontFamily:'Oswald'}}>Designer</div>
+                    <p style={{color:'black'}}>Designers are on standby to help bring your dream to life</p>
+                </div>
+                <div style={{textAlign:'center',fontFamily:'Oswald',color:'#0a6396',width:'200px'}}>
+                    <i  style={{fontSize:'200%'}} class="fa-solid fa-pen"></i>
+                    <div  style={{fontSize:'150%',fontFamily:'Oswald'}}>Developer</div>
+                    <p style={{color:'black'}}>Developers are on standby to help bring your dream to life</p>
 
-                    </table>
+                </div>
+                <div style={{textAlign:'center',fontFamily:'Oswald',color:'#0a6396',width:'200px'}}>
+                    <i  style={{fontSize:'200%'}} class="fa-solid fa-pen"></i>
+                    <div  style={{fontSize:'150%',fontFamily:'Oswald'}}>Hosting</div>
+                    <p style={{color:'black'}}>We offer a low monthly cost to host and maintain your site</p>
+
+                </div>
+                <div style={{textAlign:'center',fontFamily:'Oswald',color:'#0a6396',width:'200px'}}>
+                    <i  style={{fontSize:'200%',color:'#0a6396'}} class="fa-solid fa-pen"></i>
+                    <div  style={{fontSize:'150%',fontFamily:'Oswald',color:'#0a6396'}}>Support</div>
+                    <p style={{color:'black'}}>We offer 24/7 support</p>
+
                 </div>
             </div>
 

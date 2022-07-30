@@ -206,6 +206,8 @@
 .introHeader{
    font-size: 400%;
    font-weight: bolder;
+   font-family: 'Oswald';
+   color: #0a6396;
 }
 .hiding{
    visibility: hidden;

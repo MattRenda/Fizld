@@ -6,9 +6,7 @@ import Footer from '../../Utils/Footer';
 import { Link } from 'react-router-dom';
 const Home = () => {
     let header = 'Beautiful website?' + <br /> + 'we\'ve got you covered.';
-    let description = 'Quickly design and customize responsive mobile-first sites with Fizld. Unlike website builders, we have no limitations.';
-    const title = 'Why Choose Us?'
-    const cardDescription = 'If you want a site with no limitations, your in the right place.'
+
     const src = window.screen.width >= 1024 && window.screen.height >= 768? '/imgs/BackgroundImg2.png': '/imgs/BackgroundImg2Mobile.png'
     return (
         <div >
@@ -19,7 +17,7 @@ const Home = () => {
                         <div className='container'>
                             <div>
                                 <h1 className="display-5 fw-bold lh-1 mb-3 introHeader">Beautiful website? <br />  we've got you covered.</h1>
-                                <p className="lead">{description}</p>
+                                <p className="lead">Make your dream website come true for 50$/month</p>
                             </div>
                         </div>                    
                     </div>
@@ -31,7 +29,7 @@ const Home = () => {
                     </div>
                 </div>
               
-                <Examples title={title} description={cardDescription} />
+                <Examples />
                 <Footer contact={true} />
 
             </div>
