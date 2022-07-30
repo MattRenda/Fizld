@@ -16,7 +16,7 @@ const Examples = ({ title, description }) => {
                 <div style={{textAlign:'center',fontFamily:'Oswald',color:'#0a6396',width:'200px'}}>
                     <i  style={{fontSize:'200%'}} class="fa-solid fa-code"></i>
                     <div  style={{fontSize:'150%',fontFamily:'Oswald'}}>Developer</div>
-                    <p style={{color:'black'}}>Developers are on standby to help bring your dream to life</p>
+                    <p style={{color:'black'}}>Skilled developers are ready to manifest your dream</p>
 
                 </div>
                 <div style={{textAlign:'center',fontFamily:'Oswald',color:'#0a6396',width:'200px'}}>
