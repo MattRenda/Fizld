@@ -22,7 +22,7 @@ const Home = () => {
                         </div>                    
                     </div>
                     <div style={{ display: 'flex', justifyContent: 'center', margin: '50px 0px 40px 0px' }}>
-                        <Link to={'/Pricing'} style={{color: 'white', padding: '15px 25px', borderRadius: '70px', backgroundColor:'#1170a7'}} className='btn'>Get Started</Link>
+                        <Link to={'/Pricing'} style={{color: 'white', padding: '10px 20px', borderRadius: '70px', backgroundColor:'#1170a7',fontFamily:'Oswald',fontSize:'150%'}} className='btn'>Get Started</Link>
                     </div>
                     <div style={{ textAlign: 'center' }}>
                         <img width='70%' alt='homepageimg' src={src} />
