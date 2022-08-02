@@ -108,7 +108,7 @@ const Pricing = () => {
             <div className='mt-5 mb-5' style={{ display: 'flex', justifyContent: 'center',paddingTop:'10vh',flexDirection:'column',alignItems:'center' }}>
                 <div style={{fontSize: '350%',fontFamily:'Oswald',color:'#0a639694',textAlign:'center'}}>Contact us to get started!</div>
                 <div style={{ display: 'flex',alignItems:'center',padding:'5vh 20px 11vh 20px',justifyContent:'center',width:'100%',flexWrap:'wrap'}}>
-                    <a style={{fontSize:'220%',backgroundColor:'#0a639694',color:'white', fontFamily:'Oswald', width:'250px',paddingTop:'20px'}} className='btn' href='tel:(916) 314-7681'>Call</a>
+                    <a style={{fontSize:'220%',backgroundColor:'#0a639694',color:'white', fontFamily:'Oswald', width:'250px'}} className='btn' href='tel:(916) 314-7681'>Call</a>
                     <p style={{fontSize:'200%',color:'#0a639694',fontFamily:'Oswald', width:'250px', textAlign:'center',paddingTop:'20px'}}>OR</p>
                     <ContactPage/>
                 </div>
