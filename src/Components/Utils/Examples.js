@@ -10,12 +10,12 @@ const Examples = ({ title, description }) => {
             <div  style={{display:'flex', justifyContent:'space-evenly',padding:'50px 10vw',flexWrap:'wrap'}}>
                 <div style={{textAlign:'center',fontFamily:'Oswald',color:'#0a6396',width:'200px'}}>
                     <i  style={{fontSize:'200%'}} class="fa-solid fa-pen"></i>
-                    <div  style={{fontSize:'150%',fontFamily:'Oswald'}}>Designer</div>
+                    <div  style={{fontSize:'150%',fontFamily:'Oswald'}}>Designers</div>
                     <p style={{color:'black'}}>Designers are on standby to help bring your dream to life</p>
                 </div>
                 <div style={{textAlign:'center',fontFamily:'Oswald',color:'#0a6396',width:'200px'}}>
                     <i  style={{fontSize:'200%'}} class="fa-solid fa-code"></i>
-                    <div  style={{fontSize:'150%',fontFamily:'Oswald'}}>Developer</div>
+                    <div  style={{fontSize:'150%',fontFamily:'Oswald'}}>Developers</div>
                     <p style={{color:'black'}}>Skilled developers are ready to manifest your dream</p>
 
                 </div>
