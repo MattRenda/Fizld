@@ -5,7 +5,7 @@ const Footer = ({contact}) => {
   const year = new Date();
   return (
     <div style={{ position: 'relative' }} className='off-white pb-5'>
-     <div hidden={!contact}><ContactPage title={'Need to contact us?'} /></div> 
+     <div className='form' hidden={!contact}><ContactPage title={'Need to contact us?'} /></div> 
       <footer className="pt-4 my-md-5 pt-md-5 border-top container">
         <div style={{display:'flex',flexWrap:'wrap',justifyContent:'space-evenly'}}>
           <div >

@@ -104,8 +104,12 @@ const Pricing = () => {
                 </div>
             </div>
             <div className='mt-5 mb-5' style={{ display: 'flex', justifyContent: 'center',paddingTop:'20vh',flexDirection:'column',alignItems:'center' }}>
-                <div style={{fontSize: '350%',fontFamily:'Oswald',color:'#0a639694'}}>Message us to get started!</div>
-                <ContactPage/>
+                <div style={{fontSize: '350%',fontFamily:'Oswald',color:'#0a639694'}}>Contact us to get started!</div>
+                <div style={{ display: 'flex',alignItems:'center',margin:'5vh 0',justifyContent:'space-evenly',width:'100%'}}>
+                    <a style={{fontSize:'220%',backgroundColor:'#0a639694',color:'white', fontFamily:'Oswald',marginLeft:'150px', width:'200px'}} className='btn' href='tel:(916) 314-7681'>Call</a>
+                    <p style={{fontSize:'200%',color:'#0a639694',fontFamily:'Oswald',marginLeft:'-200px',marginRight:'-200px'}}>OR</p>
+                    <ContactPage/>
+                </div>
             </div>
            
         </div>
