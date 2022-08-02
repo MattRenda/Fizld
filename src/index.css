@@ -192,6 +192,7 @@
 }
 .form{
    padding:5vh 5vw;
+   background-color: white;
 }
 
 .table td, .table th{
@@ -245,7 +246,7 @@
       height:190px
    } */
    .form{
-      padding:5vh 10vw;
+      padding:5vh 20vw;
    }
    .mobile{
       display:none;
