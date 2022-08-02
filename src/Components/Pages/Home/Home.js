@@ -7,12 +7,12 @@ import { Link } from 'react-router-dom';
 const Home = () => {
     let header = 'Beautiful website?' + <br /> + 'we\'ve got you covered.';
 
-    const src = window.screen.width >= 1024 && window.screen.height >= 768? '/imgs/BackgroundImg2.png': '/imgs/BackgroundImg2Mobile.png'
+    const src = window.screen.width >= 1024 && window.screen.height >= 768? '/imgs/BackgroundImg2.webp': '/imgs/BackgroundImg2Mobile.webp'
     return (
         <div >
             <div className='headerSpacing'>
                 <Header />
-                <div style={{ backgroundImage: "url(/imgs/BackgroundImg.png)", backgroundRepeat: 'no-repeat', backgroundSize: 'cover', paddingTop: '50px', backgroundColor: '#fafbfb' }}>
+                <div style={{ backgroundImage: "url(/imgs/BackgroundImg.webp)", backgroundRepeat: 'no-repeat', backgroundSize: 'cover', paddingTop: '50px', backgroundColor: '#fafbfb' }}>
                     <div style={{ textAlign: 'center' }}>
                         <div className='container'>
                             <div>
