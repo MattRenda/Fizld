@@ -7,7 +7,7 @@ const ContactPage =({title,plan})=> {
     const[state,setState] = useState({
         name: '',
         email: '',
-        message: plan?`Hello, I am interested in creating a website!`:'',
+        message: `Hello, I am interested in creating a website!`,
         subject: 'messaged you from your Portfolio!'
     })
 

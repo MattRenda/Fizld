@@ -1,5 +1,5 @@
 import React from 'react'
-import ContactPage from './ContactPage';
+import ContactPage from './Contact/ContactPage';
 const Footer = ({contact}) => {
 
   const year = new Date();

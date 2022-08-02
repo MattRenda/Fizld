@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import { createStructuredSelector } from 'reselect';
 import { connect } from 'react-redux';
 import * as selectors from '../../Redux/selectors';
-import ContactPage from '../../Utils/ContactPage';
+import ContactPage from '../../Utils/Contact/ContactPage';
 const Account = ({ user }) => {
     window.scrollTo(0, 0);
     const navigate = useNavigate();
