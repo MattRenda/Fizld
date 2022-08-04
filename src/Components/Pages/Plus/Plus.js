@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from '../../Utils/Header';
 import Footer from '../../Utils/Footer';
-import Payment from '../Payment/Payment';
+import Payment from '../../Utils/Payment';
 
 const Plus =()=>{
     window.scrollTo(0, 0);

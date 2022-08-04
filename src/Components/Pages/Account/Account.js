@@ -2,15 +2,29 @@ import React, {useState} from 'react'
 import Header from '../../Utils/Header';
 import Footer from '../../Utils/Footer';
 import { useNavigate } from 'react-router-dom';
+import { loadStripe } from "@stripe/stripe-js";
 
 import { createStructuredSelector } from 'reselect';
 import { connect } from 'react-redux';
 import * as selectors from '../../Redux/selectors';
 import ContactPage from '../../Utils/Contact/ContactPage';
+const stripePromise = loadStripe("pk_live_51KGXrHC5jJgfrH90JGNtRgxVKZ0COX1xW1KRTVYa5YdIsKJxhkA7g13jFgYDWiwWYVVwiE7MbrjKTet0DkxDVyGL000vkf3dW2");
+
+
 const Account = ({ user }) => {
     window.scrollTo(0, 0);
     const navigate = useNavigate();
     const [deviceRatio,setdeviceRatio] = useState({width:1920, height:1080});
+    const fullName = user.FirstName + ' ' + user.LastName;
+    const processPayment=(price,email,fullName,description)=>{
+        fetch("https://4tgrm96sfd.execute-api.us-east-1.amazonaws.com/default/Fizld-payment", {
+            method: "POST",
+            body: JSON.stringify({ price: price, email: email, fullName:fullName,description:description}),
+        })
+        .then((res) => res.text())
+        .then((data) => window.location.replace(data))
+        .catch(error=>console.log(error))
+    }
     return (
         <div className='headerSpacing'>
             <Header />
@@ -52,7 +66,7 @@ const Account = ({ user }) => {
                                     {user.features?.map(feature=>
                                     <div style={{display:'flex',justifyContent:'space-between',marginBottom:'10px',alignItems:'center',backgroundColor:'#f7f7f7', borderRadius:'10px', padding:'10px'}}>
                                         {feature.name}
-                                        <button style={{margin:'5px',fontSize:'120%',fontWeight:'bold'}} disabled={feature.status === 'done'?false:true} onClick={()=> navigate('/basic',{state:{plan:feature.name,cost:feature.cost}})} className={`btn btn-${feature.status === 'done'?"success":"light"}`}>{feature.status.toUpperCase() === "DONE"? "Pay Now": feature.status.toUpperCase()}</button>    
+                                        <button style={{margin:'5px',fontSize:'120%',fontWeight:'bold'}} disabled={feature.status === 'done'?false:true} onClick={()=> processPayment(feature.cost,user.Email,fullName,feature.name)} className={`btn btn-${feature.status === 'done'?"success":"light"}`}>{feature.status.toUpperCase() === "DONE"? "Pay Now": feature.status.toUpperCase()}</button>    
                                     </div>
                                     )}
                             </div>
@@ -67,7 +81,7 @@ const Account = ({ user }) => {
                                         <div> SSL certificate</div>  
                                     </div>
                                     <div>
-                                        <button style={{margin:'5px',fontSize:'120%',fontWeight:'bold'}} disabled={user.monthlyPayment === true?true:false} onClick={()=> navigate('/basic',{state:{plan:"Monthly Support",cost:50}})} className='btn btn-success'>{user.monthlyPayment === true?"Paid for the month!":"Pay now"}</button>    
+                                        <button style={{margin:'5px',fontSize:'120%',fontWeight:'bold'}} disabled={user.monthlyPayment === true?true:false} onClick={()=> processPayment(50,user.Email,fullName,'Hosting')} className='btn btn-success'>{user.monthlyPayment === true?"Paid for the month!":"Pay now"}</button>    
                                     </div>
                                 </div>
                             </div>

@@ -1,6 +1,5 @@
 import React from 'react'
 import Examples from '../../Utils/Examples'
-import Plans from './Plans'
 import Header from '../../Utils/Header';
 import Footer from '../../Utils/Footer';
 import { Link } from 'react-router-dom';

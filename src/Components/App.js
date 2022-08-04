@@ -7,21 +7,19 @@ import {
     BrowserRouter as Router,
     Routes,
     Route,
-    Navigate
+    Navigate,
+    useParams 
   } from "react-router-dom";
   
 import Login from './Pages/Login/Login';
 import CreateAccount from './Pages/Login/CreateAccount';
 import PricingPage from './Pages/Pricing/PricingPage';
-import Basic from './Pages/Basic/Basic';
-import Plus from './Pages/Plus/Plus';
-import Premium from './Pages/Premium/Premium';
+import Success from './Pages/Payment/Success';
 import Account from './Pages/Account/Account';
 import { createStructuredSelector } from 'reselect';
 import { connect } from 'react-redux';
 import * as actions from './Redux/actions';
 import * as selectors from './Redux/selectors';
-import Payment from './Pages/Payment/Payment';
 import Home from './Pages/Home/Home';
 import Protected from './Utils/Protected';
 
@@ -30,15 +28,16 @@ const App =({Init, user})=>{
         Init();
     // eslint-disable-next-line
     },[])
+
     return(
             <Router>
                 <Routes>
                     <Route path="/" element={<Home/>}/>
                     <Route path="/Login" element={<Login/>}/>
                     <Route path="/CreateAccount" element={user._id?<Navigate replace to={'/'}/>:<CreateAccount/>}/>
-                    <Route path="/Basic" element={ 
+                    <Route path={`/Success/:id`} element={ 
                         <Protected>
-                            <Basic/>
+                            <Success/>
                         </Protected>
                     }/>
                     <Route path="/Pricing" element={<PricingPage/>}/>

@@ -3,11 +3,8 @@ import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
 import CheckoutForm from "./CheckoutForm";
 import Lottie from "react-lottie";
-import secure from '../../../lotties-animations/Secure.json'
+import secure from '../../lotties-animations/Secure.json'
 
-import { createStructuredSelector } from 'reselect';
-import { connect } from 'react-redux';
-import * as selectors from '../../Redux/selectors';
 // Make sure to call loadStripe outside of a component’s render to avoid
 // recreating the Stripe object on every render.
 // This is a public sample test API key.
@@ -15,23 +12,27 @@ import * as selectors from '../../Redux/selectors';
 // Sign in to see your own test API key embedded in code samples.
 const stripePromise = loadStripe("pk_live_51KGXrHC5jJgfrH90JGNtRgxVKZ0COX1xW1KRTVYa5YdIsKJxhkA7g13jFgYDWiwWYVVwiE7MbrjKTet0DkxDVyGL000vkf3dW2");
 
-const Payment = ({ plan, price, user }) => {
+const Payment = ({ fullName, price, email,plan }) => {
   const [clientSecret, setClientSecret] = useState("");
-
   useEffect(() => {
     // Create PaymentIntent as soon as the page loads
-    fetch("https://4tgrm96sfd.execute-api.us-east-1.amazonaws.com/default/Fizld-payment", {
-      method: "POST",
-      body: JSON.stringify({ price: price, email: user.Email, description:plan}),
-    })
-      .then((res) => res.json())
-      .then((data) => setClientSecret(data.client_secret))
+    if(email && fullName){
+      fetch("https://4tgrm96sfd.execute-api.us-east-1.amazonaws.com/default/Fizld-payment", {
+        method: "POST",
+        body: JSON.stringify({ price: price, email: email, fullName:fullName,description:plan}),
+      })
+      .then((res) => res.text())
+      .then((data) => window.location.replace(data))
       .catch(error=>console.log(error))
-  // eslint-disable-next-line
-  }, []);
-
+    }
+      // eslint-disable-next-line
+  }, [email,fullName]);
+  
   const appearance = {
     theme: 'flat',
+    variables: {
+      colorPrimary: '#0a6396',
+    },
   };
   const options = {
     clientSecret,
@@ -98,12 +99,4 @@ const Payment = ({ plan, price, user }) => {
   );
 }
 
-const mapStateToProps =createStructuredSelector({
-  user: selectors.getUser(),
-})
-
-const mapDispatchToProps =(dispatch)=>({
-})
-
-const withRedux = connect(mapStateToProps, mapDispatchToProps)(Payment);
-export default withRedux;
+export default Payment;

@@ -101,7 +101,7 @@ const CheckoutForm = ({ price, plan }) => {
               Your card details will be saved for future purchases and subscription renewals.
             </small>
           </div>
-          <button className="btn btn-primary" style={{ marginTop: '10px', float:'right' }} disabled={isLoading || !stripe || !elements} id="submit">
+          <button className="btn " style={{ marginTop: '10px', float:'right',backgroundColor:'#0a6396',color:'white' }} disabled={isLoading || !stripe || !elements} id="submit">
             Submit Purchase
           </button>
           {/* Show any error or success messages */}

@@ -26,14 +26,14 @@ function getCookie(name) {
 }
 
 export function* updateUser(input){
-  // const response = yield fetch("https://fizld.azurewebsites.net/api/update?code=twqTM2opMbNoURUn43DdB3cO3M6PaTCSVhsJuxiJHkKaeEPKa42Pyw==",{
-  //   method:"POST",
-  //   body:JSON.stringify({
-  //     Email:input.payload.email,
-  //     Password:input.payload.password,
-  //     plan:input.payload.plan
-  //   })
-  // })
+  const response = yield fetch("https://6lpj0zzd1j.execute-api.us-east-1.amazonaws.com/default/Fizld-update",{
+    method:"POST",
+    body:JSON.stringify({
+      Email:input.payload.email,
+      Password:input.payload.password,
+      product:input.payload.product
+    })
+  })
 }
 
 export function* setUser(input){
@@ -54,7 +54,6 @@ export function* setUser(input){
         return {error:"server Error"}
     })
     document.cookie = `ms_id=${JSON.stringify(response)};`
-    console.log(response)
   
     yield put(actions.setUserSuccess(response));
 }
