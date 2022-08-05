@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import Header from '../../Utils/Header';
 import Footer from '../../Utils/Footer';
 import { useNavigate } from 'react-router-dom';
@@ -7,11 +7,12 @@ import { loadStripe } from "@stripe/stripe-js";
 import { createStructuredSelector } from 'reselect';
 import { connect } from 'react-redux';
 import * as selectors from '../../Redux/selectors';
+import * as actions from '../../Redux/actions';
 import ContactPage from '../../Utils/Contact/ContactPage';
 const stripePromise = loadStripe("pk_live_51KGXrHC5jJgfrH90JGNtRgxVKZ0COX1xW1KRTVYa5YdIsKJxhkA7g13jFgYDWiwWYVVwiE7MbrjKTet0DkxDVyGL000vkf3dW2");
 
 
-const Account = ({ user }) => {
+const Account = ({ user,setUser }) => {
     window.scrollTo(0, 0);
     const navigate = useNavigate();
     const [deviceRatio,setdeviceRatio] = useState({width:1920, height:1080});
@@ -25,6 +26,16 @@ const Account = ({ user }) => {
         .then((data) => window.location.replace(data))
         .catch(error=>console.log(error))
     }
+    useEffect(()=>{
+        const input={};
+        const {Email,Password} =JSON.parse(sessionStorage.getItem('ms_id'))
+        input.email = Email;
+        input.password = Password;
+        if(input.password && input.email){
+            setUser(input)
+        }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    },[])
     return (
         <div className='headerSpacing'>
             <Header />
@@ -100,6 +111,8 @@ const mapStateToProps = createStructuredSelector({
 })
 
 const mapDispatchToProps = (dispatch) => ({
+    setUser : (input) => dispatch(actions.setUser(input))
+
 })
 
 const withRedux = connect(mapStateToProps, mapDispatchToProps)(Account);

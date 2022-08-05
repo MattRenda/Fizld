@@ -92,7 +92,7 @@ const AccountMenu =({ user,setUser }) =>{
           <ListItemIcon>
             <Logout fontSize="small" />
           </ListItemIcon>
-            <Button style={{ color: "#6D8FAB" }} onClick={() => {setUser(); document.cookie = "ms_id="}}><b style={{color:'#6D8FAB'}}>Logout</b></Button>
+            <Button style={{ color: "#6D8FAB" }} onClick={() => {setUser(); sessionStorage.removeItem('"ms_id');}}><b style={{color:'#6D8FAB'}}>Logout</b></Button>
         </MenuItem> 
       </Menu>:""}
     </React.Fragment>

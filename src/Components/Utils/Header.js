@@ -34,7 +34,7 @@ const Header = ({ user, setUser }) => {
                             user._id ?
                                 <div>
                                     <Link  className='btn'  to={'/Account'}><b> {user.FirstName + " " + user.LastName} </b></Link>
-                                    <button className='btn' onClick={() => {setUser(); document.cookie = `ms_id=`; navigate("/")}}><b >Logout</b></button>
+                                    <button className='btn' onClick={() => {setUser(); sessionStorage.removeItem('"ms_id'); navigate("/")}}><b >Logout</b></button>
                                 </div>
                                 : <button className='btn' onClick={() => navigate("/Login")}><b >Login</b></button>
                         }

@@ -3,14 +3,21 @@ import {useNavigate,useLocation,useParams} from 'react-router-dom';
 import { createStructuredSelector } from 'reselect';
 import { connect } from 'react-redux';
 import * as actions from '../../Redux/actions';
+import * as selectors from '../../Redux/selectors';
 
-const Success = ({updateUser}) => {
+const Success = ({updateUser,user}) => {
+  const navigate = useNavigate();
+  let {id} = useParams();
+  let input ={};
+  input.product = id.split(',')[2].split('-').join(' ');
+  input.email = user.Email;
+  input.password = user.Password;
   useEffect(()=>{
-    //updateUser(product)
-  },[])
- const navigate = useNavigate();
-    let {id} = useParams();
-  let product = id.split(',')[2].split('-').join(' ');
+    if(input.product && input.email && input.password){
+      updateUser(input);
+    }
+  },[updateUser,input])
+
   return (
     <div className="container" style={{width:'100%', height:'90vh',display:'flex', justifyContent:'center',alignItems:'center',flexDirection:'column'}}>
       <img src='/imgs/Logo.webp' width={'150px'} height={'auto'} alt='fizzld logo' style={{paddingBottom:'50px'}}/>
@@ -26,6 +33,8 @@ const Success = ({updateUser}) => {
 }
 
 const mapStateToProps = createStructuredSelector({
+  user: selectors.getUser(),
+
 })
 
 const mapDispatchToProps = (dispatch) => ({

@@ -5,18 +5,8 @@ import withAsync from '../ReduxUtility/withAsync';
 import * as actions from './actions';
 
 export function* Init(){
-function getCookie(name) {
-  var cookieArr = document.cookie.split(";");
-  for(var i = 0; i < cookieArr.length; i++) {
-      var cookiePair = cookieArr[i].split("=");
-      if(name === cookiePair[0].trim()) {
-          return decodeURIComponent(cookiePair[1]);
-      }
-  }
-  return null;
-}
   try {
-    const user = getCookie("ms_id")
+    let user = sessionStorage.getItem('ms_id');    
     if(user){
       yield put(actions.setUserSuccess(JSON.parse(user)));
     }
@@ -26,7 +16,7 @@ function getCookie(name) {
 }
 
 export function* updateUser(input){
-  const response = yield fetch("https://6lpj0zzd1j.execute-api.us-east-1.amazonaws.com/default/Fizld-update",{
+  yield fetch("https://6lpj0zzd1j.execute-api.us-east-1.amazonaws.com/default/Fizld-update",{
     method:"POST",
     body:JSON.stringify({
       Email:input.payload.email,
@@ -34,9 +24,13 @@ export function* updateUser(input){
       product:input.payload.product
     })
   })
+  .then(res=>res.json())
+  .then(data=>console.log(data.modifiedCount));
 }
 
 export function* setUser(input){
+  console.log(input)
+
     const response = yield fetch("https://b1jfi6brah.execute-api.us-east-1.amazonaws.com/default/Fizld-Get",{
       method:"POST",
       body:JSON.stringify({
@@ -53,7 +47,7 @@ export function* setUser(input){
       else
         return {error:"server Error"}
     })
-    document.cookie = `ms_id=${JSON.stringify(response)};`
+    sessionStorage.setItem('ms_id',JSON.stringify(response));
   
     yield put(actions.setUserSuccess(response));
 }

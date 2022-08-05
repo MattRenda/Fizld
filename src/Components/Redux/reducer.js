@@ -10,6 +10,7 @@ const setUserSuccess = (state, action)=>({
   user: action.payload,
 })
 
+
 export default handleActions({
     [C.SET_USER_SUCCESS]: setUserSuccess,
   }, initialState);
