@@ -17,10 +17,10 @@ const Account = ({ user,setUser }) => {
     const navigate = useNavigate();
     const [deviceRatio,setdeviceRatio] = useState({width:1920, height:1080});
     const fullName = user.FirstName + ' ' + user.LastName;
-    const processPayment=(price,email,fullName,description)=>{
+    const processPayment=(price,email,fullName,description,customerId)=>{
         fetch("https://4tgrm96sfd.execute-api.us-east-1.amazonaws.com/default/Fizld-payment", {
             method: "POST",
-            body: JSON.stringify({ price: price, email: email, fullName:fullName,description:description}),
+            body: JSON.stringify({ price: price, email: email, fullName:fullName,description:description,customerId:customerId}),
         })
         .then((res) => res.text())
         .then((data) => window.location.replace(data))
@@ -77,7 +77,7 @@ const Account = ({ user,setUser }) => {
                                     {user.features?.map(feature=>
                                     <div style={{display:'flex',justifyContent:'space-between',marginBottom:'10px',alignItems:'center',backgroundColor:'#f7f7f7', borderRadius:'10px', padding:'10px'}}>
                                         {feature.name}
-                                        <button style={{margin:'5px',fontSize:'120%',fontWeight:'bold'}} disabled={feature.status === 'done'?false:true} onClick={()=> processPayment(feature.cost,user.Email,fullName,feature.name)} className={`btn btn-${feature.status === 'done'?"success":"light"}`}>{feature.status.toUpperCase() === "DONE"? "Pay Now": feature.status.toUpperCase()}</button>    
+                                        <button style={{margin:'5px',fontSize:'120%',fontWeight:'bold'}} disabled={feature.status === 'done'?false:true} onClick={()=> processPayment(feature.cost,user.Email,fullName,feature.name,user.StripeId)} className={`btn btn-${feature.status === 'done'?"success":"light"}`}>{feature.status.toUpperCase() === "DONE"? "Pay Now": feature.status.toUpperCase()}</button>    
                                     </div>
                                     )}
                             </div>
@@ -92,7 +92,7 @@ const Account = ({ user,setUser }) => {
                                         <div> SSL certificate</div>  
                                     </div>
                                     <div>
-                                        <button style={{margin:'5px',fontSize:'120%',fontWeight:'bold'}} disabled={user.monthlyPayment === true?true:false} onClick={()=> processPayment(50,user.Email,fullName,'Hosting')} className='btn btn-success'>{user.monthlyPayment === true?"Paid for the month!":"Pay now"}</button>    
+                                        <button style={{margin:'5px',fontSize:'120%',fontWeight:'bold'}} disabled={user.monthlyPayment === true?true:false} onClick={()=> processPayment(50,user.Email,fullName,'Hosting',user.StripeId)} className='btn btn-success'>Manage</button>    
                                     </div>
                                 </div>
                             </div>
