@@ -9,7 +9,7 @@ const Success = ({updateUser,user}) => {
   const navigate = useNavigate();
   let {id} = useParams();
   let input ={};
-  input.product = id.split('-')[1].split('-').join(' ');
+  input.product = id.split('-')[1].split('_').join(' ');
   input.email = user.Email;
   input.password = user.Password;
   useEffect(()=>{
